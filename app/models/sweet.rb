@@ -1,0 +1,2 @@
+class Sweet < ApplicationRecord
+end
