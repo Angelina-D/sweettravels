@@ -1,12 +1,23 @@
 <h1>Here is all the sweets Request!</h1>
 <p>You can bowse through to see all the sweet request for Candy all over the world!</p>
+
 <div class="card-request">
   <% @requests.each do |request| %>
-    <p>description:  <%= request.description %></p> <br>
-    <p>price:  <%= request.price_cents %> </p><br>
-    <p>donation:   <%= request.donation_cents %></p> <br>
-    <p>quantity:<%= request.quantity %> </p><br>
-    <p>charity: <%= request.charity_id %></p> <br>
-    <p>-------------------------</p>
+    <%= link_to request_path(request.id), :action => 'go', class: "card card-light" do %>
+    <div class="card-img">
+      <%= cl_image_tag(request.sweet.picture,
+      crop: :fill) %>
+    </div>
+      <p>description:  <%= request.description %></p> <br>
+      <p>price:  <%= convert_currency(request.price_cents) %> €</p><br>
+      <p>donation:   <%= convert_currency(request.donation_cents) %> €</p> <br>
+      <p>quantity:<%= request.quantity %> </p><br>
+      <p>charity: <%= request.charity_id %></p> <br>
+      <p>country: <%= request.sweet.country %></p> <br>
+      <div class="">
+        <%= cl_image_tag(request.user.photo,
+         {class: "avatar"}) %>
+      </div>
+      <% end %>
   <% end %>
 </div>
