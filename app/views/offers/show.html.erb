@@ -1,2 +1,7 @@
-<h1>Offers#show</h1>
-<p>Find me in app/views/offers/show.html.erb</p>
+<h1>See Details of this Offer</h1>
+<p>Start Date: <%= @offer.start_date %></p>
+<p>End Date: <%= @offer.end_date %></p>
+<p>Pick Up Location: <%= @offer.pick_up_location %></p>
+<p>Content: <%= @offer.content %></p>
+<p>Status: <%= @offer.status %></p>
+<p>Username: <%= @offer.user.full_name %></p>
