@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   get 'requests/delete'
   get 'profiles/show'
 
-  resource :offers, only: [:new, :create, :show, :edit, :update]
+  resources :offers, only: [:new, :create, :show, :edit, :update]
 end

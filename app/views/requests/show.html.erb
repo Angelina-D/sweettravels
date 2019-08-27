@@ -1,2 +1,10 @@
-<h1>Requests#show</h1>
-<p>Find me in app/views/requests/show.html.erb</p>
+<h1> request for <%= @request.sweet.name %></h1>
+<p>Find below the details of this request:</p>
+
+<p> description: <%= @request.description %></p>
+<p> price: <%= @request.price_cents %></p>
+<p> donation: <%= @request.donation_cents %></p>
+<p> quantity: <%= @request.quantity %></p>
+<p> charity: <%= @request.charity_id %></p>
+<p> user: <%= @request.user_id %></p>
+<p> sweet: <%= @request.sweet_id %></p>

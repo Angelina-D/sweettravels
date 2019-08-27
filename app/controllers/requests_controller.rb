@@ -3,6 +3,7 @@ class RequestsController < ApplicationController
   end
 
   def show
+    @request = Request.find(params[:format])
   end
 
   def new
