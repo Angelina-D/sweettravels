@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_26_144634) do
+ActiveRecord::Schema.define(version: 2019_08_27_064107) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,10 +32,10 @@ ActiveRecord::Schema.define(version: 2019_08_26_144634) do
     t.date "end_date"
     t.string "pick_up_location"
     t.integer "status"
-    t.bigint "users_id"
-    t.bigint "requests_id"
-    t.index ["requests_id"], name: "index_offers_on_requests_id"
-    t.index ["users_id"], name: "index_offers_on_users_id"
+    t.bigint "user_id"
+    t.bigint "request_id"
+    t.index ["request_id"], name: "index_offers_on_request_id"
+    t.index ["user_id"], name: "index_offers_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -47,15 +47,15 @@ ActiveRecord::Schema.define(version: 2019_08_26_144634) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
-    t.bigint "charities_id"
     t.integer "price_cents"
     t.integer "donation_cents"
     t.integer "quantity"
-    t.bigint "users_id"
-    t.bigint "sweets_id"
-    t.index ["charities_id"], name: "index_requests_on_charities_id"
-    t.index ["sweets_id"], name: "index_requests_on_sweets_id"
-    t.index ["users_id"], name: "index_requests_on_users_id"
+    t.bigint "charity_id"
+    t.bigint "user_id"
+    t.bigint "sweet_id"
+    t.index ["charity_id"], name: "index_requests_on_charity_id"
+    t.index ["sweet_id"], name: "index_requests_on_sweet_id"
+    t.index ["user_id"], name: "index_requests_on_user_id"
   end
 
   create_table "sweets", force: :cascade do |t|
@@ -77,13 +77,14 @@ ActiveRecord::Schema.define(version: 2019_08_26_144634) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "full_name"
+    t.string "photo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "offers", "requests", column: "requests_id"
-  add_foreign_key "offers", "users", column: "users_id"
-  add_foreign_key "requests", "charities", column: "charities_id"
-  add_foreign_key "requests", "sweets", column: "sweets_id"
-  add_foreign_key "requests", "users", column: "users_id"
+  add_foreign_key "offers", "requests"
+  add_foreign_key "offers", "users"
+  add_foreign_key "requests", "charities"
+  add_foreign_key "requests", "sweets"
+  add_foreign_key "requests", "users"
 end
