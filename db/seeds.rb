@@ -4,11 +4,11 @@ content = ['Whaou, just Whaou!', 'I feel like my life has a meaning now',
 'I can not remember what life was like before this', 'I will be obese but fuck it! YOLO']
 
 # Review.destroy_all
-Sweet.destroy_all
 Offer.destroy_all
-User.destroy_all
-Charity.destroy_all
 Request.destroy_all
+User.destroy_all
+Sweet.destroy_all
+Charity.destroy_all
 puts 'Oh data destroyed'
 
 ############################ SWEET ##########################################
@@ -94,17 +94,18 @@ Charity.create(
 
 puts "Charity created!"
 ##################### REQUEST ########################
-
-Request.create(
-  description: 'Hello I would like a couple of sweet!',
-  price_cents: rand(1000..2500),
-  donation_cents: rand(500..2000),
-  quantity: rand(1..5),
-  charity_id: Charity.all.sample.id,
-  user_id: User.all.sample.id,
-  sweet_id: Sweet.all.sample.id,
-  )
-
+7.times do
+  Request.create(
+    description: 'Hello I would like a couple of sweet!',
+    price_cents: rand(1000..2500),
+    donation_cents: rand(500..2000),
+    quantity: rand(1..5),
+    charity_id: Charity.all.sample.id,
+    user_id: User.all.sample.id,
+    sweet_id: Sweet.all.sample.id,
+    )
+end
+puts "Requests created!"
 
 # ################################ OFFER ####################################
 Offer.create(

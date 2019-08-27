@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_26_164801) do
+ActiveRecord::Schema.define(version: 2019_08_27_064107) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,8 +32,10 @@ ActiveRecord::Schema.define(version: 2019_08_26_164801) do
     t.date "end_date"
     t.string "pick_up_location"
     t.integer "status"
-    t.integer "request_id"
-    t.integer "user_id"
+    t.bigint "user_id"
+    t.bigint "request_id"
+    t.index ["request_id"], name: "index_offers_on_request_id"
+    t.index ["user_id"], name: "index_offers_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -48,9 +50,12 @@ ActiveRecord::Schema.define(version: 2019_08_26_164801) do
     t.integer "price_cents"
     t.integer "donation_cents"
     t.integer "quantity"
-    t.integer "charity_id"
-    t.integer "user_id"
-    t.integer "sweet_id"
+    t.bigint "charity_id"
+    t.bigint "user_id"
+    t.bigint "sweet_id"
+    t.index ["charity_id"], name: "index_requests_on_charity_id"
+    t.index ["sweet_id"], name: "index_requests_on_sweet_id"
+    t.index ["user_id"], name: "index_requests_on_user_id"
   end
 
   create_table "sweets", force: :cascade do |t|
@@ -77,4 +82,9 @@ ActiveRecord::Schema.define(version: 2019_08_26_164801) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "offers", "requests"
+  add_foreign_key "offers", "users"
+  add_foreign_key "requests", "charities"
+  add_foreign_key "requests", "sweets"
+  add_foreign_key "requests", "users"
 end
