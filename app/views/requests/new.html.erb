@@ -1,2 +1,19 @@
-<h1>Requests#new</h1>
-<p>Find me in app/views/requests/new.html.erb</p>
+<div class="form-container">
+<h1>Create you new Candy request</h1>
+<p>Please fill in the following details</p>
+  <div class="form-style">
+    <%= simple_form_for(@request) do |f| %>
+      <%= f.error_notification %>
+     <div class=“”>
+       <%= f.input :description %>
+       <%= f.input :price_cents %>
+       <%= f.input :donation_cents %>
+       <%= f.input :quantity %>
+       <%= f.association :charity, as: :radio_buttons %>
+     </div>
+     <div class=“form-actions”>
+       <%= f.button :submit, class: 'btn-action' %>
+     </div>
+    <% end %>
+  </div>
+</div>
