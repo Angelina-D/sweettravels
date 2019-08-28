@@ -108,18 +108,20 @@ end
 puts "Requests created!"
 
 # ################################ OFFER ####################################
-Offer.create(
-  content: "Hey everyone, I'm going to the US for two weeks",
-  end_date: "#{date = Time.at(rand * Time.now.to_i)}",
-  start_date: "#{date-10.days}",
-  user_id: User.all.sample.id,
-  pick_up_location: 'berlin',
-  status: rand(0..5),
-  request_id: Request.all.sample.id,
-  )
+20.times do
+  Offer.create(
+    content: "Hey everyone, I'm going to the US for two weeks",
+    end_date: "#{date = Time.at(rand * Time.now.to_i)}",
+    start_date: "#{date-10.days}",
+    user_id: User.all.sample.id,
+    pick_up_location: 'berlin',
+    status: rand(0..5),
+    request_id: Request.all.sample.id,
+    )
+end
 
 Offer.create(
-  content: "Hey everyone, I'm going to France for two weeks",
+  content: "Hey everyone, I'm going to France for two weeks I like to talk about my life blablabal ablablba labalbalbal balablba labab albalbalbal abalbalbalbalbalbal balbalbalbal balablab albalba lbal balablaba lbalbalbalabl abalba lbalal abalbabla",
   end_date: "#{date = Time.at(rand * Time.now.to_i)}",
   start_date: "#{date-10.days}",
   user_id: User.all.sample.id,
