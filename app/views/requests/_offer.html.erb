@@ -1,0 +1,10 @@
+<% @offers.each do |offer| %>
+  <%= link_to request_offer_path(offer.id), :action => 'go', class: "card card-light" do %>
+    <div class="">
+      <%= cl_image_tag(offer.user.photo,
+      {class: "avatar"}) %>
+    </div>
+    <%= offer.content %>
+    <%= offer.created_at.to_formatted_s(:long_ordinal)  %>
+  <% end %>
+<% end %>
