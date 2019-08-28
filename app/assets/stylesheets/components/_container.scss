@@ -1,3 +1,13 @@
 .flex-container{
   display: flex;
 }
+
+.form-container{
+  width: 600px;
+  margin: auto;
+  // border: 5px solid $pink-orange;
+  box-shadow: 40px 40px $pink-orange;
+  background-color: $light-pink;
+  padding: 20px;
+  border-radius: 8px
+}

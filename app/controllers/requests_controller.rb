@@ -8,9 +8,13 @@ class RequestsController < ApplicationController
   end
 
   def new
+    @request = Request.new
+    @charities = Charity.all
   end
 
   def create
+    @request = Request.new
+
   end
 
   def destroy
@@ -26,5 +30,9 @@ class RequestsController < ApplicationController
 
   def find_request
     @request = Request.find(params[:id])
+  end
+
+  def request_params
+    params.require(:request).permit()
   end
 end
