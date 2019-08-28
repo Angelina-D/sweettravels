@@ -1,7 +1,7 @@
 <h1>Here is all the sweets Request!</h1>
 <p>You can bowse through to see all the sweet request for Candy all over the world!</p>
 
-<div class="card-request">
+<div class="">
   <% @requests.each do |request| %>
     <%= link_to request_path(request.id), :action => 'go', class: "card card-light" do %>
     <div class="">

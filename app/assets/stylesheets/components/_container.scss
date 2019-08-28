@@ -28,3 +28,22 @@
   padding: 20px;
   border-radius: 8px
 }
+
+.container-offer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  background: white;
+  padding: 8px 16px;
+
+  .container-content {
+      flex-grow: 1;
+      padding: 0 24px;
+
+  }
+}
+
+.container-detail {
+  width: 800px;
+  margin: auto;
+}
