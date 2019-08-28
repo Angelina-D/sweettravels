@@ -14,7 +14,6 @@ class RequestsController < ApplicationController
 
   def create
     @request = Request.new
-
   end
 
   def destroy
