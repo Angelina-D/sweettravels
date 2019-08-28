@@ -1,0 +1,41 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#offers" role="tab" aria-controls="home" aria-selected="true">Sweet Hero</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#requests" role="tab" aria-controls="profile" aria-selected="false">Candy Cravings</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="offers" role="tabpanel" aria-labelledby="home-tab">
+    <h2> The offers you made</h2>
+    <% @offers.each do |offer| %>
+      <h3> <%= offer.request.description %> </h3>
+      <p> <%= offer.content %> </p>
+      <p> <%= offer.start_date %> </p>
+      <p> <%= offer.end_date %> </p>
+      <p> <%= offer.pick_up_location %> </p>
+      <p> <%= offer.status %> </p>
+    <% end %>
+  </div>
+  <div class="tab-pane fade" id="requests" role="tabpanel" aria-labelledby="profile-tab">
+    <h2> All your requests</h2>
+    <% @requests.each do |request| %>
+      <h4> <%= request.sweet.name %> </h4>
+      <p> <%= request.sweet.country %> </p>
+      <p> <%= request.description %> </p>
+      <p> <%= request.charity.name %> </p>
+      <p> <%= request.price_cents %> </p>
+      <p> <%= request.donation_cents %> </p>
+      <p> <%= request.quantity %> </p>
+    <% end %>
+  </div>
+
+
+
+
+
+
+
+
+
