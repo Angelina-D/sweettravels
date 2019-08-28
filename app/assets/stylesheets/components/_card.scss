@@ -9,11 +9,23 @@
   width: 600px;
 }
 
-.card-light{
-  border: 2px solid grey;
-}
+.card{
+  padding:40px;
+  background-color: $beige !important;
 
-.card-request{
+  &-light{
+    border: 2px solid grey;
+    width: 600px;
+    margin: auto;
+    // display: flex;
+  }
+
+    img{
+    background-size: cover;
+    height: 422px;
+    width: 445px;
+    background-position: 50%;
+  }
 
 }
 
@@ -22,3 +34,4 @@
   text-align: center;
   padding: 20px;
 }
+
