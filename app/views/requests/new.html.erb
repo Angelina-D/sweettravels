@@ -10,6 +10,7 @@
        <%= f.input :donation_cents %>
        <%= f.input :quantity %>
        <%= f.association :charity, as: :radio_buttons %>
+       <%= f.association :sweet, as: :radio_buttons %>
      </div>
      <div class=“form-actions”>
        <%= f.button :submit, class: 'btn-action' %>

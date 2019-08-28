@@ -6,7 +6,7 @@
   <p> description: <%= @request.description %></p>
   <p> user: <%= @request.user.full_name %></p>
   <%= cl_image_tag(@request.user.photo,
-  crop: :fill) %>
+  {class: "avatar"}) %>
 
  <h3>sweet: <%= @request.sweet.name %></h3>
   <%= cl_image_tag(@request.sweet.picture,
@@ -20,8 +20,23 @@
   <p>Charity cause: <%= @request.charity.description %></p>
   <%= cl_image_tag(@request.charity.picture,
   crop: :fill) %>
+
+  <h3>Offers:</h3>
+  <div class=" card card-light">
+    <% @offers.each do |offer| %>
+      <%= link_to request_offer_path(offer.id), :action => 'go', class: "card card-light" do %>
+        <div class="card-light">
+          <%= cl_image_tag(offer.user.photo,
+          {class: "avatar"}) %>
+        </div>
+        <%= offer.content %>
+        <%= offer.created_at.to_formatted_s(:long_ordinal)  %>
+      <% end %>
+    <% end %>
+  </div>
+
   <div class="btn-action">
-    <%= link_to 'MAKE AN OFFER', "#" %>
+    <%= link_to 'MAKE AN OFFER', new_request_offer_path(@request) %>
   </div>
 
     <div class="btn-action">
