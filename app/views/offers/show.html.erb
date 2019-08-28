@@ -1,7 +1,21 @@
 <h1>See Details of this Offer</h1>
-<p>Start Date: <%= @offer.start_date %></p>
-<p>End Date: <%= @offer.end_date %></p>
-<p>Pick Up Location: <%= @offer.pick_up_location %></p>
-<p>Content: <%= @offer.content %></p>
-<p>Status: <%= @offer.status %></p>
-<p>Username: <%= @offer.user.full_name %></p>
+<div class="container-detail">
+
+  <div class="card-detail-offer">
+  <div class="container-offer">
+    <%= cl_image_tag(@offer.user.photo,
+    {class: "avatar"}) %>
+    <div class='container-content'>
+      <h4><%= @offer.user.full_name %>'s offer</h4>
+      <p>Status: <%= @offer.status %></p>
+    </div>
+  </div>
+
+  <p>Message:</p>
+    <%= @offer.content %>
+  <p>Will be back <%= @offer.end_date %></p>
+  <p>Pick Up Location: <%= @offer.pick_up_location %></p>
+
+
+</div>
+</div>
