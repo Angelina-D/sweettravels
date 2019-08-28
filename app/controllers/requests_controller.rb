@@ -1,7 +1,11 @@
 class RequestsController < ApplicationController
   before_action :find_request, only: [:show, :destroy]
   def index
-    @requests = Request.all
+    if params[:search_sweet_name_and_country] != ""
+      @requests = Request.search_sweet_name_and_country(params[:search_sweet_name_and_country])
+    else
+      @requests = Request.all
+    end
   end
 
   def show

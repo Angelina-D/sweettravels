@@ -1,6 +1,12 @@
 <h1>Here is all the sweets Request!</h1>
 <p>You can bowse through to see all the sweet request for Candy all over the world!</p>
 
+<%= form_tag(search_path, method: "get") do %>
+  <%= text_field_tag :search_sweet_name_and_country, nil, placeholder: "Search by sweet name and country!", class: "" %>
+  <%= submit_tag "Search"%>
+  <!-- , style: "display: none;"  -->
+<% end %>
+
 <div class="card-request">
   <% @requests.each do |request| %>
     <%= link_to request_path(request.id), :action => 'go', class: "card card-light" do %>
