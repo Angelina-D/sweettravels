@@ -5,7 +5,6 @@ class RequestsController < ApplicationController
   end
 
   def show
-    @request = Request.find(params[:id])
   end
 
   def new
@@ -19,6 +18,10 @@ class RequestsController < ApplicationController
   end
 
   def destroy
+    offers = Offer.where(request_id: @request.id)
+    offers.each do |offer|
+      offer.destroy
+    end
     @request.destroy
     redirect_to root_path
   end
