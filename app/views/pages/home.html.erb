@@ -1,2 +1,71 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "Vector.png" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "SWEET-HERO", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "CANDIES", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "IMPACT", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item dropdown">
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Logout", "#", class: "dropdown-item" %>
+          <%= link_to "Profile", "#", class: "dropdown-item" %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="banner-landing" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1502741509793-1bf00d85aeff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80);">
+  <div class="container">
+    <%= image_tag "landing-logo.png" %>
+    <h1>SWEET TRAVELS</h1>
+    <p>Fix Your sweet tooth while contributing to a cause.</p>
+    <a class="btn btn-info" href="#">Become a Hero</a>
+    <a class="btn btn-info" href="#">Post a request</a>
+  </div>
+</div>
+
+
+<div class="container-box">
+  <h2>How it works</h2>
+  <div class="flex-container-landing">
+    <div class="card-landing">
+      <%= image_tag "lolly.png" %>
+      <h4>Make a request</h4>
+      <p>Kind of candy</p>
+    </div>
+    <div class="card-landing">
+      <%= image_tag "suitcase.png"%>
+      <h4>Be a Hero</h4>
+      <p>Help a craving</p>
+    </div>
+    <div class="card-landing">
+      <%= image_tag "heart.png" %>
+      <h4>Give to a cause</h4>
+      <p>contribute to a cause</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div>
+    <h2>Money raised</h2>
+    <h2>10,394</h2>
+  </div>
+</div>
