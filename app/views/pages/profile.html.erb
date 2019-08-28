@@ -8,6 +8,7 @@
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="offers" role="tabpanel" aria-labelledby="home-tab">
+    <%= render 'pages/shared/user_info' %>
     <h2> The offers you made</h2>
     <% @offers.each do |offer| %>
       <h3> <%= offer.request.description %> </h3>
@@ -19,6 +20,7 @@
     <% end %>
   </div>
   <div class="tab-pane fade" id="requests" role="tabpanel" aria-labelledby="profile-tab">
+    <%= render 'pages/shared/user_info' %>
     <h2> All your requests</h2>
     <% @requests.each do |request| %>
       <h4> <%= request.sweet.name %> </h4>
