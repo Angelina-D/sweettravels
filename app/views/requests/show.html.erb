@@ -23,4 +23,8 @@
   <div class="btn-action">
     <%= link_to 'MAKE AN OFFER', "#" %>
   </div>
+
+    <div class="btn-action">
+    <%= link_to 'DEMOLISH REQUEST', request_path(@request), method: :delete, data: { confirm: 'Are you sure?'} %>
+  </div>
 </div>
