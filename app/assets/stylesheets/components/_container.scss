@@ -2,10 +2,27 @@
   display: flex;
 }
 
+.flex-container-landing{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.container-box {
+  width: 1000px;
+  margin: auto;
+
+  h2 {
+    text-align: center;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    font-weight: bold;
+}
+}
+
 .form-container{
   width: 600px;
   margin: auto;
-  // border: 5px solid $pink-orange;
   box-shadow: 40px 40px $pink-orange;
   background-color: $light-pink;
   padding: 20px;
