@@ -1,0 +1,13 @@
+<h1>Here are all the sweets to browse through</h1>
+
+<div class="flex-container-landing">
+  <% @sweets.each do |sweet| %>
+  <div class="card-sweet">
+    <div class="card-img">
+      <%= cl_image_tag(sweet.picture, crop: :fill) %>
+    </div>
+    <p>Category: <%= sweet.category %></p>
+    <p>Country: <%= sweet.country %></p>
+  </div>
+  <% end %>
+</div>
