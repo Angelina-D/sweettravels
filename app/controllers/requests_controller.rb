@@ -6,16 +6,23 @@ class RequestsController < ApplicationController
 
   def show
     @request = Request.find(params[:id])
+    @offers  = Offer.where(request_id: @request.id)
   end
 
   def new
     @request = Request.new
     @charities = Charity.all
+    @candies = Sweet.all
   end
 
   def create
-    @request = Request.new
-
+    @request = Request.new(request_params)
+    @request.user = current_user
+    if @request.save
+      redirect_to request_path(@request)
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -30,6 +37,6 @@ class RequestsController < ApplicationController
   end
 
   def request_params
-    params.require(:request).permit()
+    params.require(:request).permit(:description, :price_cents, :donation_cents, :quantity, :charity_id, :sweet_id)
   end
 end

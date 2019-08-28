@@ -12,7 +12,8 @@
 .card{
   padding:40px;
   background-color: $beige !important;
-
+  margin-top: 20px;
+  margin-bottom: 20px;
   &-light{
     border: 2px solid grey;
     width: 600px;
@@ -20,11 +21,9 @@
     // display: flex;
   }
 
-    img{
-    background-size: cover;
+    &-img{
     height: 422px;
     width: 445px;
-    background-position: 50%;
   }
 
 }

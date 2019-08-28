@@ -4,7 +4,7 @@
 <div class="card-request">
   <% @requests.each do |request| %>
     <%= link_to request_path(request.id), :action => 'go', class: "card card-light" do %>
-    <div class="card-img">
+    <div class="">
       <%= cl_image_tag(request.sweet.picture,
       crop: :fill) %>
     </div>
@@ -18,6 +18,6 @@
         <%= cl_image_tag(request.user.photo,
          {class: "avatar"}) %>
       </div>
-      <% end %>
+    <% end %>
   <% end %>
 </div>
