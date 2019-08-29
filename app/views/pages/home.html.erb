@@ -3,8 +3,8 @@
     <%= image_tag "landing-logo.png" %>
     <h1>SWEET TRAVELS</h1>
     <p>Fix Your sweet tooth while contributing to a cause.</p>
-    <a class="btn btn-info" href="#">Become a Hero</a>
-    <a class="btn btn-info" href="#">Post a request</a>
+    <%= link_to 'Become a hero', requests_path, class: "btn btn-info" %>
+    <%= link_to 'Look for candies', sweets_path, class: "btn btn-info" %>
   </div>
 </div>
 

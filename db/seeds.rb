@@ -44,6 +44,28 @@ Sweet.create(
   category: 'Gum',
   country: 'UK',
   )
+
+Sweet.create(
+  name: 'Bubble Gum',
+  description: 'Specialy crafter for bubble practice',
+  picture: 'https://images-na.ssl-images-amazon.com/images/I/614yjLRZ%2BNL._SX679_.jpg',
+  category: 'Gum',
+  country: 'Vietnam',
+  )
+Sweet.create(
+  name: 'Bubble Gum',
+  description: 'Specialy crafter for bubble practice',
+  picture: 'https://images-na.ssl-images-amazon.com/images/I/614yjLRZ%2BNL._SX679_.jpg',
+  category: 'Gum',
+  country: 'Brazil',
+  )
+Sweet.create(
+  name: 'Cappucino M&M',
+  description: 'M&M with a coffe explosion',
+  picture: 'https://images-na.ssl-images-amazon.com/images/I/81Y0GnZK3pL._SY450_.jpg',
+  category:'Candy',
+  country: 'Chile',
+  )
 puts "Sweets created!"
 
 ############################## USER ############################################

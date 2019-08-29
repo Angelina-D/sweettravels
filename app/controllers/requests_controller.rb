@@ -8,6 +8,14 @@ class RequestsController < ApplicationController
     else
       @requests = Request.all
     end
+
+    @markers = @requests.map do |request|
+      {
+        lat: request.sweet.latitude,
+        lng: request.sweet.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { request: request })
+      }
+    end
   end
 
   def show
