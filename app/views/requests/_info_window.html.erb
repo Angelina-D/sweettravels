@@ -1,0 +1,8 @@
+<h3> <%= request.sweet.name %></h3>
+<p> <%= cl_image_tag(request.sweet.picture,
+      {class: "avatar-large"}) %> </p>
+<p> <%= request.description %></p>
+<p> <%= request.user.full_name %></p>
+<p> <%= cl_image_tag(request.user.photo,
+      {class: "avatar"}) %> </p>
+<p> <%= request.sweet.country %></p>
