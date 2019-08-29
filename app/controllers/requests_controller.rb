@@ -9,12 +9,15 @@ class RequestsController < ApplicationController
       @requests = Request.all
     end
 
-    @sweets = Sweet.where(id: @requests.sweet_id).geocoded
+    # sweets = @requests.map do |request|
+    #   request.sweet
+    # end
 
-    @markers = @sweets.map do |sweet|
+    @markers = @requests.map do |request|
       {
-        lat: sweet.latitude,
-        lng: sweet.longitude
+        lat: request.sweet.latitude,
+        lng: request.sweet.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { request: request })
       }
     end
   end
