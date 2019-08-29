@@ -1,36 +1,54 @@
 <div class="cards-wr-margin">
-  <h2> Your recent offers</h2>
-  <div class="flex-wrap-container">
+  <h2>OFFERS RECENTLY MADE</h2>
+  <div class="flex-card-container">
     <% @offers_pend.each do |offer| %>
       <div class="card-offer-content">
-        <p> <%= image_tag "#{offer.request.sweet.picture}", alt: "Le Wagon", width: 200 %> </p>
-        <h3> <%= offer.request.description %> </h3>
-        <p> <%= offer.content %> </p>
-        <p> <%= offer.start_date %> </p>
-        <p> <%= offer.end_date %> </p>
-        <p> <%= offer.pick_up_location %> </p>
-        <p> <%= offer.status %> </p>
+        <p class="candy-pic"> <%= image_tag "#{offer.request.sweet.picture}"%> </p>
+        <div class="card-offer-text">
+          <h3> <%= offer.request.sweet.name %> </h3>
+          <p> Status: <%= offer.status %> </p>
+          <p> <i class="far fa-calendar-alt"></i> <%= offer.end_date %> </p>
+          <p> <i class="fas fa-map-marked-alt"></i> <%= offer.pick_up_location %> </p>
+          <p> <%= link_to "Details", request_path(offer.request) %> </p>
+        </div>
       </div>
     <% end %>
   </div>
-  <h2> Archived offers</h2>
+
+
+
+  <h2> ARCHIVED OFFERS</h2>
+  <div class="flex-card-container">
     <% @offers_arch.each do |offer| %>
-      <p> <%= image_tag "#{offer.request.sweet.picture}", alt: "Le Wagon", width: 200 %> </p>
-      <h3> <%= offer.request.description %> </h3>
-      <p> <%= offer.content %> </p>
-      <p> <%= offer.start_date %> </p>
-      <p> <%= offer.end_date %> </p>
-      <p> <%= offer.pick_up_location %> </p>
-      <p> <%= offer.status %> </p>
+      <div class="card-offer-content">
+        <p class="candy-pic"> <%= image_tag "#{offer.request.sweet.picture}"%> </p>
+        <div class="card-offer-text">
+          <h3> <%= offer.request.sweet.name %> </h3>
+          <p> Status: <%= offer.status %> </p>
+          <p> <i class="far fa-calendar-alt"></i> <%= offer.end_date %> </p>
+          <p> <i class="fas fa-map-marked-alt"></i> <%= offer.pick_up_location %> </p>
+          <p> <%= link_to "Details", request_path(offer.request) %> </p>
+        </div>
+      </div>
     <% end %>
-  <h2> Canceled offers</h2>
+  </div>
+
+
+  <h2> CANCELED OFFERS</h2>
+  <div class="flex-card-container">
     <% @offers_canc.each do |offer| %>
-      <p> <%= image_tag "#{offer.request.sweet.picture}", alt: "Le Wagon", width: 200 %> </p>
-      <h3> <%= offer.request.description %> </h3>
-      <p> <%= offer.content %> </p>
-      <p> <%= offer.start_date %> </p>
-      <p> <%= offer.end_date %> </p>
-      <p> <%= offer.pick_up_location %> </p>
-      <p> <%= offer.status %> </p>
+      <div class="card-offer-content">
+        <p class="candy-pic"> <%= image_tag "#{offer.request.sweet.picture}"%> </p>
+        <div class="card-offer-text">
+          <h3> <%= offer.request.sweet.name %> </h3>
+          <p> Status: <%= offer.status %> </p>
+          <p> <i class="far fa-calendar-alt"></i> <%= offer.end_date %> </p>
+          <p> <i class="fas fa-map-marked-alt"></i> <%= offer.pick_up_location %> </p>
+          <p> <%= link_to "Details", request_path(offer.request) %> </p>
+        </div>
+      </div>
     <% end %>
+  </div>
+
+
 </div>

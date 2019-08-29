@@ -6,7 +6,6 @@ class PagesController < ApplicationController
    @offers = current_user.offers
    @offers_pend = offers_pending
    @offers_arch = offers_archived
-   @offers_conf = offers_confirmed
    @offers_canc = offers_canceled
    @requests = current_user.requests
    @user = current_user
@@ -36,18 +35,17 @@ class PagesController < ApplicationController
   end
 
   def offers_pending
-    offers_pend = current_user.offers.where(status: :pending)
+    offers_pend = current_user.offers.where(status: [:pending, :confirmed])
+    offers_pend.order(:status)
   end
 
   def offers_archived
     offers_arch = current_user.offers.where(status: :archived)
-  end
-
-  def offers_confirmed
-    offers_conf = current_user.offers.where(status: :confirmed)
+    offers_arch.order(:created_at)
   end
 
   def offers_canceled
     offers_canc = current_user.offers.where(status: :canceled)
+    offers_canc.order(:created_at)
   end
 end
