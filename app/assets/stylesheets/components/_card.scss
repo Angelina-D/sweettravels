@@ -97,14 +97,20 @@ justify-content: space-between; }
 }
 
 .card-sweet {
-  width: 300px;
-  background-color: white;
-  margin: auto;
+  background-color: $light-pink;
+  border-radius: 8px;
+  box-shadow: 15px 15px $pink-orange;
 
     img {
       background-size: cover;
-      height: 300px;
-      width: 300px;
+      height: 400px;
+      width: 400px;
+      padding: 20px;
+    }
+
+    .card-info {
+      padding-right: 20px;
+      padding-left: 20px;
     }
 }
 
