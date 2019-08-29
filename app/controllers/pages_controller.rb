@@ -30,4 +30,13 @@ class PagesController < ApplicationController
     end
     sum_donation
   end
+
+  def offers_pending
+  end
+
+  def offers_archived
+  end
+
+  def offers_confirmed
+  end
 end
