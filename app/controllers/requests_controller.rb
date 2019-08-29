@@ -8,6 +8,15 @@ class RequestsController < ApplicationController
     else
       @requests = Request.all
     end
+
+    @sweets = Sweet.where(id: @requests.sweet_id).geocoded
+
+    @markers = @sweets.map do |sweet|
+      {
+        lat: sweet.latitude,
+        lng: sweet.longitude
+      }
+    end
   end
 
   def show
