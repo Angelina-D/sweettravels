@@ -4,10 +4,11 @@
   <% @sweets.each do |sweet| %>
   <div class="card-sweet">
     <div class="card-img">
-      <%= cl_image_tag(sweet.picture, crop: :fill) %>
+      <%= link_to cl_image_tag(sweet.picture, crop: :fill), new_request_path %>
     </div>
     <p>Category: <%= sweet.category %></p>
     <p>Country: <%= sweet.country %></p>
+
   </div>
   <% end %>
 </div>
