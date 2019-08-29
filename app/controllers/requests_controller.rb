@@ -9,10 +9,6 @@ class RequestsController < ApplicationController
       @requests = Request.all
     end
 
-    # sweets = @requests.map do |request|
-    #   request.sweet
-    # end
-
     @markers = @requests.map do |request|
       {
         lat: request.sweet.latitude,
