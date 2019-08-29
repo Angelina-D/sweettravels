@@ -1,14 +1,15 @@
 <h1>Here are all the sweets to browse through</h1>
 
-<div class="flex-container-landing">
+<div class="container-sweet">
   <% @sweets.each do |sweet| %>
   <div class="card-sweet">
     <div class="card-img">
       <%= link_to cl_image_tag(sweet.picture, crop: :fill), new_request_path %>
     </div>
-    <p>Category: <%= sweet.category %></p>
-    <p>Country: <%= sweet.country %></p>
-
+      <div class="card-info">
+        <h4>Country: <%= sweet.country %></h4>
+        <p>Category: <%= sweet.category %></p>
+      </div>
   </div>
   <% end %>
 </div>
