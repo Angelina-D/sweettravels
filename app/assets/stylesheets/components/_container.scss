@@ -2,10 +2,16 @@
   display: flex;
 }
 
-.flex-container-landing{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
+.container-sweet{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    justify-items: center;
+    align-items: center;
+
+  & > div {
+    width: 400px;
+    margin: 2rem 0;
+  }
 }
 
 .container-box {
@@ -47,3 +53,4 @@
   width: 800px;
   margin: auto;
 }
+
