@@ -1,14 +1,15 @@
-<h1>Here is all the sweets Request!</h1>
-<p>You can bowse through to see all the sweet request for Candy all over the world!</p>
+<div class="container-top">
+  <h1>Here is all the sweets Request!</h1>
+  <p>You can bowse through to see all the sweet request for Candy all over the world!</p>
+  <%= form_tag(search_path, method: "get", class: "search_bar") do %>
 
-<%= form_tag(search_path, method: "get") do %>
-  <%= text_field_tag :search_sweet_name_and_country, nil, placeholder: "Search by sweet name and country!", class: "" %>
-  <%= submit_tag "Search"%>
-<% end %>
-
-<div class="card-request">
-  <%= render 'request_index' %>
+    <%= text_field_tag :search_sweet_name_and_country, nil, placeholder: "Search by sweet name and country" %>
+    <i id='search_icon' class="fa fa-search searchIcon"></i>
+    <%= submit_tag "", id:'search_button'%>
+  <% end %>
 </div>
+
+  <%= render 'request_index' %>
 
 <div
   id="map"
