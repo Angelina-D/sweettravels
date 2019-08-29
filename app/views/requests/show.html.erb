@@ -1,5 +1,6 @@
-<h1> request for <%= @request.sweet.name %></h1>
-<p>Find below the details of this request:</p>
+<h1><%= @request.sweet.name %> has been added!</h1>
+<p>Find below the details of this request</p>
+<%= link_to "Back to candies", sweets_path, class: "btn-info"%>
 
 <div class="card-light card">
   <%= render 'request_details' %>
