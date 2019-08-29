@@ -124,3 +124,25 @@ justify-content: space-between; }
 
 }
 
+.card-offer-content {
+  display: flex;
+  background: white;
+  width: 40%;
+  margin: 20px 36px 20px 0px;
+  height: auto;
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 15px 15px $pink;
+}
+
+.card-request-content {
+  display: flex;
+  background: white;
+  width: 30%;
+  margin: 20px 36px 20px 0px;
+  height: auto;
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 15px 15px $pink-orange;
+}
+

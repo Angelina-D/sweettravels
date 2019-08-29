@@ -4,6 +4,9 @@ class PagesController < ApplicationController
 
   def profile
    @offers = current_user.offers
+   @offers_pend = offers_pending
+   @offers_arch = offers_archived
+   @offers_canc = offers_canceled
    @requests = current_user.requests
    @user = current_user
    @sum_requests = sum_requests
@@ -29,5 +32,20 @@ class PagesController < ApplicationController
       offer.request.donation_cents += sum_donation
     end
     sum_donation
+  end
+
+  def offers_pending
+    offers_pend = current_user.offers.where(status: [:pending, :confirmed])
+    offers_pend.order(:status)
+  end
+
+  def offers_archived
+    offers_arch = current_user.offers.where(status: :archived)
+    offers_arch.order(:created_at)
+  end
+
+  def offers_canceled
+    offers_canc = current_user.offers.where(status: :canceled)
+    offers_canc.order(:created_at)
   end
 end
