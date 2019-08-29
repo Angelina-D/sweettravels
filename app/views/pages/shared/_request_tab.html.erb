@@ -1,0 +1,12 @@
+<div class="request-card">
+  <h2> All your requests</h2>
+    <% @requests.each do |request| %>
+      <h4> <%= request.sweet.name %> </h4>
+      <p> <%= request.sweet.country %> </p>
+      <p> <%= request.description %> </p>
+      <p> <%= request.charity.name %> </p>
+      <p> <%= request.price_cents %> </p>
+      <p> <%= request.donation_cents %> </p>
+      <p> <%= request.quantity %> </p>
+  <% end %>
+</div>

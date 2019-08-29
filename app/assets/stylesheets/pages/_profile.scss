@@ -1,0 +1,29 @@
+.flex-wrap {
+  display: flex;
+}
+
+.profile-info {
+  background-color: #C7F0DB;
+  padding: 30px;
+  height: 566px;
+
+  img {
+    border-radius: 50%;
+  }
+
+  h3 {
+    text-align: center;
+    margin: 30px;
+  }
+
+  p {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  i {
+    color: #FF970F;
+    font-size: 28px;
+    margin-right: 10px;
+  }
+}

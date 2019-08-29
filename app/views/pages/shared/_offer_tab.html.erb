@@ -1,0 +1,11 @@
+<div class="offer-cards">
+  <h2> The offers you made</h2>
+    <% @offers.each do |offer| %>
+      <h3> <%= offer.request.description %> </h3>
+      <p> <%= offer.content %> </p>
+      <p> <%= offer.start_date %> </p>
+      <p> <%= offer.end_date %> </p>
+      <p> <%= offer.pick_up_location %> </p>
+      <p> <%= offer.status %> </p>
+    <% end %>
+</div>

@@ -1,6 +1,7 @@
-<%= image_tag "#{@user.photo}", alt: "Avatar", width: 200 %>
-<p> Hi, <%= @user.full_name %>!</p>
-<p> Contact: <%= @user.email %> </p>
-<p> <%= @sum_requests %> Requests made </p>
-<p> <%= @sum_confirmed_offers %> times a Hero </p>
-<p> <%= @sum_donation %> Raised </p>
+<div class="profile-info">
+  <%= image_tag "#{@user.photo}", alt: "Avatar", width: 200 %>
+  <h3> <%= @user.full_name %> </h3>
+  <p> <i class="fas fa-candy-cane"></i> <%= @sum_requests %> Requests made </p>
+  <p> <i class="fas fa-luggage-cart"></i> <%= @sum_confirmed_offers %> times a Hero </p>
+  <p> <i class="fas fa-hand-holding-heart"></i> <%= @sum_donation %> € Raised </p>
+</div>
