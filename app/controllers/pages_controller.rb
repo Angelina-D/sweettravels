@@ -4,6 +4,10 @@ class PagesController < ApplicationController
 
   def profile
    @offers = current_user.offers
+   @offers_pend = offers_pending
+   @offers_arch = offers_archived
+   @offers_conf = offers_confirmed
+   @offers_canc = offers_canceled
    @requests = current_user.requests
    @user = current_user
    @sum_requests = sum_requests
@@ -32,11 +36,18 @@ class PagesController < ApplicationController
   end
 
   def offers_pending
+    offers_pend = current_user.offers.where(status: :pending)
   end
 
   def offers_archived
+    offers_arch = current_user.offers.where(status: :archived)
   end
 
   def offers_confirmed
+    offers_conf = current_user.offers.where(status: :confirmed)
+  end
+
+  def offers_canceled
+    offers_canc = current_user.offers.where(status: :canceled)
   end
 end
