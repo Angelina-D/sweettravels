@@ -9,16 +9,24 @@
   width: 600px;
 }
 
+
+.card-light{
+  border: 2px solid grey;
+  width: 600px;
+  margin: auto;
+}
 .card{
-  padding:40px;
-  background-color: $beige !important;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  &-light{
-    border: 2px solid grey;
+  flex-direction: row;
+  &-request{
+    display: flex;
+    height: 150px;
     width: 600px;
-    margin: auto;
-    // display: flex;
+    margin: 0 auto;
+
+    &-info {
+      flex-grow:1;
+    }
+
   }
 
     &-img{
@@ -26,6 +34,60 @@
     width: 445px;
   }
 
+}
+.card-request-info{
+  flex: 1;
+  display: flex;
+  flex-direction:column;
+  padding: 16px;
+
+}
+
+.card-request{
+  overflow: hidden;
+  box-shadow: 12px 12px $pink-orange;
+  margin-bottom: 18px;
+  color: black;
+  border: none;
+  background-color: $light-pink;
+  p{
+    font-size: 12px;
+  }
+  :hover{
+    color: $red;
+  }
+}
+.card-picture{
+  height: 100%;
+  width: 178px;
+  object-fit: fill;
+  padding: 8px;
+}
+
+.card-charity{ i{ color: red; } } .card-donation{ display: flex;
+justify-content: space-between; }
+
+.card-price{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-total-column{
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.card-border-bottom{
+  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+  p {
+    margin-bottom: 5px;
+  }
+}
+
+.card-avatar{
+  display:flex
 }
 
 .card-landing {
@@ -35,14 +97,20 @@
 }
 
 .card-sweet {
-  width: 300px;
-  background-color: white;
-  margin: auto;
+  background-color: $light-pink;
+  border-radius: 8px;
+  box-shadow: 15px 15px $pink-orange;
 
     img {
       background-size: cover;
-      height: 300px;
-      width: 300px;
+      height: 400px;
+      width: 400px;
+      padding: 20px;
+    }
+
+    .card-info {
+      padding-right: 20px;
+      padding-left: 20px;
     }
 }
 
@@ -77,6 +145,4 @@
   border-radius: 8px;
   box-shadow: 15px 15px $pink-orange;
 }
-
-
 

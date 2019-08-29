@@ -1,18 +1,31 @@
 <% @requests.each do |request| %>
-  <%= link_to request_path(request.id), :action => 'go', class: "card card-light" do %>
-  <div class="">
+  <%= link_to request_path(request.id), :action => 'go', class: "card card-request" do %>
     <%= cl_image_tag(request.sweet.picture,
-    crop: :fill) %>
-  </div>
-    <p>description:  <%= request.description %></p> <br>
-    <p>price:  <%= convert_currency(request.price_cents) %> €</p><br>
-    <p>donation:   <%= convert_currency(request.donation_cents) %> €</p> <br>
-    <p>quantity:<%= request.quantity %> </p><br>
-    <p>charity: <%= request.charity_id %></p> <br>
-    <p>country: <%= request.sweet.country %></p> <br>
-    <div class="">
-      <%= cl_image_tag(request.user.photo,
-       {class: "avatar"}) %>
+    {class:"card-picture"}) %>
+
+    <div class="card-request-info">
+      <div class="card-donation">
+        <p>  <i class="fas fa-globe-americas"></i> <%= request.sweet.country %></p>
+        <div class="card-charity">
+          <p> <i class="fas fa-heart"></i> <%= request.charity.name %></p>
+        </div>
+      </div>
+      <div class="card-price">
+        <div class="card-avatar">
+          <%= cl_image_tag(request.user.photo,
+           {class: "avatar"}) %>
+           <p>  <%= request.user.full_name %></p>
+        </div>
+         <div class="card-total-column">
+            <p>donation: <%= convert_currency(request.donation_cents) %> €</p>
+          <div class="card-border-bottom">
+            <p>price:  <%= convert_currency(request.price_cents) %> €</p>
+          </div>
+            <p class='mt-2'>total:  <%= convert_currency(request.price_cents + request.donation_cents) %> €</p>
+        </div>
+      </div>
     </div>
   <% end %>
 <% end %>
+
+
