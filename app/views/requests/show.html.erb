@@ -1,18 +1,35 @@
-<h1><%= @request.sweet.name %> has been added!</h1>
-<p>Find below the details of this request</p>
-<%= link_to "Back to candies", sweets_path, class: "btn-info"%>
+<div class="container-top">
+  <h1> Request for <%= @request.sweet.name %></h1>
+  <p>Find below the details of this request</p>
+</div>
 
-<div class="card-light card">
-  <%= render 'request_details' %>
-
-  <h3>Offers:</h3>
-  <%= render 'offer' %>
-
-  <div class="btn-action">
-    <%= link_to 'MAKE AN OFFER', new_request_offer_path(@request) %>
+<div class="container-show-request">
+  <div class="card-request-user">
+    <div class="row1-request-user">
+      <%= cl_image_tag(@request.user.photo,
+      {class: "avatar"}) %>
+    </div>
+    <div class="row2-request-user">
+      <p>SWEETIE</p>
+    </div>
+    <div class="row3-request-user">
+      <p>  <%= @request.user.full_name %></p>
+    </div>
+    <div class="row4-request-user">
+      <%= link_to "Back to candies", sweets_path, class: "btn-info"%>
+    </div>
   </div>
+  <div class="card-request-show">
+    <%= render 'request_details' %>
 
-    <div class="btn-action">
-    <%= link_to 'DEMOLISH REQUEST', request_path(@request), method: :delete, data: { confirm: 'Are you sure?'} %>
+    <div class="row4-request">
+      <div class="btn-action mt-2">
+        <%= link_to 'MAKE AN OFFER', new_request_offer_path(@request) %>
+      </div>
+
+  <!--     <div class="btn-action">
+        <%#= link_to 'DEMOLISH REQUEST', request_path(@request), method: :delete, data: { confirm: 'Are you sure?'} %>
+      </div> -->
+    </div>
   </div>
 </div>
