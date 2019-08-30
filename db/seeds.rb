@@ -13,7 +13,21 @@ puts 'Oh data destroyed'
 
 ############################ SWEET ##########################################
 
-Sweet.create(
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sweet1 = Sweet.create(
   name: 'Feijoa Candy',
   description: 'Mayceys lollies continue to be a Kiwi favourite',
   picture: 'https://www.shopnewzealand.co.nz/sites/default/files/styles/large/public/imported_images/feijoa_sweets.jpg?itok=45DsESd6',
@@ -21,7 +35,7 @@ Sweet.create(
   country: 'New Zealand',
   )
 
-Sweet.create(
+sweet2 = Sweet.create(
   name: 'Dragibus',
   description: 'France best kept secret',
   picture: 'https://24h-chrono.fr/127-large_default/haribo-dragibus.jpg',
@@ -29,7 +43,7 @@ Sweet.create(
   country: 'France',
   )
 
-Sweet.create(
+sweet3 = Sweet.create(
   name: 'Halal Fizzy Filled Hearts',
    description: "Perfect for Valentinesday (14th Feb) or Weddings",
    picture: 'https://images-na.ssl-images-amazon.com/images/I/41dHxPoTxfL._SX355_.jpg',
@@ -37,7 +51,7 @@ Sweet.create(
    country: 'Spain',
    )
 
-Sweet.create(
+sweet4 = Sweet.create(
   name: 'Balas Sabor Coco',
   description: 'For coco cravings and birthday parties',
   picture: 'https://www.vicios-brasileiros.de/images/product_images/original_images/Bala-Coco-Brasilien.jpg',
@@ -45,75 +59,82 @@ Sweet.create(
   country: 'Brasil',
   )
 
-Sweet.create(
+sweet5 = Sweet.create(
   name: '이것들을 사랑해',
   description: 'Look at that promising cow on the package - its awesome!',
   picture: 'http://blog.snackfever.com/wp-content/uploads/2017/01/malang-cow-strawberry-e1484313141780.png',
   category: 'Bonbon',
   country: 'Korea',
   )
-Sweet.create(
+sweet6 = Sweet.create!(
   name: 'Rossana',
   description: "Nuts in there! Watch your allergy",
   picture: "https://images-na.ssl-images-amazon.com/images/I/81%2B-vLir0UL._SL1500_.jpg",
   category: 'Choco',
   country: 'Italy',
   )
-Sweet.create(
+sweet7 = Sweet.create(
   name: 'Chocolate covered Bretzels',
   description: 'The best of all candies ever',
   picture: 'https://www.flipz.com/wp-content/uploads/2015/05/Dark-Chocolate-Flipz.jpg',
   category:'Choco',
   country: 'USA',
   )
+sweet8 = Sweet.create(
+  name: 'Prinzenrolle',
+  description: 'Very awesome good quality 4.5/5 stars',
+  picture: 'https://www.staples.de/content/images/product/5865718_1_xnl.jpg',
+  category:'Choco',
+  country: 'Germany',
+  )
 puts "Sweets created!"
 
 ############################## USER ############################################
-User.create(
+user1 = User.create(
   full_name: 'Annegret' ,
   photo: 'https://images.halloweencostumes.com/products/51294/1-1/childs-german-girl-costume-.jpg',
   email:'potatoe@hotmail.com',
   password: '123456'
   )
-User.create(
+user2 = User.create(
   full_name: 'Kaylee' ,
   photo: 'https://avatars3.githubusercontent.com/u/50417340?v=4',
   email:'bootstrapisevil@hotmail.com',
   password: '123456'
   )
 
-User.create(
+user3 = User.create(
   full_name: 'Max' ,
   photo: 'https://avatars2.githubusercontent.com/u/51816032?v=4',
   email:'cssisevil@hotmail.com',
   password: '123456'
   )
 
-User.create(
+user4 = User.create(
   full_name: 'Jorge' ,
   photo: 'https://avatars1.githubusercontent.com/u/28198714?v=4',
-  email:'jsisevil@hotmail.com',
+  email:'jsisthebest@hotmail.com',
   password: '123456'
   )
 
-User.create(
+user5 = User.create(
   full_name: 'Yann' ,
   photo: 'https://d17fnq9dkz9hgj.cloudfront.net/uploads/2012/11/153546296-items-dangerous-pet-birds.jpg',
   email:'jsisevil@hotmail.com',
   password: '123456'
   )
 
-User.create(
+user6 = User.create(
   full_name: 'Malina' ,
   photo: 'https://avatars2.githubusercontent.com/u/41272214?v=4',
-  email:'jsisevil@hotmail.com',
+  email:'rubyisevil@hotmail.com',
   password: '123456'
   )
 
-User.create(
+user7 = User.create!(
   full_name: 'Angelo' ,
   photo: 'https://avatars1.githubusercontent.com/u/51519319?v=4',
-  email:'jsisevil@hotmail.com',
+  email:'cssisawesome@hotmail.com',
   password: '123456'
   )
 
@@ -122,10 +143,10 @@ puts "Users created!"
 ####################### CHARITY ###############################
 
 Charity.create(
-  name: "NZ Cancer Research",
-  cause: "Health",
-  description: 'NZ Cancer Research, is an NZ organisation to build a society to help people with cancer through their diagnosis and healing.',
-  picture: 'https://auckland-northland.cancernz.org.nz/assets/Uploads/cancer-society2x.gif'
+  name: "Global Gift Guide",
+  cause: "Education",
+  description: 'Children are the faces of the future, and their education is one of the most critical factors to help a community rise above poverty. Your gift of education will not only help a child but her entire village. ',
+  picture: 'https://cdn.shopify.com/s/files/1/0104/7098/1690/files/logo_817x140.png?v=1528232228'
   )
 
 Charity.create(
@@ -137,17 +158,75 @@ Charity.create(
 
 puts "Charity created!"
 ##################### REQUEST ########################
-7.times do
-  Request.create(
-    description: 'Hello I would like a couple of sweet!',
+Request.create(
+    description: 'I am Craving Feijoa!',
     price_cents: rand(1000..2500),
     donation_cents: rand(500..2000),
     quantity: rand(1..5),
     charity_id: Charity.all.sample.id,
-    user_id: User.all.sample.id,
-    sweet_id: Sweet.all.sample.id,
+    user: user3,
+    sweet: sweet1,
     )
-end
+
+Request.create(
+    description: 'Would love to have these right now! 고맙습니다',
+    price_cents: rand(1000..2500),
+    donation_cents: rand(500..2000),
+    quantity: rand(1..5),
+    charity_id: Charity.all.sample.id,
+    user: user2,
+    sweet: sweet5,
+    )
+
+Request.create(
+    description: 'Hola! Could someone bring these 🥰',
+    price_cents: rand(1000..2500),
+    donation_cents: rand(500..2000),
+    quantity: rand(1..5),
+    charity_id: Charity.all.sample.id,
+    user: user4,
+    sweet: sweet3,
+    )
+
+Request.create(
+    description: 'I am only here because of parrots & Dragibus',
+    price_cents: rand(1000..2500),
+    donation_cents: rand(500..2000),
+    quantity: rand(1..5),
+    charity_id: Charity.all.sample.id,
+    user: user5,
+    sweet: sweet2,
+    )
+
+Request.create(
+    description: 'My all time Favorite - send help pls',
+    price_cents: rand(1000..2500),
+    donation_cents: rand(500..2000),
+    quantity: rand(1..5),
+    charity_id: Charity.all.sample.id,
+    user: user6,
+    sweet: sweet7,
+    )
+
+Request.create(
+    description: 'My all time Favorite - send help pls',
+    price_cents: rand(1000..2500),
+    donation_cents: rand(500..2000),
+    quantity: rand(1..5),
+    charity_id: Charity.all.sample.id,
+    user: user7,
+    sweet: sweet6,
+    )
+
+Request.create!(
+    description: 'My all time Favorite - send help pls',
+    price_cents: rand(1000..2500),
+    donation_cents: rand(500..2000),
+    quantity: rand(1..5),
+    charity_id: Charity.all.sample.id,
+    user: user1,
+    sweet: sweet8,
+    )
 puts "Requests created!"
 
 # ################################ OFFER ####################################
@@ -156,10 +235,10 @@ puts "Requests created!"
     content: "Hey everyone, I'm going to the US for two weeks",
     end_date: "#{date = Time.at(rand * Time.now.to_i)}",
     start_date: "#{date-10.days}",
-    user_id: User.all.sample.id,
+    user: User.all.sample,
     pick_up_location: 'berlin',
     status: rand(0..3),
-    request_id: Request.all.sample.id,
+    request: Request.all.sample,
     )
 end
 
@@ -167,30 +246,30 @@ Offer.create(
   content: "Hey everyone, I'm going to France for two weeks I like to talk about my life blablabal ablablba labalbalbal balablba labab albalbalbal abalbalbalbalbalbal balbalbalbal balablab albalba lbal balablaba lbalbalbalabl abalba lbalal abalbabla",
   end_date: "#{date = Time.at(rand * Time.now.to_i)}",
   start_date: "#{date-10.days}",
-  user_id: User.all.sample.id,
+  user: User.all.sample,
   pick_up_location: 'berlin' ,
   status: rand(0..3),
-  request_id: Request.all.sample.id,
+  request: Request.all.sample,
   )
 
 Offer.create(
   content: "Hey everyone, I'm going to the UK for two weeks",
   end_date: "#{date = Time.at(rand * Time.now.to_i)}",
   start_date: "#{date-10.days}",
-  user_id: User.all.sample.id,
+  user: User.all.sample,
   pick_up_location: 'berlin',
   status: rand(0..3),
-  request_id: Request.all.sample.id,
+  request: Request.all.sample,
   )
 
 Offer.create(
   content: "Hey everyone, I'm going to Turkey for two weeks",
   end_date: "#{date = Time.at(rand * Time.now.to_i)}",
   start_date: "#{date-10.days}",
-  user_id: User.all.sample.id,
+  user: User.all.sample,
   pick_up_location: 'berlin',
   status: rand(0..3),
-  request_id: Request.all.sample.id,
+  request: Request.all.sample,
   )
 
 puts "Offers created!"
