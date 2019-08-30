@@ -14,11 +14,11 @@ puts 'Oh data destroyed'
 ############################ SWEET ##########################################
 
 Sweet.create(
-  name: 'Cappucino M&M',
-  description: 'M&M with a coffe explosion',
-  picture: 'https://images-na.ssl-images-amazon.com/images/I/81Y0GnZK3pL._SY450_.jpg',
-  category:'Candy',
-  country: 'US',
+  name: 'Feijoa Candy',
+  description: 'Mayceys lollies continue to be a Kiwi favourite',
+  picture: 'https://www.shopnewzealand.co.nz/sites/default/files/styles/large/public/imported_images/feijoa_sweets.jpg?itok=45DsESd6',
+  category:'Lollies',
+  country: 'New Zealand',
   )
 
 Sweet.create(
@@ -30,68 +30,89 @@ Sweet.create(
   )
 
 Sweet.create(
-  name: 'Milka Biscuit',
-   description: 'Classic Milka super charge with an inside biscuit',
-   picture: 'https://cdn.shopify.com/s/files/1/1232/4978/products/milka_choco_keks.jpg?v=1564727420',
-   category:'Choco',
-   country: 'Germany',
+  name: 'Halal Fizzy Filled Hearts',
+   description: "Perfect for Valentinesday (14th Feb) or Weddings",
+   picture: 'https://images-na.ssl-images-amazon.com/images/I/41dHxPoTxfL._SX355_.jpg',
+   category:'Gummibear',
+   country: 'Spain',
    )
 
 Sweet.create(
-  name: 'Bubble Gum',
-  description: 'Specialy crafter for bubble practice',
-  picture: 'https://images-na.ssl-images-amazon.com/images/I/614yjLRZ%2BNL._SX679_.jpg',
-  category: 'Gum',
-  country: 'UK',
+  name: 'Balas Sabor Coco',
+  description: 'For coco cravings and birthday parties',
+  picture: 'https://www.vicios-brasileiros.de/images/product_images/original_images/Bala-Coco-Brasilien.jpg',
+  category: 'Bonbon',
+  country: 'Brasil',
   )
 
 Sweet.create(
-  name: 'Bubble Gum',
-  description: 'Specialy crafter for bubble practice',
-  picture: 'https://images-na.ssl-images-amazon.com/images/I/614yjLRZ%2BNL._SX679_.jpg',
-  category: 'Gum',
-  country: 'Vietnam',
+  name: '이것들을 사랑해',
+  description: 'Look at that promising cow on the package - its awesome!',
+  picture: 'http://blog.snackfever.com/wp-content/uploads/2017/01/malang-cow-strawberry-e1484313141780.png',
+  category: 'Bonbon',
+  country: 'Korea',
   )
 Sweet.create(
-  name: 'Bubble Gum',
-  description: 'Specialy crafter for bubble practice',
-  picture: 'https://images-na.ssl-images-amazon.com/images/I/614yjLRZ%2BNL._SX679_.jpg',
-  category: 'Gum',
-  country: 'Brazil',
+  name: 'Rossana',
+  description: "Nuts in there! Watch your allergy",
+  picture: "https://images-na.ssl-images-amazon.com/images/I/81%2B-vLir0UL._SL1500_.jpg",
+  category: 'Choco',
+  country: 'Italy',
   )
 Sweet.create(
-  name: 'Cappucino M&M',
-  description: 'M&M with a coffe explosion',
-  picture: 'https://images-na.ssl-images-amazon.com/images/I/81Y0GnZK3pL._SY450_.jpg',
-  category:'Candy',
-  country: 'Chile',
+  name: 'Chocolate covered Bretzels',
+  description: 'The best of all candies ever',
+  picture: 'https://www.flipz.com/wp-content/uploads/2015/05/Dark-Chocolate-Flipz.jpg',
+  category:'Choco',
+  country: 'USA',
   )
 puts "Sweets created!"
 
 ############################## USER ############################################
 User.create(
-  full_name: 'Jim' ,
-  photo: 'https://www.maxim.com/.image/t_share/MTUwOTU3OTc1MDY5MDA5MDQ5/ace-ventura-jim-carrey.jpg',
-  email:'rubyismylord@hotmail.com',
+  full_name: 'Annegret' ,
+  photo: 'https://images.halloweencostumes.com/products/51294/1-1/childs-german-girl-costume-.jpg',
+  email:'potatoe@hotmail.com',
   password: '123456'
   )
 User.create(
-  full_name: 'Macaulay' ,
-  photo: 'https://www.gannett-cdn.com/presto/2019/08/07/USAT/c21bdd69-caef-4838-861d-a7a88b877235-x.JPG?width=540&height=&fit=bounds&auto=webp',
+  full_name: 'Kaylee' ,
+  photo: 'https://avatars3.githubusercontent.com/u/50417340?v=4',
   email:'bootstrapisevil@hotmail.com',
   password: '123456'
   )
 
 User.create(
-  full_name: 'Will' ,
-  photo: 'https://www.thesun.co.uk/wp-content/uploads/2017/07/nintchdbpict000289398111.jpg',
+  full_name: 'Max' ,
+  photo: 'https://avatars2.githubusercontent.com/u/51816032?v=4',
   email:'cssisevil@hotmail.com',
   password: '123456'
   )
 
 User.create(
-  full_name: 'Victoria' ,
-  photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5qxXw866cYtPpiIHOQumzIjXQJ2RfnRm7HPDzZlTnSdktgO_F',
+  full_name: 'Jorge' ,
+  photo: 'https://avatars1.githubusercontent.com/u/28198714?v=4',
+  email:'jsisevil@hotmail.com',
+  password: '123456'
+  )
+
+User.create(
+  full_name: 'Yann' ,
+  photo: 'https://d17fnq9dkz9hgj.cloudfront.net/uploads/2012/11/153546296-items-dangerous-pet-birds.jpg',
+  email:'jsisevil@hotmail.com',
+  password: '123456'
+  )
+
+User.create(
+  full_name: 'Malina' ,
+  photo: 'https://avatars2.githubusercontent.com/u/41272214?v=4',
+  email:'jsisevil@hotmail.com',
+  password: '123456'
+  )
+
+User.create(
+  full_name: 'Angelo' ,
+  photo: 'https://avatars1.githubusercontent.com/u/51519319?v=4',
   email:'jsisevil@hotmail.com',
   password: '123456'
   )
@@ -101,10 +122,10 @@ puts "Users created!"
 ####################### CHARITY ###############################
 
 Charity.create(
-  name: "Doctors without border",
+  name: "NZ Cancer Research",
   cause: "Health",
-  description: 'Doctors Without Borders, is an international humanitarian medical non-governmental organisation (NGO) of French origin best known for its projects in conflict zones and in countries affected by endemic diseases.',
-  picture: 'https://armacad.info/images/2016/07/doctors-without-borders-k8t3CTUSaD1UHYV2pTmtzyK1Q78nN9zW.png'
+  description: 'NZ Cancer Research, is an NZ organisation to build a society to help people with cancer through their diagnosis and healing.',
+  picture: 'https://auckland-northland.cancernz.org.nz/assets/Uploads/cancer-society2x.gif'
   )
 
 Charity.create(
