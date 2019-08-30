@@ -87,7 +87,7 @@
   flex-direction: row;
   &-request{
     display: flex;
-    height: 150px;
+    height: 180px;
     width: 600px;
     margin: 0 auto;
 
@@ -119,15 +119,15 @@
   border: none;
   background-color: $light-pink;
   p{
-    font-size: 12px;
+    font-size: 18px;
   }
   :hover{
-    color: $red;
+    color: white;
   }
 }
 .card-picture{
   height: 100%;
-  width: 178px;
+  width: 188px;
   object-fit: fill;
   padding: 8px;
 }
