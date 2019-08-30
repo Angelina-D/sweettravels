@@ -1,9 +1,13 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Amiko|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Passion+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Red+Hat+Text&display=swap');
+
 // Define fonts for body and headers
 $body-font: 'Red Hat Text', sans-serif;
 $headers-font: 'Amiko', sans-serif;
+$my-font: 'Passion One', cursive;
+
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
