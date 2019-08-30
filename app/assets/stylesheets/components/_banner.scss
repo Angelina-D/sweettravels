@@ -18,3 +18,54 @@
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
+.banner__money {
+  background-size: cover;
+  background-position: center;
+  background-image: asset-url('city.png');
+  min-height: 100vh;
+  min-width: 1024px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 5rem;
+  color: red;
+    flex-wrap: wrap;
+
+  &-raised {
+
+    h1 {
+    font-family: 'Passion One', cursive;
+    font-size: 150px;
+    letter-spacing: 8px;
+    color: #C7F0DB;
+    font-weight: bold;
+    text-shadow: 5px 11px 0px #49BEB7;
+    }
+
+
+
+  }
+
+  &-number {
+
+    display: flex;
+    h1 {
+
+    font-family: 'Passion One', cursive;
+    font-size: 150px;
+    color: #49BEB7;
+    font-weight: bold;
+    background-color: #C7F0DB;
+    width: 120px;
+    text-align: center;
+    margin: 0 6px;
+    }
+    .comma {
+      background-color: transparent;
+      transform: translateY(50px);
+      width: 70px;
+    }
+  }
+
+}
