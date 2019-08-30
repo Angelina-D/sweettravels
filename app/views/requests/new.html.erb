@@ -1,12 +1,12 @@
 <%= link_to "back to candies", sweets_path , class: 'btn-info' %>
 <div class="form-container">
-<h1>Create you new Candy request</h1>
+<h1>Create a new Candy request</h1>
 <p>Please fill in the following details</p>
   <div class="form-style">
     <%= simple_form_for(@request) do |f| %>
       <%= f.error_notification %>
      <div class=“”>
-       <%= f.input :description %>
+       <%= f.input :description, label: 'Message:' %>
        <%= f.input :price_cents, label: 'Candy price:'%>
        <%= f.input :donation_cents, label: 'Donation:'  %>
        <%= f.input :quantity %>
