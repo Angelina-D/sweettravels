@@ -1,21 +1,24 @@
-<h1>See Details of this Offer</h1>
-<div class="container-detail">
 
+<div class="container-top">
+  <h1>See Details of this Offer</h1>
+</div>
+<div class="container-detail">
   <div class="card-detail-offer">
-  <div class="container-offer">
+    <div class="container-offer">
     <%= cl_image_tag(@offer.user.photo,
     {class: "avatar"}) %>
-    <div class='container-content'>
+      <div class='container-content'>
       <h4><%= @offer.user.full_name %>'s offer</h4>
       <p>Status: <%= @offer.status %></p>
+      </div>
     </div>
-  </div>
-
   <p>Message:</p>
-    <%= @offer.content %>
+  <%= @offer.content %>
   <p>Will be back <%= @offer.end_date %></p>
   <p>Pick Up Location: <%= @offer.pick_up_location %></p>
-
-
-</div>
+  <div class="mt-5">
+    <%= link_to 'Go to Profile', profile_path, class: 'btn-action mr-4' %>
+    <%= link_to 'Back to request', requests_path, class: 'btn-action' %>
+  </div>
+  </div>
 </div>
