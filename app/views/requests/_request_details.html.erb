@@ -1,18 +1,21 @@
-<p> created: <%= @request.created_at.to_formatted_s(:long_ordinal) %></p>
-<p> description: <%= @request.description %></p>
-<p> user: <%= @request.user.full_name %></p>
-<%= cl_image_tag(@request.user.photo,
-{class: "avatar"}) %>
+<div class="row1-request">
+  <%= cl_image_tag(@request.sweet.picture,
+  crop: :fill) %>
+</div>
 
-<h3>sweet: <%= @request.sweet.name %></h3>
-<%= cl_image_tag(@request.sweet.picture,
-crop: :fill) %>
+<div class="row2-request">
+  <h2><%= @request.sweet.name %></h3>
+  <p> created the <%= @request.created_at.to_formatted_s(:long_ordinal) %></p>
+  <p> Pack of <%= @request.quantity %>g</p>
+  <p> Message: <%= @request.description %></p>
+</div>
 
-<p> price: <%= convert_currency(@request.price_cents)%></p>
-<p> donation: <%= convert_currency(@request.donation_cents) %> </p>
-<p> quantity: <%= @request.quantity %></p>
+<div class="text-left row3-request">
+  <p><i class="fas fa-heart"></i> <%= @request.charity.name %></p>
+  <p> Donation: <%= convert_currency(@request.donation_cents) %> </p>
+  <div class="card-border-bottom-show">
+    <p> Estimate price: <%= convert_currency(@request.price_cents)%></p>
+  </div>
+  <p> Estimate total: <%= convert_currency(@request.price_cents + @request.donation_cents)%></p>
+</div>
 
-<h3> charity: <%= @request.charity.name %></h3>
-<p>Charity cause: <%= @request.charity.description %></p>
-<%= cl_image_tag(@request.charity.picture,
-crop: :fill) %>
