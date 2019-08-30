@@ -137,7 +137,7 @@ puts "Requests created!"
     start_date: "#{date-10.days}",
     user_id: User.all.sample.id,
     pick_up_location: 'berlin',
-    status: rand(0..2),
+    status: rand(0..3),
     request_id: Request.all.sample.id,
     )
 end
@@ -148,7 +148,7 @@ Offer.create(
   start_date: "#{date-10.days}",
   user_id: User.all.sample.id,
   pick_up_location: 'berlin' ,
-  status: rand(0..2),
+  status: rand(0..3),
   request_id: Request.all.sample.id,
   )
 
@@ -158,7 +158,7 @@ Offer.create(
   start_date: "#{date-10.days}",
   user_id: User.all.sample.id,
   pick_up_location: 'berlin',
-  status: rand(0..2),
+  status: rand(0..3),
   request_id: Request.all.sample.id,
   )
 
@@ -168,7 +168,7 @@ Offer.create(
   start_date: "#{date-10.days}",
   user_id: User.all.sample.id,
   pick_up_location: 'berlin',
-  status: rand(0..2),
+  status: rand(0..3),
   request_id: Request.all.sample.id,
   )
 

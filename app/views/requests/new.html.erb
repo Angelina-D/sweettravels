@@ -7,8 +7,8 @@
       <%= f.error_notification %>
      <div class=“”>
        <%= f.input :description %>
-       <%= f.input :price_cents %>
-       <%= f.input :donation_cents %>
+       <%= f.input :price_cents, label: 'Candy price:'%>
+       <%= f.input :donation_cents, label: 'Donation:'  %>
        <%= f.input :quantity %>
        <%= f.association :charity, as: :radio_buttons %>
        <%= f.association :sweet, as: :radio_buttons %>

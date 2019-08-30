@@ -1,0 +1,27 @@
+<div class="cards-wr-margin">
+  <h2> ALL YOUR REQUESTS</h2>
+  <div class="flex-card-container">
+    <% @requests.each do |request| %>
+      <div class="card-request-content">
+        <p class="candy-pic-request"> <%= image_tag "#{request.sweet.picture}"%> </p>
+        <% if @offers.where(request_id: request.id).nil? %>
+          <p><%= No Offers %></p>
+          <% else %>
+          <p> <%= link_to @offers.where(request_id: request.id).count %></p>
+        <% end %>
+        <div class="card-request-text">
+          <h3> <%= request.sweet.name %> </h3>
+          <p> <%= request.quantity %>x</p>
+          <p> <i class="fas fa-globe-americas"></i> <%= request.sweet.country %> </p>
+          <p> <i class="fas fa-heart"></i> <%= request.charity.name %> </p>
+          <div class="calculator">
+            <p> Candy <%= request.price_cents % 100 %> €</p>
+            <p> Charity <%= request.donation_cents % 100 %> €</p>
+            <p class="smaller-line">_________</p>
+            <p>total 300€</p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

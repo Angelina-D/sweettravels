@@ -1,0 +1,108 @@
+.flex-wrap-container {
+  display: flex;
+}
+
+.profile-info {
+  background-color: #C7F0DB;
+  padding: 30px;
+  height: 566px;
+
+  img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    text-align: center;
+    margin: 30px;
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
+
+  i {
+    color: #FF970F;
+    font-size: 28px;
+    margin-right: 10px;
+  }
+}
+
+.sections {
+  display: flex;
+
+  h5 {
+    font-size: 14px;
+    margin: 7px;
+    text-align: center;
+    color: #FF84B6;
+  }
+}
+
+.cards-wr-margin {
+  margin-left: 70px;
+  margin-top: 20px;
+
+  h2 {
+    font-size: 33px;
+    margin-top: 20px;
+    color: #EF81B6;
+  }
+}
+
+.flex-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 46px;
+}
+
+.candy-pic {
+  img {
+    width: 150px;
+    height: 175px;
+  // margin: 10px;
+  }
+}
+
+.candy-pic-request {
+  img {
+    height: 50px;
+  }
+}
+
+.card-offer-text {
+  h3 {
+    font-size: 22px;
+    margin: 10px;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 10px;
+  }
+}
+
+.card-request-text {
+  h3 {
+    font-size: 21px;
+    margin: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 10px;
+  }
+}
+
+.calculator {
+    border-color: black;
+    border: #fff1f6 solid;
+    p {
+      font-size: 15px;
+      margin: 4px;
+    }
+}
+
+.smaller-line {
+  margin-top: 0px;
+}

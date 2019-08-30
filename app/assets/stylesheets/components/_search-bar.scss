@@ -1,0 +1,27 @@
+.search_bar  {
+ input{
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $dark-pink;
+  color: $pink;
+  width: 400px;
+  text-align: right;
+  padding: 4px;
+  }
+
+  input:focus {
+    outline-width: 0;
+}
+  #search_icon{
+    color: $pink;
+  }
+  #search_button{
+    display: none;
+  }
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $pink;
+  opacity: 1; /* Firefox */
+}
