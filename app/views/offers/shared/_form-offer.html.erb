@@ -1,7 +1,6 @@
 <%= simple_form_for [@request, @offer] do |f| %>
-<%= f.input :content %>
-<%= f.input :start_date %>
-<%= f.input :end_date %>
+<%= f.input :content, label: 'Write a message:' %>
+<%= f.input :end_date,label: 'Arrival date' %>
 <%= f.input :pick_up_location %>
-<%= f.button :submit %>
+<%= f.button :submit, class: 'btn-action' %>
 <% end %>
