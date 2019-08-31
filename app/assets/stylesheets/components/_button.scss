@@ -1,9 +1,14 @@
+
+
+// ################## PLEASE DON'T PUT MARGIN ON THOSE LITTLE GUYS. CREATE A NEW CLASS
+// OR USE THE BOOTSTRAP MARGIN OPTION #########################################
+
+
 .btn-info {
   text-align: center;
   padding: 12px;
   font-size: 22px;
   font-weight: bold;
-  margin-right: 35px;
   a {
     text-decoration: none;
     color: #4351C6;
@@ -17,7 +22,6 @@
   font-size: 22px;
   font-weight: bold;
   border: 4px solid $pink;
-  // box-shadow:inset 0 0 10px #000000;
   color: white;
   a {
     text-decoration: none;
@@ -25,8 +29,18 @@
   }
 }
 
-
-
+.btn-return {
+  background: #FFD54D;
+  text-align: center;
+  padding: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  border: 4px solid $orange;
+  color: black;
+  a {
+    text-decoration: none;
+  }
+}
 
 .btn-small{
   width: 177px;
