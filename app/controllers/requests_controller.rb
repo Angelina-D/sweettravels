@@ -19,7 +19,8 @@ class RequestsController < ApplicationController
   end
 
   def new
-    @request = Request.new
+    @request = Request.new()
+    @request.sweet_id = params[:sweet_id]
     @charities = Charity.all
     @candies = Sweet.all
   end
