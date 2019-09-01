@@ -35,10 +35,19 @@
   padding: 20px;
   border-radius: 8px
 }
+.request-form-container{
+  width: 1000px;
+  height: 600px;
+  margin: auto;
+  box-shadow: 40px 40px $pink-orange;
+  background-color: $light-pink;
+  padding: 20px;
+  border-radius: 8px
+}
 
 #sweet-image-container{
   height:160px;
-  width: 200px;
+  max-width: 200px;
 }
 
 .container-offer {

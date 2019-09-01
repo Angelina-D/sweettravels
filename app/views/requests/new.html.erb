@@ -1,22 +1,40 @@
 <%= link_to "back to candies", sweets_path , class: 'btn-info' %>
-<div class="form-container">
-  <div class="text-center">
-    <h1>Create a new request for <%= @request.sweet.name %> </h1>
-  </div>
-  <%= cl_image_tag(@request.sweet.picture, {id: 'sweet-image-container'}) %>
-  <div class="form-style">
-    <%= simple_form_for(@request) do |f| %>
-      <%= f.error_notification %>
-     <div class=“”>
-       <%= f.input :description, label: 'Write a Message to your hero:' %>
-       <%= f.input :price_cents, label: 'Candy price:'%>
-       <%= f.input :donation_cents, label: 'Donation amount:'  %>
-       <%= f.input :quantity, label: 'Number of pack:'%>
-       <%= f.association :charity, as: :radio_buttons %>
-     </div>
-     <div class=“form-actions”>
-       <%= f.button :submit, class: 'btn-action' %>
-     </div>
-    <% end %>
-  </div>
+<div class="request-form-container">
+    <div class="text-center">
+      <h1>Create a new request for <%= @request.sweet.name %> </h1>
+    </div>
+  <%= simple_form_for(@request) do |f| %>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= f.error_notification %>
+        <%= f.input :description, label: 'Write a Message to your hero:' %>
+      </div>
+      <div class="form-group col-md-4">
+        <%= cl_image_tag(@request.sweet.picture, {id: 'sweet-image-container'}) %>
+      </div>
+    </div>
+    <div class="form-row mt-64">
+      <div class="form-group col-md-3">
+        <%= f.input :price_cents, label: 'Candy price:'%>
+      </div>
+      <div class="form-group col-md-3">
+        <%= f.input :quantity, label: 'Number of pack:'%>
+      </div>
+    </div>
+    <div class="form-row mt-20">
+      <div class="form-group col-md-6">
+          <%= f.input :donation_cents, label: 'Donation amount:'  %>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= f.association :charity, as: :radio_buttons %>
+      </div>
+      <div class="form-goup col-md-4">
+        <div class=“form-actions”>
+        <%= f.button :submit, class: 'btn-action' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
