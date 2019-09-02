@@ -1,5 +1,12 @@
-<div class="container-top">
+<div class="container-top sticky-search">
   <h1>Here are all the sweets to browse through</h1>
+
+  <%= form_tag(search_sweets_path, method: "get", class: "search_bar") do %>
+
+    <%= text_field_tag :query, nil, placeholder: "Search by sweet name, country and category" %>
+    <i id='search_icon' class="fa fa-search searchIcon"></i>
+    <%= submit_tag "", id:'search_button'%>
+  <% end %>
 </div>
 <div class="container-sweet">
   <% @sweets.each do |sweet| %>
