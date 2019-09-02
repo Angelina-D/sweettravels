@@ -11,77 +11,43 @@
 
 // #################################### REQUEST SHOW #############################333
 .card-request-show{
-  display: grid;
   width: 800px;
   padding: 32px;
   margin-bottom: 32px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  background-color: white;
+
+  background-color: $light-pink;
+  border-radius: 8px;
+  box-shadow: 16px 16px $pink-orange;
+
   grid-column-start: 5;
   grid-column-end: 12;
-  grid-row-start: 1
-
+  grid-row-start: 1;
 }
-  .row1-request{
-    grid-column-start: 7;
-    grid-column-end: 12;
-    grid-row-start: 1;
-    img {
-      height: 250px;
-    }
-  }
-  .row2-request{
-    grid-column-start: 1;
-    grid-column-end: 12;
-    grid-row-start: 2;
-    margin-top: 16px;
-  }
 
-  .row3-request{
-    grid-column-start: 10;
-    grid-column-end: 12;
-    grid-row-start: 3
+#img-sweet{
+  img {
+    height: 208px;
+    max-width: 356px;
   }
-  .row4-request{
-    grid-column-start: 8;
-    grid-column-end: 9;
-    grid-row-start: 4;
-  }
-  .card-border-bottom-show{
-    border-bottom: 1px solid black;
-    padding-bottom: 2px;
-    margin-bottom: 4px;
-  }
-  .card-request-user{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    text-align: center;
-    background-color: $light-green;
-    padding-top: 32px;
+}
 
-  }
-  .row1-request-user{
-    grid-column-start: 6;
-    grid-column-end: 12;
-    grid-row-start: 1;
-  }
-  .row2-request-user{
-    grid-column-start: 6;
-    grid-column-end: 12;
-    grid-row-start: 2
-  }
-  .row3-request-user{
-    grid-column-start: 6;
-    grid-column-end: 12;
-    grid-row-start: 3
-  }
-  .row4-request-user{
-    grid-column-start: 6;
-    grid-column-end: 12;
-    grid-row-start: 4
-  }
+.card-border-bottom-show{
+  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+  margin-bottom: 4px;
+}
+.card-request-sidebar{
+  text-align: center;
+}
+.card-request-user{
+  background-color: $light-green;
+  box-shadow: 15px 15px $green;
+  border-radius: 8px;
+}
+.card-pink-p{
+  text-decoration: underline;
+  margin-bottom: -20px;
+}
 // #################################### REQUEST INDEX #############################333
 .card{
   flex-direction: row;
