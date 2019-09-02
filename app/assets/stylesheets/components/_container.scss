@@ -35,6 +35,21 @@
   padding: 20px;
   border-radius: 8px
 }
+.request-form-container{
+  width: 880px;
+  height: 600px;
+  margin: auto;
+  box-shadow: 40px 40px $pink-orange;
+  background-color: $light-pink;
+  padding: 20px;
+  border-radius: 8px
+}
+
+#sweet-image-container{
+  height:160px;
+  max-width: 200px;
+  border-radius: 16px;
+}
 
 .container-offer {
   display: flex;
@@ -82,6 +97,7 @@
   width: 1140px;
   margin: 51px auto 20px auto;
   font-size: 20px;
+
 }
 
 .sticky-search{
@@ -89,4 +105,23 @@
   top: 0;
   background: $beige;
   z-index: 5;
+  height: 180px;
+
+  h1 {
+    font-family: 'Passion One', cursive;
+    font-size: 75px;
+    letter-spacing: 2px;
+    color: #C7F0DB;
+    font-weight: bold;
+    text-shadow: 5px 9px 0px #49BEB7;
+  }
+
+  .search_bar {
+    padding-top: 12px;
+  }
+}
+
+#map {
+  border-radius: 50%;
+  margin-top: 40px;
 }

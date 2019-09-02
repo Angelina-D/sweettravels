@@ -1,5 +1,5 @@
 <div class="container-top sticky-search">
-  <h1>Here are all the sweets to browse through</h1>
+  <h1>Candy? Fix dat craving!</h1>
 
   <%= form_tag(search_sweets_path, method: "get", class: "search_bar") do %>
 
@@ -12,7 +12,7 @@
   <% @sweets.each do |sweet| %>
   <div class="card-sweet">
     <div class="card-img">
-      <%= link_to cl_image_tag(sweet.picture, crop: :fill), new_request_path %>
+      <%= link_to cl_image_tag(sweet.picture, crop: :fill), new_sweet_request_path(sweet.id) %>
     </div>
       <div class="card-info">
         <h4>Country: <%= sweet.country %></h4>
