@@ -1,10 +1,7 @@
-<div class="banner-landing" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1502741509793-1bf00d85aeff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80);">
-  <div class="container">
-    <%= image_tag "landing-logo.png" %>
-    <h1>Make the world a better place one sweet at a time.</h1>
-    <p>Get your sweets from all over the world by requesting them, and having local travelers bring them to you while also donating to your favorite charity</p>
-    <%= link_to 'Become a hero', requests_path, class: "btn btn-info" %>
-    <%= link_to 'Look for candies', sweets_path, class: "btn btn-info" %>
+<div class="banner-landing" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= image_path 'wall.jpeg' %>);">
+  <div class="banner-c">
+    <h1>EVERYONE HAS A CRAVING SOMETIME</h1>
+    <p>Get it fixed doing two sweet things at once</p>
   </div>
 </div>
 
@@ -46,4 +43,6 @@
   </div>
 </div>
 
+    <%= link_to 'Become a hero', requests_path, class: "btn btn-info" %>
+    <%= link_to 'Look for candies', sweets_path, class: "btn btn-info" %>
 
