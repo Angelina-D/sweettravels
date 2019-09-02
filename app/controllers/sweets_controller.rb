@@ -1,7 +1,13 @@
 class SweetsController < ApplicationController
 
   def index
-    @sweets = Sweet.all
+    if params[:query] == ''
+      @sweets = Sweet.all
+    elsif params[:query]
+      @sweets = Sweet.search_sweet(params[:query])
+    else
+      @sweets = Sweet.all
+    end
   end
 
   def show
