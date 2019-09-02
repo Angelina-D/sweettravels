@@ -1,7 +1,7 @@
 <%= link_to "back to candies", sweets_path , class: 'btn-info' %>
 <div class="request-form-container">
     <div class="text-center">
-      <h1>Create a new request for <%= @request.sweet.name %> </h1>
+      <h1>Request for <%= @request.sweet.name %> </h1>
     </div>
   <%= simple_form_for(@request) do |f| %>
     <div class="form-row">
@@ -26,6 +26,7 @@
           <%= f.input :donation_cents, label: 'Donation amount:'  %>
       </div>
     </div>
+
     <div class="form-row">
       <div class="form-group col-md-6">
         <%#= f.association :charity, as: :radio_buttons %>
@@ -35,11 +36,15 @@
 
                 <input class="no-display" type="radio" value="<%= charity.id %>" name="request[charity_id]" id="request_charity_id_<%= charity.id %>">
 
-                <label class="collection_radio_buttons" for="request_charity_id_<%= charity.id %>"> <%= cl_image_tag(charity.picture)%> </label>
+                <label class="form-charity-label radio_buttons required" for="request_charity_id_<%= charity.id %>"> <%= cl_image_tag(charity.picture)%> </label>
+
             <% end %>
 
           </div>
       </div>
+
+      <input  type="hidden"  value="<%= @request.sweet_id %>" name="request[sweet_id]" id="request_sweet_id">
+
       <div class="form-goup col-md-4">
         <div class=“form-actions”>
         <%= f.button :submit, class: 'btn-action' %>

@@ -1,3 +1,13 @@
 .no-display{
-  visibility: hidden;
+  display: none;
+}
+
+.form-charity-label{
+  :hover{
+    border: 2px solid black;
+    cursor: pointer;
+  }
+  &.active{
+    border: 2px solid yellow;
+  }
 }
