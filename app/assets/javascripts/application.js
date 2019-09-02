@@ -2,16 +2,25 @@
 //= require_tree .
 
 document.querySelectorAll(".form-charity-label").forEach((label) => {
-  console.log(label);
-    console.log("check");
   label.addEventListener("click", (event) => {
-    if (label.classList.contains(".active")){
-      label.classList.remove("active");
-      console.log("blabla")
-    };
-    if (true){
-      console.log("true")
-    }
+    document.querySelectorAll(".form-charity-label").forEach((label) => {
+      if (label.classList.contains("active")){
+        label.classList.remove("active");
+      };
+    })
+
+    event.currentTarget.classList.toggle("active")
+  });
+});
+
+document.querySelectorAll(".form-label-donation").forEach((label) => {
+  label.addEventListener("click", (event) => {
+    document.querySelectorAll(".form-label-donation").forEach((label) => {
+      if (label.classList.contains("active")){
+        label.classList.remove("active");
+      };
+    })
+
     event.currentTarget.classList.toggle("active")
   });
 });

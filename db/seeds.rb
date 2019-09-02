@@ -13,20 +13,6 @@ puts 'Oh data destroyed'
 
 ############################ SWEET ##########################################
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 sweet1 = Sweet.create(
   name: 'Feijoa Candy',
   description: 'Mayceys lollies continue to be a Kiwi favourite',
@@ -142,6 +128,32 @@ puts "Users created!"
 
 ####################### CHARITY ###############################
 
+Charity.create(
+  name: "Global Gift Guide",
+  cause: "Education",
+  description: 'Children are the faces of the future, and their education is one of the most critical factors to help a community rise above poverty. Your gift of education will not only help a child but her entire village. ',
+  picture: 'https://cdn.shopify.com/s/files/1/0104/7098/1690/files/logo_817x140.png?v=1528232228'
+  )
+
+Charity.create(
+  name: "action against hunger",
+  cause: "Hunger",
+  description: 'Action Against Hunger (or Action Contre La Faim (ACF) in French) is a global humanitarian organization which originated in France and is committed to ending world hunger. The organization helps malnourished children and provides communities with access to safe water and sustainable solutions to hunger. ',
+  picture: 'https://armacad.info/images/2016/07/doctors-without-borders-k8t3CTUSaD1UHYV2pTmtzyK1Q78nN9zW.png'
+  )
+Charity.create(
+  name: "Global Gift Guide",
+  cause: "Education",
+  description: 'Children are the faces of the future, and their education is one of the most critical factors to help a community rise above poverty. Your gift of education will not only help a child but her entire village. ',
+  picture: 'https://cdn.shopify.com/s/files/1/0104/7098/1690/files/logo_817x140.png?v=1528232228'
+  )
+
+Charity.create(
+  name: "action against hunger",
+  cause: "Hunger",
+  description: 'Action Against Hunger (or Action Contre La Faim (ACF) in French) is a global humanitarian organization which originated in France and is committed to ending world hunger. The organization helps malnourished children and provides communities with access to safe water and sustainable solutions to hunger. ',
+  picture: 'https://armacad.info/images/2016/07/doctors-without-borders-k8t3CTUSaD1UHYV2pTmtzyK1Q78nN9zW.png'
+  )
 Charity.create(
   name: "Global Gift Guide",
   cause: "Education",

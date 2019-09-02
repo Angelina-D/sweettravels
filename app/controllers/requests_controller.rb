@@ -34,6 +34,7 @@ class RequestsController < ApplicationController
       @request.save
       redirect_to request_path(@request)
     else
+    raise
       render :new
     end
   end
