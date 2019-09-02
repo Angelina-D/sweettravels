@@ -82,6 +82,7 @@
   width: 1140px;
   margin: auto;
   font-size: 20px;
+
 }
 
 .sticky-search{
@@ -89,4 +90,18 @@
   top: 0;
   background: $beige;
   z-index: 5;
+  height: 180px;
+
+  h1 {
+    font-family: 'Passion One', cursive;
+    font-size: 75px;
+    letter-spacing: 2px;
+    color: #C7F0DB;
+    font-weight: bold;
+    text-shadow: 5px 9px 0px #49BEB7;
+  }
+
+  .search_bar {
+    padding-top: 12px;
+  }
 }
