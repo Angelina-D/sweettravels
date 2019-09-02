@@ -19,7 +19,8 @@ class RequestsController < ApplicationController
   end
 
   def new
-    @request = Request.new
+    @request = Request.new()
+    @request.sweet_id = params[:sweet_id]
     @charities = Charity.all
     @candies = Sweet.all
   end
@@ -33,6 +34,7 @@ class RequestsController < ApplicationController
       @request.save
       redirect_to request_path(@request)
     else
+    raise
       render :new
     end
   end

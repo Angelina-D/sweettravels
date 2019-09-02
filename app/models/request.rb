@@ -13,4 +13,6 @@ class Request < ApplicationRecord
                   using: {
                     tsearch: { prefix: true } # <-- now `superman batm` will return something!
                   }
+
+  DONATION = [5, 10, 15, 20]
 end

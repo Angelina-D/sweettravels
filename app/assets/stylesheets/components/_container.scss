@@ -35,6 +35,21 @@
   padding: 20px;
   border-radius: 8px
 }
+.request-form-container{
+  width: 880px;
+  height: 600px;
+  margin: auto;
+  box-shadow: 40px 40px $pink-orange;
+  background-color: $light-pink;
+  padding: 20px;
+  border-radius: 8px
+}
+
+#sweet-image-container{
+  height:160px;
+  max-width: 200px;
+  border-radius: 16px;
+}
 
 .container-offer {
   display: flex;
