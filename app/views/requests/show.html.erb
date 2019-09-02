@@ -1,35 +1,27 @@
 <div class="container-top">
   <h1> Request for <%= @request.sweet.name %></h1>
-  <p>Below are the details of this request</p>
 </div>
-
-<div class="container-show-request">
-  <div class="card-request-user">
-    <div class="row1-request-user">
-      <%= cl_image_tag(@request.user.photo,
-      {class: "avatar"}) %>
-    </div>
-    <div class="row2-request-user">
-      <p>SWEETIE</p>
-    </div>
-    <div class="row3-request-user">
-      <p>  <%= @request.user.full_name %></p>
-    </div>
-    <div class="row4-request-user">
-      <%= link_to "Back to candies", sweets_path, class: "btn-info"%>
-    </div>
-  </div>
-  <div class="card-request-show">
-    <%= render 'request_details' %>
-
-    <div class="row4-request">
-      <div class="btn-action mt-2">
-        <%= link_to 'MAKE AN OFFER', new_request_offer_path(@request) %>
+<div class="background">
+  <div class="container-show-request row justify-content-between">
+    <div class="card-request-sidebar col-3">
+      <div class="card-request-user py-5 px-4 mb-5">
+          <%= cl_image_tag(@request.user.photo,
+          {class: "avatar-xl"}) %>
+        <div class="card-pink-p mt-3">
+          <p>SWEETIE</p>
+        </div>
+          <p>  <%= @request.user.full_name %></p>
+        <div class="text-left">
+          <p> <%= image_tag "lolly.png", class: "icon-xs" %> 5 requests made </p>
+          <p> <%= image_tag "suitcase.png", class: "icon-xs" %> 99 times a hero </p>
+          <p> <%= image_tag "heart.png", class: "icon-xs" %> 235 raised</p>
+        </div>
       </div>
+        <%= link_to "Back to candies", sweets_path, class: "btn-return"%>
+    </div>
 
-  <!--     <div class="btn-action">
-        <%#= link_to 'DEMOLISH REQUEST', request_path(@request), method: :delete, data: { confirm: 'Are you sure?'} %>
-      </div> -->
+    <div class="card-request-show container col-8">
+      <%= render 'request_details' %>
     </div>
   </div>
 </div>
