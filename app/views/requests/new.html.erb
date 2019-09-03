@@ -5,56 +5,68 @@
   <%= simple_form_for(@request) do |f| %>
     <div class="row">
       <div class="col-md-8 ">
-        <%= f.error_notification %>
-        <%= f.input :description, label: 'Write a Message to your hero:', input_html: { class: 'round-form' } %>
-      </div>
-      <div class="col-md-4 text-center">
-        <%= cl_image_tag(@request.sweet.picture, {id: 'sweet-image-container'}) %>
-      </div>
-    </div>
-    <div class="row mt-64">
-      <div class="col-md-4">
-        <%= f.input :price_cents, label: 'Candy price:', input_html: { class: 'round-form' }%>
-      </div>
-      <div class="col-md-4">
-        <%= f.input :quantity, label: 'Number of pack:', input_html: { class: 'round-form' }%>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-12">
+            <%= f.error_notification %>
+            <%= f.input :description, label: 'Write a Message to your hero:', input_html: { class: 'round-form' } %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-6">
+                <%= f.input :price_cents, label: 'Candy price:', input_html: { class: 'round-form' }%>
+              </div>
+              <div class="col-md-6">
+                <%= f.input :quantity, label: 'Number of pack:', input_html: { class: 'round-form' }%>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
             <legend class="col-form-label pt-0">Donation</legend>
             <div class="form-check pl-0">
               <% Request::DONATION.each do |d| %>
-              <input class="no-display" type="radio" value="<%= d %>" name="request[donation_cents]" id="request_donation_cents_<%= d %>" />
-              <label class="collection_check_boxes form-label-donation" for="request_donation_cents_<%= d %>"> <%= d %>
-              </label>
-
+                <input class="no-display round-form" type="radio" value="<%= d %>" name="request[donation_cents]" id="request_donation_cents_<%= d %>" />
+                <label class="collection_check_boxes form-label-donation round-form" for="request_donation_cents_<%= d %>"> <%= d %>
+                </label>
               <% end %>
             </div>
 
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-8 d-flex flex-wrap">
-            <legend class="col-form-label pt-0">Pick a Charity</legend>
-            <% Charity.all.each do |charity| %>
-              <div class="img-charity align-self-center mr-2">
-                <input class="no-display" type="radio" value="<%= charity.id %>" name="request[charity_id]" id="request_charity_id_<%= charity.id %>">
-
-                <label class="form-charity-label radio_buttons required fit-img" for="request_charity_id_<%= charity.id %>"> <%= cl_image_tag(charity.picture)%> </label>
-              </div>
-            <% end %>
-
-      </div>
-
-      <input  type="hidden"  value="<%= @request.sweet_id %>" name="request[sweet_id]" id="request_sweet_id">
-
-      <div class="form-goup col-md-4 text-center mt-5">
-        <div class=“form-actions”>
-        <%= f.button :submit, class: 'btn-action' %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-8 d-flex flex-wrap">
+              <%#= f.association :charity, as: :radio_buttons %>
+              <legend class="col-form-label pt-0">Pick a Charity</legend>
+              <% Charity.all.each do |charity| %>
+                <div class="img-charity align-self-center mr-2">
+                  <input class="no-display" type="radio" value="<%= charity.id %>" name="request[charity_id]" id="request_charity_id_<%= charity.id %>">
+                  <label class="form-charity-label radio_buttons required fit-img" for="request_charity_id_<%= charity.id %>"> <%= cl_image_tag(charity.picture)%> </label>
+                </div>
+              <% end %>
+            </div>
+            <input type="hidden" value="<%= @request.sweet_id %>" name="request[sweet_id]" id="request_sweet_id">
+          </div>
         </div>
       </div>
+      <div class="col-md-4 text-center d-flex justify-content-between flex-column">
+        <div class="row">
+          <div class="col-md-12">
+          <%= cl_image_tag(@request.sweet.picture, {id: 'sweet-image-container'}) %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <div class=“form-actions”>
+              <%= f.button :submit, class: 'btn-action' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
   <% end %>
 </div>
