@@ -10,6 +10,14 @@ class RequestsController < ApplicationController
       @requests = Request.all
     end
 
+    if params[:search_user_city] == ''
+      @requests = Request.all
+    elsif params[:search_user_city]
+      @requests = Request.search_request_per_city(params[:search_user_city])
+    else
+      @requests = Request.all
+    end
+
     @markers = geocode_request(@requests)
   end
 

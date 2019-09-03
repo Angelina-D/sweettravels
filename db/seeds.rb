@@ -80,48 +80,55 @@ user1 = User.create(
   full_name: 'Annegret' ,
   photo: 'https://images.halloweencostumes.com/products/51294/1-1/childs-german-girl-costume-.jpg',
   email:'potatoe@hotmail.com',
-  password: '123456'
+  password: '123456',
+  city: 'Berlin',
   )
 user2 = User.create(
   full_name: 'Kaylee' ,
   photo: 'https://avatars3.githubusercontent.com/u/50417340?v=4',
   email:'bootstrapisevil@hotmail.com',
-  password: '123456'
+  password: '123456',
+  city: 'Berlin',
   )
 
 user3 = User.create(
   full_name: 'Max' ,
   photo: 'https://avatars2.githubusercontent.com/u/51816032?v=4',
   email:'cssisevil@hotmail.com',
-  password: '123456'
+  password: '123456',
+  city: 'Berlin',
   )
 
 user4 = User.create(
   full_name: 'Jorge' ,
   photo: 'https://avatars1.githubusercontent.com/u/28198714?v=4',
   email:'jsisthebest@hotmail.com',
-  password: '123456'
+  password: '123456',
+  city: 'Berlin',
   )
 
 user5 = User.create(
   full_name: 'Yann' ,
   photo: 'https://d17fnq9dkz9hgj.cloudfront.net/uploads/2012/11/153546296-items-dangerous-pet-birds.jpg',
   email:'jsisevil@hotmail.com',
-  password: '123456'
+  password: '123456',
+  city: 'Nantes',
   )
 
 user6 = User.create(
   full_name: 'Malina' ,
   photo: 'https://avatars2.githubusercontent.com/u/41272214?v=4',
   email:'rubyisevil@hotmail.com',
-  password: '123456'
+  password: '123456',
+  city: 'Berlin',
   )
 
 user7 = User.create!(
   full_name: 'Angelo' ,
   photo: 'https://avatars1.githubusercontent.com/u/51519319?v=4',
   email:'cssisawesome@hotmail.com',
-  password: '123456'
+  password: '123456',
+  city: 'Berlin',
   )
 
 puts "Users created!"

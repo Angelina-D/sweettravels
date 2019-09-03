@@ -3,6 +3,7 @@
     <h2 class="header-thick"><%= @request.sweet.name %></h2>
     <div class="small-text-align">
       <p> created on <%= @request.created_at.to_formatted_s(:long_ordinal) %></p>
+      <p> City: <%= @request.user.city %></p>
       <p> <%= @request.quantity %> Pack</p>
       <p> Message: <%= @request.description %></p>
     </div>

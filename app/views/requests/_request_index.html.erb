@@ -16,6 +16,7 @@
            {class: "avatar"}) %>
            <p>  <%= request.user.full_name %></p>
         </div>
+           <p> <%= request.user.city %></p>
          <div class="card-total-column">
             <p>donation: <%= convert_currency(request.donation_cents) %> €</p>
           <div class="card-border-bottom">
