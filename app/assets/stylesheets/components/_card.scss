@@ -28,6 +28,7 @@
   img {
     height: 208px;
     max-width: 356px;
+    border-radius: 16px;
   }
 }
 
@@ -43,10 +44,21 @@
   background-color: $light-green;
   box-shadow: 15px 15px $green;
   border-radius: 8px;
+  margin-top: 43px;
 }
 .card-pink-p{
   text-decoration: underline;
   margin-bottom: -20px;
+}
+.text-details{
+  color: darkgrey;
+  font-size: 16px;
+}
+.card-addition-request{
+  box-shadow: 8px 8px #FFD54D;
+  background-color: #FE7661;
+  border-radius: 16px;
+  padding: 12px;
 }
 // #################################### REQUEST INDEX #############################333
 .card{
@@ -146,9 +158,9 @@
 
     img {
       background-size: cover;
-      height: 400px;
-      width: 400px;
-      padding: 20px;
+      height: 380px;
+      width: 380px;
+      margin: 10px;
     }
 
     .card-info {
@@ -170,7 +182,7 @@
 .card-offer-content {
   display: flex;
   background: white;
-  width: 40%;
+  // width: 40%;
   margin: 20px 36px 20px 0px;
   height: auto;
   padding: 14px;
@@ -181,7 +193,7 @@
 .card-request-content {
   display: flex;
   background: white;
-  width: 70%;
+  width: 40%;
   margin: 20px 36px 20px 0px;
   height: auto;
   padding: 14px;

@@ -94,7 +94,7 @@
 }
 .request-form-container{
   width: 880px;
-  height: 600px;
+  min-height: 620px;
   margin: auto;
   box-shadow: 40px 40px $pink-orange;
   background-color: $light-pink;
@@ -103,9 +103,11 @@
 }
 
 #sweet-image-container{
-  height:160px;
-  max-width: 200px;
-  border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .container-offer {
@@ -152,7 +154,7 @@
 
 .container-show-request{
   width: 1140px;
-  margin: auto;
+  margin: 51px auto 20px auto;
   font-size: 20px;
 
 }
@@ -181,4 +183,21 @@
 #map {
   border-radius: 50%;
   margin-top: 40px;
+  box-shadow: 0 24px 16px -4px #66b0cc;
+}
+
+.rc-16{
+  border-radius: 16px;
+}
+.rc-24{
+  border-radius: 24px;
+}
+
+.rc-top-16{
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.rc-bottom-16{
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
 }

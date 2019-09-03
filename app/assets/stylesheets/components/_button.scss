@@ -21,6 +21,7 @@
   padding: 12px;
   font-size: 22px;
   font-weight: bold;
+  border-radius: 16px;
   a {
     text-decoration: none;
     color: #4351C6;
@@ -28,12 +29,13 @@
 }
 
 .btn-action {
-  background: #FFC3BB;
+  background: $dark-pink;
   text-align: center;
   padding: 12px;
   font-size: 22px;
   font-weight: bold;
-  border: 4px solid $pink;
+  border: 4px solid $dark-pink;
+  border-radius: 16px;
   color: white;
   a {
     text-decoration: none;
@@ -41,14 +43,26 @@
   }
 }
 
-.btn-return {
+#offer {
   background: #FFD54D;
   text-align: center;
   padding: 12px;
   font-size: 22px;
   font-weight: bold;
-  border: 4px solid $orange;
+  border: 4px solid #FE7661;
+  color: white;
+  border-radius: 8px;
+}
+
+.btn-return {
+  background: #c7f0db;
+  text-align: center;
+  padding: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  border: 4px solid #49BEB7;
   color: black;
+  border-radius: 8px;
   a {
     text-decoration: none;
   }

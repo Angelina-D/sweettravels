@@ -8,8 +8,9 @@
           <h3> <%= offer.request.sweet.name %> </h3>
           <p> Status: <%= offer.status %> </p>
           <p> <i class="far fa-calendar-alt"></i> <%= offer.end_date %> </p>
-          <p> <i class="fas fa-map-marked-alt"></i> <%= offer.pick_up_location %> </p>
-          <p> <%= link_to "Details", request_path(offer.request) %> </p>
+          <p> <i class="fas fa-map-marked-alt"></i> <%= offer.user.city %> </p>
+          <p> <%= link_to "Request", request_path(offer.request) %> </p>
+          <p> <%= link_to 'Offer', request_offer_path(request_id: offer.request_id, id: offer.id) %></p>
         </div>
       </div>
     <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_28_154252) do
+ActiveRecord::Schema.define(version: 2019_09_03_100658) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 2019_08_28_154252) do
     t.string "cause"
     t.string "picture"
     t.text "description"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.bigint "user_id"
+    t.bigint "offer_id"
+    t.index ["offer_id"], name: "index_messages_on_offer_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "offers", force: :cascade do |t|
@@ -80,10 +88,13 @@ ActiveRecord::Schema.define(version: 2019_08_28_154252) do
     t.datetime "updated_at", null: false
     t.string "full_name"
     t.string "photo"
+    t.string "city"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "messages", "offers"
+  add_foreign_key "messages", "users"
   add_foreign_key "offers", "requests"
   add_foreign_key "offers", "users"
   add_foreign_key "requests", "charities"

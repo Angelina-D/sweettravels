@@ -2,13 +2,9 @@ class RequestsController < ApplicationController
   before_action :find_request, only: [:show, :destroy]
   include MoneyConverterHelper
   def index
-    if params[:search_sweet_name_and_country] == ''
-      @requests = Request.all
-    elsif params[:search_sweet_name_and_country]
-      @requests = Request.search_sweet_name_and_country(params[:search_sweet_name_and_country])
-    else
-      @requests = Request.all
-    end
+    @requests = Request.all
+    @requests = @requests.search_sweet_name_and_country(params[:search_sweet_name_and_country]) if params[:search_sweet_name_and_country].present?
+    @requests = @requests.search_request_per_city(params[:search_user_city]) if params[:search_user_city].present?
 
     @markers = geocode_request(@requests)
   end
@@ -16,6 +12,9 @@ class RequestsController < ApplicationController
   def show
     @request = Request.find(params[:id])
     @offers  = Offer.where(request_id: @request.id)
+    @sum_requests = sum_requests
+    @number_time_hero = number_time_hero
+    @money_raised = money_raised
   end
 
   def new
@@ -34,7 +33,6 @@ class RequestsController < ApplicationController
       @request.save
       redirect_to request_path(@request)
     else
-    raise
       render :new
     end
   end
@@ -66,5 +64,21 @@ class RequestsController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { request: request })
       }
     end
+  end
+
+  def sum_requests
+    @request.user.requests.count
+  end
+
+  def number_time_hero
+    @request.user.offers.where(status: :confirmed).count
+  end
+
+  def money_raised
+    money = 0
+    @request.user.offers.where(status: :confirmed).each do |offer|
+      money += offer.request.donation_cents
+    end
+    convert_currency(money)
   end
 end

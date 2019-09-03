@@ -80,48 +80,63 @@ user1 = User.create(
   full_name: 'Annegret' ,
   photo: 'https://images.halloweencostumes.com/products/51294/1-1/childs-german-girl-costume-.jpg',
   email:'potatoe@hotmail.com',
-  password: '123456'
+  password: '123456',
+  city: 'Berlin',
   )
 user2 = User.create(
   full_name: 'Kaylee' ,
   photo: 'https://avatars3.githubusercontent.com/u/50417340?v=4',
   email:'bootstrapisevil@hotmail.com',
-  password: '123456'
+  password: '123456',
+  city: 'Berlin',
   )
 
 user3 = User.create(
   full_name: 'Max' ,
   photo: 'https://avatars2.githubusercontent.com/u/51816032?v=4',
   email:'cssisevil@hotmail.com',
-  password: '123456'
+  password: '123456',
+  city: 'Berlin',
   )
 
 user4 = User.create(
   full_name: 'Jorge' ,
   photo: 'https://avatars1.githubusercontent.com/u/28198714?v=4',
   email:'jsisthebest@hotmail.com',
-  password: '123456'
+  password: '123456',
+  city: 'Berlin',
   )
 
 user5 = User.create(
   full_name: 'Yann' ,
   photo: 'https://d17fnq9dkz9hgj.cloudfront.net/uploads/2012/11/153546296-items-dangerous-pet-birds.jpg',
   email:'jsisevil@hotmail.com',
-  password: '123456'
+  password: '123456',
+  city: 'Nantes',
   )
 
 user6 = User.create(
   full_name: 'Malina' ,
   photo: 'https://avatars2.githubusercontent.com/u/41272214?v=4',
   email:'rubyisevil@hotmail.com',
-  password: '123456'
+  password: '123456',
+  city: 'Berlin',
   )
 
 user7 = User.create!(
   full_name: 'Angelo' ,
   photo: 'https://avatars1.githubusercontent.com/u/51519319?v=4',
   email:'cssisawesome@hotmail.com',
-  password: '123456'
+  password: '123456',
+  city: 'Berlin',
+  )
+
+user8 = User.create(
+  full_name: 'Dodo' ,
+  photo: 'https://media.vanityfair.com/photos/5c2fdb09ef10e32ca1332862/16:9/w_1280,c_limit/trumpshutdownraises.jpg',
+  email:'ilovecarlos@hotmail.com',
+  password: '123456',
+  city: 'Los Angeles',
   )
 
 puts "Users created!"
@@ -226,6 +241,16 @@ Request.create(
     donation_cents: rand(500..2000),
     quantity: rand(1..5),
     charity_id: Charity.all.sample.id,
+    user: user8,
+    sweet: sweet7,
+    )
+
+Request.create(
+    description: 'My all time Favorite - send help pls',
+    price_cents: rand(1000..2500),
+    donation_cents: rand(500..2000),
+    quantity: rand(1..5),
+    charity_id: Charity.all.sample.id,
     user: user7,
     sweet: sweet6,
     )
@@ -254,15 +279,17 @@ puts "Requests created!"
     )
 end
 
-Offer.create(
-  content: "Hey everyone, I'm going to France for two weeks I like to talk about my life blablabal ablablba labalbalbal balablba labab albalbalbal abalbalbalbalbalbal balbalbalbal balablab albalba lbal balablaba lbalbalbalabl abalba lbalal abalbabla",
-  end_date: "#{date = Time.at(rand * Time.now.to_i)}",
-  start_date: "#{date-10.days}",
-  user: User.all.sample,
-  pick_up_location: 'berlin' ,
-  status: rand(0..3),
-  request: Request.all.sample,
-  )
+50.times do
+  Offer.create(
+    content: "Hey everyone, I'm going to France for two weeks I like to talk about my life blablabal ablablba labalbalbal balablba labab albalbalbal abalbalbalbalbalbal balbalbalbal balablab albalba lbal balablaba lbalbalbalabl abalba lbalal abalbabla",
+    end_date: "#{date = Time.at(rand * Time.now.to_i)}",
+    start_date: "#{date-10.days}",
+    user: User.all.sample,
+    pick_up_location: 'berlin' ,
+    status: 0,
+    request: Request.all.sample,
+    )
+end
 
 Offer.create(
   content: "Hey everyone, I'm going to the UK for two weeks",

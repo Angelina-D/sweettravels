@@ -13,7 +13,14 @@
 }
 
 .round-form{
-  border-radius: 16px;
+  border-radius: 4px;
+  background-color: #fbcfe0;
+  border-bottom: 3px solid #FE83B7;
+  border-top: none;
+  border-right: none;
+  font-style: italic;
+  border-left: none;
+  margin-bottom: 1.5rem;
 }
 .img-charity{
   max-width: 150px;
@@ -26,11 +33,11 @@
   }
 }
 .form-label-donation{
- background: $yellow;
+ background: #FFD54D94;
   padding: 20px;
-  width: 24%;
-  border-radius: 24px;
-  opacity: .4;
+  width: 20%;
+  border-radius: 8px;
+  // opacity: .4;
   flex: 0 0 30%;
   text-align: center;
   color: $red;
@@ -43,4 +50,13 @@
   color: white;
   opacity: 1;
   }
+}
+
+#request_description {
+  background-color: #fbcfe0;
+  border-bottom: 3px solid #FE83B7;
+  border-top: none;
+  border-right: none;
+  font-style: italic;
+  border-left: none;
 }

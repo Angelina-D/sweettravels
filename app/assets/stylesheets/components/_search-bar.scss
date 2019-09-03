@@ -20,6 +20,11 @@
   }
 }
 
+.align-search-bar {
+  display: flex;
+  justify-content: center;
+}
+
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: $pink;
