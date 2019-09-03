@@ -2,7 +2,19 @@
 
 // ################## PLEASE DON'T PUT MARGIN ON THOSE LITTLE GUYS. CREATE A NEW CLASS
 // OR USE THE BOOTSTRAP MARGIN OPTION #########################################
+.front-right-button {
+    margin: 142px 0px 50px 123px;
+    background-color: $yellow;
+    border-radius: 6px;
+    padding: 15px;
+}
 
+.front-left-button {
+   margin: 142px 0px 50px 123px;
+   background-color: $yellow;
+   border-radius: 6px;
+   padding: 15px;
+}
 
 .btn-info {
   text-align: center;

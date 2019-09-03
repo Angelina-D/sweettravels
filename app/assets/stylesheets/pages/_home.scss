@@ -1,4 +1,6 @@
 // Specific CSS for your home-page
+@import url('http://allfont.de/allfont.css?fonts=sans-serif-shaded');
+
   a{
     text-decoration: none !important;
   }
@@ -7,7 +9,22 @@
     color: $dark-pink !important;
   }
 
-  .banner-c{
-    width: 50%;
-    height: auto;
-  }
+#home-font {
+  font-family: 'Sans Serif Shaded', arial !important;
+  font-size: 48px;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+#right-parrot {
+  margin-right: -15px;
+}
+
+#right-speech {
+  margin-left: 40px;
+  width: 339px;
+}
+
+#left-speech {
+  width: 339px;
+  margin-right: 51px;
+}
