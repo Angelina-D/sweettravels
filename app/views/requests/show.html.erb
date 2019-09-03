@@ -10,9 +10,9 @@
         </div>
           <p>  <%= @request.user.full_name %></p>
         <div class="text-left">
-          <p> <%= image_tag "lolly.png", class: "icon-xs" %> 5 requests made </p>
-          <p> <%= image_tag "suitcase.png", class: "icon-xs" %> 99 times a hero </p>
-          <p> <%= image_tag "heart.png", class: "icon-xs" %> 235 raised</p>
+          <p> <%= image_tag "lolly.png", class: "icon-xs" %> &nbsp; <%= @sum_requests %> requests made </p>
+          <p> <%= image_tag "suitcase.png", class: "icon-xs" %> &nbsp;<%= @number_time_hero %> times a hero </p>
+          <p> <%= image_tag "heart.png", class: "icon-xs" %> &nbsp; <%= @money_raised %>€ raised</p>
         </div>
       </div>
     </div>
