@@ -37,7 +37,7 @@
 }
 .request-form-container{
   width: 880px;
-  height: 620px;
+  min-height: 620px;
   margin: auto;
   box-shadow: 40px 40px $pink-orange;
   background-color: $light-pink;
