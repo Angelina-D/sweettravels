@@ -37,7 +37,7 @@
 }
 .request-form-container{
   width: 880px;
-  height: 600px;
+  height: 620px;
   margin: auto;
   box-shadow: 40px 40px $pink-orange;
   background-color: $light-pink;
@@ -46,9 +46,10 @@
 }
 
 #sweet-image-container{
-  height:160px;
-  max-width: 200px;
-  border-radius: 16px;
+    max-width: 180px;
+    border-radius: 4px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .container-offer {
