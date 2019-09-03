@@ -1,7 +1,7 @@
 <% @requests.each do |request| %>
   <%= link_to request_path(request.id), :action => 'go', class: "card card-request" do %>
     <%= cl_image_tag(request.sweet.picture,
-    {class:"card-picture"}) %>
+    {class:"card-picture rc-16"}) %>
 
     <div class="card-request-info">
       <div class="card-donation">

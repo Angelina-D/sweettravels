@@ -3,6 +3,7 @@ class OffersController < ApplicationController
   before_action :set_request, only: [:new, :edit, :update]
 
   def show
+    @offer = Offer.includes(messages: :user).find(params[:id])
   end
 
   def new
