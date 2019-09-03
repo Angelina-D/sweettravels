@@ -8,7 +8,15 @@ class Request < ApplicationRecord
   pg_search_scope :search_sweet_name_and_country,
                   against: [],
                   associated_against: {
-                    sweet: [:name, :country ]
+                    sweet: [:name, :country]
+                  },
+                  using: {
+                    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+                  }
+  pg_search_scope :search_request_per_city,
+                  against: [],
+                  associated_against: {
+                    user: [:city]
                   },
                   using: {
                     tsearch: { prefix: true } # <-- now `superman batm` will return something!
