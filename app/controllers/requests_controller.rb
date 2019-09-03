@@ -12,6 +12,9 @@ class RequestsController < ApplicationController
   def show
     @request = Request.find(params[:id])
     @offers  = Offer.where(request_id: @request.id)
+    @sum_requests = sum_requests
+    @number_time_hero = number_time_hero
+    @money_raised = money_raised
   end
 
   def new
@@ -61,5 +64,21 @@ class RequestsController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { request: request })
       }
     end
+  end
+
+  def sum_requests
+    @request.user.requests.count
+  end
+
+  def number_time_hero
+    @request.user.offers.where(status: :confirmed).count
+  end
+
+  def money_raised
+    money = 0
+    @request.user.offers.where(status: :confirmed).each do |offer|
+      money += offer.request.donation_cents
+    end
+    convert_currency(money)
   end
 end

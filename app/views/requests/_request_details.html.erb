@@ -2,10 +2,11 @@
   <div class="col-sm">
     <h2 class="header-thick"><%= @request.sweet.name %></h2>
     <div class="small-text-align">
-      <p> created on <%= @request.created_at.to_formatted_s(:long_ordinal) %></p>
-      <p> City: <%= @request.user.city %></p>
-      <p> <%= @request.quantity %> Pack</p>
-      <p> Message: <%= @request.description %></p>
+      <p class="text-details"> created on <%= @request.created_at.to_formatted_s(:long_ordinal) %></p>
+      <p> <i class="fas fa-map-marked-alt"></i> &nbsp; <%= @request.user.city %></p>
+      <p> <i class="fas fa-plane-departure"></i>  &nbsp; <%= @request.sweet.country %></p>
+      <p> <%= @request.quantity %> X &nbsp;<i class="fas fa-candy-cane"></i></p>
+      <p> <i class="far fa-envelope"></i> &nbsp;<%= @request.description %></p>
     </div>
   </div>
 
@@ -17,20 +18,26 @@
 
 <div class="row align-items-end">
 
-    <div class="col-sm">
-      <div class="btn-action" id= "offer">
-        <%= link_to 'MAKE AN OFFER', new_request_offer_path(@request) %>
-      </div>
+  <div class="col-6">
+    <div class="btn-action" id= "offer">
+      <%= link_to 'MAKE AN OFFER', new_request_offer_path(@request) %>
     </div>
-
-  <div class="col-sm">
-    <p><i class="fas fa-heart"></i> <%= @request.charity.name %></p>
-    <p> Donation: <%= convert_currency(@request.donation_cents) %> </p>
-    <div class="card-border-bottom-show">
-      <p> Estimate price: <%= convert_currency(@request.price_cents)%></p>
-    </div>
-    <p> Estimate total: <%= convert_currency(@request.price_cents + @request.donation_cents)%></p>
   </div>
+
+  <div class="col-1"></div>
+
+  <div class="col-4">
+    <div class="card-addition-request">
+      <p><i class="fas fa-heart"></i> <%= @request.charity.name %></p>
+      <p> Donation: <%= convert_currency(@request.donation_cents) %> </p>
+      <div class="card-border-bottom-show">
+        <p> Estimate price: <%= convert_currency(@request.price_cents)%></p>
+      </div>
+      <p> Estimate total: <%= convert_currency(@request.price_cents + @request.donation_cents)%></p>
+    </div>
+  </div>
+
+  <div class="col-1"></div>
 
 </div>
 

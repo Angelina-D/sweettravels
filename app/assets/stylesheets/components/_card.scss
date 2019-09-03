@@ -28,7 +28,7 @@
   img {
     height: 208px;
     max-width: 356px;
-    border-radius: 4px;
+    border-radius: 16px;
   }
 }
 
@@ -49,6 +49,16 @@
 .card-pink-p{
   text-decoration: underline;
   margin-bottom: -20px;
+}
+.text-details{
+  color: darkgrey;
+  font-size: 16px;
+}
+.card-addition-request{
+  box-shadow: 8px 8px #FFD54D;
+  background-color: #FE7661;
+  border-radius: 16px;
+  padding: 12px;
 }
 // #################################### REQUEST INDEX #############################333
 .card{
