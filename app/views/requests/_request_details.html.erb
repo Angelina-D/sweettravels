@@ -1,9 +1,11 @@
 <div class="row mb-3" id='img-sweet'>
   <div class="col-sm">
-    <h2><%= @request.sweet.name %></h3>
-    <p> created on <%= @request.created_at.to_formatted_s(:long_ordinal) %></p>
-    <p> <%= @request.quantity %> Pack</p>
-    <p> Message: <%= @request.description %></p>
+    <h2 class="header-thick"><%= @request.sweet.name %></h2>
+    <div class="small-text-align">
+      <p> created on <%= @request.created_at.to_formatted_s(:long_ordinal) %></p>
+      <p> <%= @request.quantity %> Pack</p>
+      <p> Message: <%= @request.description %></p>
+    </div>
   </div>
 
   <div class="col-sm d-flex align-items-center justify-content-center">
@@ -15,7 +17,7 @@
 <div class="row align-items-end">
 
     <div class="col-sm">
-      <div class="btn-action">
+      <div class="btn-action" id= "offer">
         <%= link_to 'MAKE AN OFFER', new_request_offer_path(@request) %>
       </div>
     </div>

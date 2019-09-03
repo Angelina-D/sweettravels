@@ -2,21 +2,31 @@
   background-size: cover;
   background-position: center;
   padding: 190px 0;
+  display: flex;
+  justify-content: center;
 }
+
+.banner-c{
+  width: 50%;
+  height: auto;
+  text-align: center;
+}
+
 
 .banner-landing h1 {
   margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  color: #FFD54D;
+  text-shadow: 10px 10px 10px #fd1070;
+  font-size: 79px;
   font-weight: bold;
 }
 
 .banner-landing p {
-  font-size: 20px;
-  color: white;
+  color: #C7F0DB;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 40px;
+  margin-top: 26px;
 }
 
 .banner__money {
