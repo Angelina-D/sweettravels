@@ -15,10 +15,28 @@
           <p> <i class="fas fa-globe-americas"></i> <%= request.sweet.country %> </p>
           <p> <i class="fas fa-heart"></i> <%= request.charity.name %> </p>
           <div class="calculator">
-            <p> Candy <%= request.price_cents % 100 %> €</p>
-            <p> Charity <%= request.donation_cents % 100 %> €</p>
+            <p> Candy <%= convert_currency(request.price_cents) %> €</p>
+            <p> Charity <%= convert_currency(request.donation_cents) %> €</p>
             <p class="smaller-line">_________</p>
-            <p>total 300€</p>
+            <p>total <%= convert_currency(request.price_cents + request.donation_cents) %></p>
+          </div>
+          <div class="card-offer-list">
+            <% request.offers.each do |offer| %>
+              <div class="card-offer-details">
+                <p>
+                <%= image_tag "#{offer.user.photo}", class: "avatar-large" %>
+                <%= offer.user.full_name %>
+                 </p>
+                 <div class="card-action-offer mt-5">
+                 <p>
+                <%= offer.content %>
+                <%= link_to 'detail', request_offer_path(request_id: offer.request_id, id: offer.id), class: 'btn-action'   %>
+                <%= link_to 'confirm', edit_statusoffer_path(id: offer.id, status: 0), class: 'btn-action'  %>
+                <%= link_to 'decline', edit_statusoffer_path(id: offer.id, status: 2), class: 'btn-action'  %>
+                 </p>
+                 </div>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>

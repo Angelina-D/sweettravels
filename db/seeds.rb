@@ -274,12 +274,12 @@ puts "Requests created!"
     start_date: "#{date-10.days}",
     user: User.all.sample,
     pick_up_location: 'berlin',
-    status: rand(0..3),
+    status: rand(0..4),
     request: Request.all.sample,
     )
 end
 
-50.times do
+20.times do
   Offer.create(
     content: "Hey everyone, I'm going to France for two weeks I like to talk about my life blablabal ablablba labalbalbal balablba labab albalbalbal abalbalbalbalbalbal balbalbalbal balablab albalba lbal balablaba lbalbalbalabl abalba lbalal abalbabla",
     end_date: "#{date = Time.at(rand * Time.now.to_i)}",
@@ -297,7 +297,7 @@ Offer.create(
   start_date: "#{date-10.days}",
   user: User.all.sample,
   pick_up_location: 'berlin',
-  status: rand(0..3),
+  status: rand(0..4),
   request: Request.all.sample,
   )
 
@@ -307,7 +307,7 @@ Offer.create(
   start_date: "#{date-10.days}",
   user: User.all.sample,
   pick_up_location: 'berlin',
-  status: rand(0..3),
+  status: rand(0..4),
   request: Request.all.sample,
   )
 
