@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  include MoneyConverterHelper
+
   def home
   end
 
@@ -29,9 +31,9 @@ class PagesController < ApplicationController
     sum_confirmed = current_user.offers.where(status: :confirmed)
     sum_donation = 0
     sum_confirmed.each do |offer|
-      offer.request.donation_cents += sum_donation
+      sum_donation += offer.request.donation_cents
     end
-    sum_donation
+    convert_currency(sum_donation)
   end
 
   def offers_pending

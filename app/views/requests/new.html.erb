@@ -1,4 +1,4 @@
-<div class="request-form-container mt-5">
+<div class="request-form-container my-5">
     <div class="text-center">
       <h1>Request for <%= @request.sweet.name %> </h1>
     </div>
@@ -52,25 +52,27 @@
             <legend class="col-form-label pt-0">Pick a Charity</legend>
           </div>
         </div>
-        <div class="row">
-          <%#= f.association :charity, as: :radio_buttons %>
-          <% Charity.all.each do |charity| %>
-          <div class="col-md-4">
-            <div class="img-charity align-self-center mr-2">
-              <input class="no-display" type="radio" value="<%= charity.id %>" name="request[charity_id]" id="request_charity_id_<%= charity.id %>">
-              <label class="form-charity-label radio_buttons required fit-img" for="request_charity_id_<%= charity.id %>"> <%= cl_image_tag(charity.picture)%> </label>
+        <div class="row ml-5">
+          <div class="col-sm-12">
+            <div class="d-flex flex-wrap justify-content-around">
+              <% Charity.all.each do |charity| %>
+                <div class="img-charity align-self-center mr-5">
+                  <input class="no-display" type="radio" value="<%= charity.id %>" name="request[charity_id]" id="request_charity_id_<%= charity.id %>">
+                  <label class="form-charity-label radio_buttons required fit-img rc-16" for="request_charity_id_<%= charity.id %>"> <%= cl_image_tag(charity.picture, {class: "rc-16"})%> </label>
+                </div>
+              <% end %>
             </div>
           </div>
-          <% end %>
 
         </div>
         <input type="hidden" value="<%= @request.sweet_id %>" name="request[sweet_id]" id="request_sweet_id">
       </div>
     </div>
     <div class="row mt-4">
-          <div class="form-group col-md-12">
+      <div class="col-3"></div>
+          <div class="form-group col-md-6">
             <div class=“form-actions”>
-              <%= f.button :submit, class: 'btn-action' %>
+              <%= f.button :submit, class: 'btn-action w-100' %>
             </div>
           </div>
         </div>

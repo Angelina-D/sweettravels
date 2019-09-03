@@ -147,7 +147,7 @@ Charity.create(
   name: "Global Gift Guide",
   cause: "Education",
   description: 'Children are the faces of the future, and their education is one of the most critical factors to help a community rise above poverty. Your gift of education will not only help a child but her entire village. ',
-  picture: 'https://cdn.shopify.com/s/files/1/0104/7098/1690/files/logo_817x140.png?v=1528232228'
+  picture: 'https://www.channelstv.com/wp-content/uploads/2019/07/ACF-3.jpg'
   )
 
 Charity.create(
@@ -160,7 +160,7 @@ Charity.create(
   name: "Global Gift Guide",
   cause: "Education",
   description: 'Children are the faces of the future, and their education is one of the most critical factors to help a community rise above poverty. Your gift of education will not only help a child but her entire village. ',
-  picture: 'https://cdn.shopify.com/s/files/1/0104/7098/1690/files/logo_817x140.png?v=1528232228'
+  picture: 'https://www.channelstv.com/wp-content/uploads/2019/07/ACF-3.jpg'
   )
 
 Charity.create(
@@ -173,7 +173,7 @@ Charity.create(
   name: "Global Gift Guide",
   cause: "Education",
   description: 'Children are the faces of the future, and their education is one of the most critical factors to help a community rise above poverty. Your gift of education will not only help a child but her entire village. ',
-  picture: 'https://cdn.shopify.com/s/files/1/0104/7098/1690/files/logo_817x140.png?v=1528232228'
+  picture: 'https://www.channelstv.com/wp-content/uploads/2019/07/ACF-3.jpg'
   )
 
 Charity.create(

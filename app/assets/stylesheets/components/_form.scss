@@ -4,11 +4,13 @@
 
 .form-charity-label{
   :hover{
-    border: 2px solid black;
+    border: 1px solid $red;
+    box-shadow: 5px 5px $pink-orange;
     cursor: pointer;
   }
   &.active{
     border: 2px solid yellow;
+    box-shadow: 5px 5px $pink-orange;
   }
 }
 
