@@ -1,14 +1,12 @@
-<div class="container-top">
-  <h1> Request for <%= @request.sweet.name %></h1>
-</div>
 <div class="background">
   <div class="container-show-request row justify-content-between">
     <div class="card-request-sidebar col-3">
+        <%= link_to "Back to candies", sweets_path, class: "btn-return"%>
       <div class="card-request-user py-5 px-4 mb-5">
           <%= cl_image_tag(@request.user.photo,
           {class: "avatar-xl"}) %>
         <div class="card-pink-p mt-3">
-          <p>SWEETIE</p>
+          <p>Sweetie</p>
         </div>
           <p>  <%= @request.user.full_name %></p>
         <div class="text-left">
@@ -17,7 +15,6 @@
           <p> <%= image_tag "heart.png", class: "icon-xs" %> 235 raised</p>
         </div>
       </div>
-        <%= link_to "Back to candies", sweets_path, class: "btn-return"%>
     </div>
 
     <div class="card-request-show container col-8">
