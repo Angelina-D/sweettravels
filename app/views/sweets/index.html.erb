@@ -12,7 +12,7 @@
   <% @sweets.each do |sweet| %>
   <div class="card-sweet">
     <div class="card-img">
-      <%= link_to cl_image_tag(sweet.picture, crop: :fill), new_sweet_request_path(sweet.id) %>
+      <%= link_to cl_image_tag(sweet.picture, {class:"rc-16"}), new_sweet_request_path(sweet.id) %>
     </div>
       <div class="card-info">
         <h4>Country: <%= sweet.country %></h4>
