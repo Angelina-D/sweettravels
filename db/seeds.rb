@@ -131,6 +131,14 @@ user7 = User.create!(
   city: 'Berlin',
   )
 
+user8 = User.create(
+  full_name: 'Dodo' ,
+  photo: 'https://media.vanityfair.com/photos/5c2fdb09ef10e32ca1332862/16:9/w_1280,c_limit/trumpshutdownraises.jpg',
+  email:'ilovecarlos@hotmail.com',
+  password: '123456',
+  city: 'Los Angeles',
+  )
+
 puts "Users created!"
 
 ####################### CHARITY ###############################
@@ -224,6 +232,16 @@ Request.create(
     quantity: rand(1..5),
     charity_id: Charity.all.sample.id,
     user: user6,
+    sweet: sweet7,
+    )
+
+Request.create(
+    description: 'My all time Favorite - send help pls',
+    price_cents: rand(1000..2500),
+    donation_cents: rand(500..2000),
+    quantity: rand(1..5),
+    charity_id: Charity.all.sample.id,
+    user: user8,
     sweet: sweet7,
     )
 

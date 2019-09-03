@@ -11,15 +11,16 @@ class Request < ApplicationRecord
                     sweet: [:name, :country]
                   },
                   using: {
-                    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+                    tsearch: { prefix: true }
                   }
+
   pg_search_scope :search_request_per_city,
                   against: [],
                   associated_against: {
                     user: [:city]
                   },
                   using: {
-                    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+                    tsearch: { prefix: true }
                   }
 
   DONATION = [5, 10, 15, 20]
