@@ -7,15 +7,18 @@
       <%= image_tag 'https://res.cloudinary.com/duw2hqlo3/image/upload/v1567516396/1873562-removebg-preview_Kopie_3_olm2s7.png',id: "left-parrot"%>
       <div class="button-cont">
         <%= image_tag 'https://res.cloudinary.com/duw2hqlo3/image/upload/v1567522968/Group_6_3_ykqzd3.svg',id: "left-speech"%>
-        <button class="front-left-button">Make a request</button>
+        <button class="front-left-button">MAKE A REQUEST</button>
       </div>
       <div class="button-cont">
         <%= image_tag 'https://res.cloudinary.com/duw2hqlo3/image/upload/v1567522972/Group_7_3_yuh7po.png',id: "right-speech"%>
-        <button class="front-right-button">Make an offer</button>
+        <button class="front-right-button">MAKE AN OFFER</button>
       </div>
       <%= image_tag 'https://res.cloudinary.com/duw2hqlo3/image/upload/v1567506570/5b7296f92000002c0034a4b1-removebg-preview_1_icakt8.png',id: "right-parrot"%>
     </div>
 </div>
+
+<div class="background-glitter" style="background-image: url(https://media1.giphy.com/media/WNJATm9pwnjpjI1i0g/giphy.gif?cid=790b7611a105b44895dc2e857e23a432ff27863771445879&rid=giphy.gif)"></div>
+
 
 
 <div class="container-box">
@@ -55,8 +58,8 @@
   </div>
 </div>
 
-    <%= link_to 'Become a hero', requests_path, class: "btn btn-info" %>
-    <%= link_to 'Look for candies', sweets_path, class: "btn btn-info" %>
+    <%= link_to 'Become a hero', requests_path %>
+    <%= link_to 'Look for candies', sweets_path %>
 
 <div class="footer">
     <%#= image_tag "landing-logo.png" %>
