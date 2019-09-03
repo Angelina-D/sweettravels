@@ -2,21 +2,9 @@ class RequestsController < ApplicationController
   before_action :find_request, only: [:show, :destroy]
   include MoneyConverterHelper
   def index
-    if params[:search_sweet_name_and_country] == ''
-      @requests = Request.all
-    elsif params[:search_sweet_name_and_country]
-      @requests = Request.search_sweet_name_and_country(params[:search_sweet_name_and_country])
-    else
-      @requests = Request.all
-    end
-
-    if params[:search_user_city] == ''
-      @requests = Request.all
-    elsif params[:search_user_city]
-      @requests = Request.search_request_per_city(params[:search_user_city])
-    else
-      @requests = Request.all
-    end
+    @requests = Request.all
+    @requests = @requests.search_sweet_name_and_country(params[:search_sweet_name_and_country]) if params[:search_sweet_name_and_country].present?
+    @requests = @requests.search_request_per_city(params[:search_user_city]) if params[:search_user_city].present?
 
     @markers = geocode_request(@requests)
   end
