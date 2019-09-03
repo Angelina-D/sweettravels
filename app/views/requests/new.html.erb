@@ -22,10 +22,7 @@
     </div>
     <div class="row">
       <div class="col-md-8">
-          <%#= f.input :donation_cents, label: 'Donation amount:', input_html: { class: 'round-form' }  %>
-          <%#= f.input :donation_cents, collection: Request::DONATION, as: :check_boxes%>
             <legend class="col-form-label pt-0">Donation</legend>
-            <!-- <input type="checkbox" name="request[donation_cents][]" value="" /> -->
             <div class="form-check pl-0">
               <% Request::DONATION.each do |d| %>
               <input class="no-display" type="radio" value="<%= d %>" name="request[donation_cents]" id="request_donation_cents_<%= d %>" />
@@ -40,7 +37,6 @@
 
     <div class="row">
       <div class="col-md-8 d-flex flex-wrap">
-        <%#= f.association :charity, as: :radio_buttons %>
             <legend class="col-form-label pt-0">Pick a Charity</legend>
             <% Charity.all.each do |charity| %>
               <div class="img-charity align-self-center mr-2">
