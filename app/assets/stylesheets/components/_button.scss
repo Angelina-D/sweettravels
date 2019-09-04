@@ -1,19 +1,54 @@
 
-
+@import url('http://allfont.de/allfont.css?fonts=sans-serif-shaded');
 // ################## PLEASE DON'T PUT MARGIN ON THOSE LITTLE GUYS. CREATE A NEW CLASS
 // OR USE THE BOOTSTRAP MARGIN OPTION #########################################
-.front-right-button {
-    margin: 142px 0px 50px 123px;
-    background-color: $yellow;
-    border-radius: 6px;
-    padding: 15px;
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
 }
 
 .front-left-button {
-   margin: 142px 0px 50px 123px;
-   background-color: $yellow;
-   border-radius: 6px;
-   padding: 15px;
+    margin: 84px 0px 128px 100px;
+    background-color: #FAE1E2;
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: black;
+    box-shadow: 5px 6px 0px 3px #CC4481;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px #CC4481;
+    color: #CC4481;
+
+    a {
+      color: #CC4481;
+    }
+
+    &:hover {
+      animation: bounce 0.3s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
+}
+
+.front-right-button {
+    margin: 84px 0px 128px 100px;
+    background-color: #99decd;
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: black;
+    box-shadow: 5px 6px 0px 3px #165eca;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px #165eca;
+    color: #165eca;
+
+    a {
+      color: #165ECA;
+    }
+
+    &:hover {
+      animation: bounce 0.3s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
 }
 
 .btn-info {

@@ -1,8 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Passion+One&display=swap');
 
 .flex-container-landing{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+
+  img {
+    width: 157px;
+    height: 143px;
+  }
 }
 
 .container-sweet{
@@ -19,6 +24,7 @@
 
 .pic-con {
   display: flex;
+  margin-bottom: 15px;
   img {
     width: 50%;
     position: sticky;
@@ -73,15 +79,20 @@
 }
 
 .container-box {
-  width: 1000px;
+  width: 100%;
   margin: auto;
 
   h2 {
+    padding-top: 91px;
+    padding-bottom: 63px;
     text-align: center;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
     font-weight: bold;
-}
+    font-family: 'Passion One', cursive;
+    text-transform: uppercase;
+    font-size: 70px;
+    color: #FCD54C;
+    text-shadow: 3px 5px #FF84B6;
+  }
 }
 
 .form-container{
