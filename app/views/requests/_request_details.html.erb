@@ -19,9 +19,11 @@
 <div class="row align-items-end">
 
   <div class="col-6">
-    <div class="btn-action" id= "offer">
-      <%= link_to 'MAKE AN OFFER', new_request_offer_path(@request) %>
-    </div>
+    <% if @request.user != current_user %>
+      <div class="btn-action" id= "offer">
+        <%= link_to 'MAKE AN OFFER', new_request_offer_path(@request) %>
+      </div>
+    <% end %>
   </div>
 
   <div class="col-1"></div>
