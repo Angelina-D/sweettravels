@@ -30,7 +30,7 @@
           </div>
           <div class="col-1"></div>
           <div class="card-offer-list col-7">
-            <% request.offers.each do |offer| %>
+            <% request.offers_to_display.each do |offer| %>
 
               <div class="card-offer-details rc-16 container my-1">
                 <div class="row align-items-center">
@@ -50,17 +50,27 @@
                     <%= link_to 'detail', request_offer_path(request_id: offer.request_id, id: offer.id), class: 'mini-button'   %>
                   </div>
 
-                  <div class="col-1"></div>
+
+                  <% if offer.confirmed? %>
+                    <div class="col-1"></div>
+
+                    <%= form_tag orders_path do %>
+                      <%= hidden_field_tag 'request_id', request.id %>
+                      <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+                    <% end %>
+
+                  <% else %>
 
                     <div class="col-1 d-flex flex-wrap">
-                      <%= link_to 'confirm', edit_statusoffer_path(id: offer.id, status: 0), class: 'mini-button mb-2'  %>
+                      <%= link_to 'confirm', edit_statusoffer_path(id: offer.id, status: 0), class: 'mini-button mb-2 confirm-button'  %>
                       <%= link_to 'decline', edit_statusoffer_path(id: offer.id, status: 2), class: 'mini-button'  %>
                     </div>
-
-                </div>
+                  <% end %>
+                <% end %>
 
               </div>
-            <% end %>
+
+            </div>
           </div>
         </div>
       </div>

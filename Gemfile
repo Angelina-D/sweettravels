@@ -19,6 +19,8 @@ gem 'cloudinary', '~> 1.9.1'
 gem 'pg_search', '~> 2.3.0'
 gem 'geocoder'
 gem 'jquery-rails'
+gem 'money-rails'
+gem 'stripe'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

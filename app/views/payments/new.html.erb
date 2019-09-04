@@ -1,0 +1,18 @@
+<h1>Payment for Request <%= @order.offer.request.sweet.name %></h1>
+<%= form_tag order_payments_path(@order) do %>
+  <article>
+    <label class="amount">
+      <span>Amount: <%= convert_currency(@order.amount) %></span>
+    </label>
+  </article>
+
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-name="My Teddy"
+    data-email="<%= current_user.email %>"
+    data-description="Teddy <%= @order.candy_sku %>"
+    data-amount="100"<%#= @request.price_cents + @request.donation_cents %>
+    data-currency="euros<%#= @request.price_cents %>">
+  </script>
+<% end %>
