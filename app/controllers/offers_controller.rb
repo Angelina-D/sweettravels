@@ -17,7 +17,7 @@ class OffersController < ApplicationController
     @offer.user = user
     @offer.request = request
     if @offer.save
-      render :show
+      redirect_to request_offer_path(request_id: @offer.request_id, id: @offer.id)
     else
       render :new
     end
