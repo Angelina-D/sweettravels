@@ -7,11 +7,11 @@
       <%= image_tag 'https://res.cloudinary.com/duw2hqlo3/image/upload/v1567516396/1873562-removebg-preview_Kopie_3_olm2s7.png',id: "left-parrot"%>
       <div class="button-cont">
         <%= image_tag 'https://res.cloudinary.com/duw2hqlo3/image/upload/v1567522968/Group_6_3_ykqzd3.svg',id: "left-speech"%>
-        <button class="front-left-button">MAKE A REQUEST</button>
+         <button class="front-left-button"> <%= link_to 'MAKE A REQUEST', requests_path %></button>
       </div>
       <div class="button-cont">
         <%= image_tag 'https://res.cloudinary.com/duw2hqlo3/image/upload/v1567522972/Group_7_3_yuh7po.png',id: "right-speech"%>
-        <button class="front-right-button">MAKE AN OFFER</button>
+        <button class="front-right-button"> <%= link_to 'MAKE AN OFFER', sweets_path %></button>
       </div>
       <%= image_tag 'https://res.cloudinary.com/duw2hqlo3/image/upload/v1567506570/5b7296f92000002c0034a4b1-removebg-preview_1_icakt8.png',id: "right-parrot"%>
     </div>
@@ -21,29 +21,32 @@
 
 
 
-<div class="container-box">
+<div class="container-box" style="background-image: url(https://res.cloudinary.com/duw2hqlo3/image/upload/v1567583939/Rectangle_1_nmpdzt.png)">
   <h2>How it works</h2>
   <div class="flex-container-landing">
     <div class="card-landing">
-      <%#= image_tag "lolly.png" %>
-      <h4>Make a request</h4>
-      <p>Kind of candy</p>
+      <%= image_tag "https://media.giphy.com/media/Feyr7kcA5tvkC45p57/giphy.gif" %>
+      <h4 class="pink">Craving Sweets</h4>
+      <p>Are you craving candy from your home country and tired of high shipping costs to feed your craving?</p>
     </div>
     <div class="card-landing">
-      <%#= image_tag "suitcase.png"%>
-      <h4>Be a Hero</h4>
-      <p>Help a craving</p>
+      <%= image_tag "https://media.giphy.com/media/kBrXyorjXo9Rh66RUf/giphy.gif"%>
+      <h4 class="pink">Make a Request</h4>
+      <p>Upload a Request of your sweetest dream on Sweet Travels and let someone bring it from their trip</p>
     </div>
     <div class="card-landing">
-      <%#= image_tag "heart.png" %>
-      <h4>Give to a cause</h4>
-      <p>contribute to a cause</p>
+      <%= image_tag "https://media.giphy.com/media/H3NDKBW2CafBn2c0pR/giphy.gif" %>
+      <h4 class="blue">True heroes bring candy</h4>
+      <p>Make an offer to a request: make some space in your luggage and bring dat candy home from your trip! </p>
     </div>
+    <div class="card-landing">
+      <%= image_tag "https://media.giphy.com/media/SxAWlNkmnYFodtLmEg/giphy.gif" %>
+      <h4 class="blue">Bring joy - twice!</h4>
+      <p>Feed cravings & contribute to causes: help to save shipping costs & increase donations!</p>
   </div>
 </div>
 
-
-<div class="banner__money" >
+<div class="banner__money" style="background-image: url(https://media1.giphy.com/media/2ZWoWMcaVoBfKQvpiF/giphy.gif?cid=790b76112817fdc9f91c0047f3dc8a5a5bff29264c04745b&rid=giphy.gif)">
   <div class="banner__money-raised">
     <h1>MONEY</h1>
     <h1>RAISED</h1>
@@ -58,9 +61,6 @@
   </div>
 </div>
 
-    <%= link_to 'Become a hero', requests_path %>
-    <%= link_to 'Look for candies', sweets_path %>
-
 <div class="footer">
-    <%#= image_tag "landing-logo.png" %>
+    <%= image_tag "landing-logo.png" %>
 </div>

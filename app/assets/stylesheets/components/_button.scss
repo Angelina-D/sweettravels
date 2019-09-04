@@ -18,6 +18,10 @@
     text-shadow: 1px 1px 2px #CC4481;
     color: #CC4481;
 
+    a {
+      color: #CC4481;
+    }
+
     &:hover {
       animation: bounce 0.3s;
       animation-direction: alternate;
@@ -35,6 +39,10 @@
     font-size: 18px;
     text-shadow: 1px 1px 2px #165eca;
     color: #165eca;
+
+    a {
+      color: #165ECA;
+    }
 
     &:hover {
       animation: bounce 0.3s;

@@ -20,9 +20,10 @@
 }
 
 .banner__money {
-  background-size: cover;
+  margin-top: 80px;
+  padding: 119px 0px 144px 0px;
+  background-size: inherit;
   background-position: center;
-  background-image: asset-url('city.png');
   min-height: 100vh;
   min-width: 1024px;
   display: flex;
@@ -54,12 +55,13 @@
 
     font-family: 'Passion One', cursive;
     font-size: 150px;
-    color: #49BEB7;
+    color: #CC4480;
     font-weight: bold;
-    background-color: #C7F0DB;
+    background-color: #F5BCD6;
     width: 120px;
     text-align: center;
     margin: 0 6px;
+    border-radius: 11px;
     }
     .comma {
       background-color: transparent;
