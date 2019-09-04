@@ -1,13 +1,22 @@
-<div class="container-top sticky-search">
-  <h1>Candy? Fix dat craving!</h1>
+<div class="container-top sticky-search-reguest">
+  <div>
+    <%= image_tag 'https://media.giphy.com/media/QBwTvLxN5kHvIsvw3B/giphy.gif', id: "left-candy" %>
+  </div>
+  <div>
+    <h1>Candy? Fix dat craving!</h1>
 
-  <%= form_tag(search_sweets_path, method: "get", class: "search_bar") do %>
+    <%= form_tag(search_sweets_path, method: "get", class: "search_bar") do %>
 
-    <%= text_field_tag :query, nil, placeholder: "Search by sweet name, country and category" %>
-    <i id='search_icon' class="fa fa-search searchIcon"></i>
-    <%= submit_tag "", id:'search_button'%>
-  <% end %>
+      <%= text_field_tag :query, nil, placeholder: "Search by sweet name, country and category" %>
+      <i id='search_icon' class="fa fa-search searchIcon"></i>
+      <%= submit_tag "", id:'search_button'%>
+    <% end %>
+  </div>
+  <div>
+    <%= image_tag 'https://media.giphy.com/media/QBwTvLxN5kHvIsvw3B/giphy.gif', id: "right-candy" %>
+  </div>
 </div>
+
 <div class="container-sweet">
   <% @sweets.each do |sweet| %>
   <div class="card-sweet">
