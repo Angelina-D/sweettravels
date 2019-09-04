@@ -185,7 +185,7 @@ Charity.create(
 
 puts "Charity created!"
 ##################### REQUEST ########################
-Request.create(
+  Request.create(
     description: 'I am Craving Feijoa!',
     price_cents: rand(1000..2500),
     donation_cents: rand(500..2000),
@@ -267,26 +267,26 @@ Request.create!(
 puts "Requests created!"
 
 # ################################ OFFER ####################################
-20.times do
-  Offer.create(
-    content: "Hey everyone, I'm going to the US for two weeks",
-    end_date: "#{date = Time.at(rand * Time.now.to_i)}",
-    start_date: "#{date-10.days}",
-    user: User.all.sample,
-    pick_up_location: 'berlin',
-    status: rand(0..4),
-    request: Request.all.sample,
-    )
-end
+# 20.times do
+#   Offer.create(
+#     content: "Hey everyone, I'm going to the US for two weeks",
+#     end_date: "#{date = Time.at(rand * Time.now.to_i)}",
+#     start_date: "#{date-10.days}",
+#     user: User.all.sample,
+#     pick_up_location: 'berlin',
+#     status: rand(0..4),
+#     request: Request.all.sample,
+#     )
+# end
 
-20.times do
+30.times do
   Offer.create(
     content: "Hey everyone, I'm going to France for two weeks I like to talk about my life blablabal ablablba labalbalbal balablba labab albalbalbal abalbalbalbalbalbal balbalbalbal balablab albalba lbal balablaba lbalbalbalabl abalba lbalal abalbabla",
     end_date: "#{date = Time.at(rand * Time.now.to_i)}",
     start_date: "#{date-10.days}",
     user: User.all.sample,
     pick_up_location: 'berlin' ,
-    status: 0,
+    status: 1,
     request: Request.all.sample,
     )
 end
