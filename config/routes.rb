@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     resources :requests, only: [:new]
   end
 
+  resources :statusoffer, only: [:edit]
+
   get 'profile', to: 'pages#profile', as: 'profile'
 
   mount ActionCable.server => "/cable"

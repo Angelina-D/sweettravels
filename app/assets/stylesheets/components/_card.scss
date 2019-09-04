@@ -191,9 +191,9 @@
 }
 
 .card-request-content {
-  display: flex;
+  // display: flex;
   background: white;
-  width: 40%;
+  // width: 40%;
   margin: 20px 36px 20px 0px;
   height: auto;
   padding: 14px;
@@ -201,3 +201,11 @@
   box-shadow: 15px 15px $pink-orange;
 }
 
+// ############################### PROFILE OFFER #####################333
+.card-offer-list{
+
+}
+.card-offer-details{
+  border: 2px solid black;
+  padding: 5px;
+}

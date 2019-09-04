@@ -1,27 +1,69 @@
 <div class="cards-wr-margin">
   <h2> ALL YOUR REQUESTS</h2>
-  <div class="flex-card-container">
+  <!-- <div class="flex-card-container"> -->
     <% @requests.each do |request| %>
-      <div class="card-request-content">
-        <p class="candy-pic-request"> <%= image_tag "#{request.sweet.picture}"%> </p>
-        <% if @offers.where(request_id: request.id).nil? %>
-          <p><%= No Offers %></p>
-          <% else %>
-          <p> <%= link_to @offers.where(request_id: request.id).count %></p>
-        <% end %>
-        <div class="card-request-text">
-          <h3> <%= request.sweet.name %> </h3>
-          <p> <%= request.quantity %>x</p>
-          <p> <i class="fas fa-globe-americas"></i> <%= request.sweet.country %> </p>
-          <p> <i class="fas fa-heart"></i> <%= request.charity.name %> </p>
-          <div class="calculator">
-            <p> Candy <%= request.price_cents % 100 %> €</p>
-            <p> Charity <%= request.donation_cents % 100 %> €</p>
-            <p class="smaller-line">_________</p>
-            <p>total 300€</p>
+      <div class="card-request-content container">
+        <div class="row">
+          <div class="card-request-info col-4">
+            <p class="candy-pic-request"> <%= image_tag "#{request.sweet.picture}"%> </p>
+
+            <% if @offers.where(request_id: request.id).nil? %>
+              <p><%= No Offers %></p>
+              <% else %>
+              <p> <%= link_to @offers.where(request_id: request.id).count %></p>
+            <% end %>
+
+            <div class="card-request-text">
+              <h3> <%= request.sweet.name %> </h3>
+              <p> <%= request.quantity %>x</p>
+              <p> <i class="fas fa-globe-americas"></i> <%= request.sweet.country %> </p>
+              <p> <i class="fas fa-heart"></i> <%= request.charity.name %> </p>
+
+              <div class="calculator rc-16">
+                <p> Candy <%= convert_currency(request.price_cents) %> €</p>
+                <p> Charity <%= convert_currency(request.donation_cents) %> €</p>
+                <p class="smaller-line">_________</p>
+                <p>total <%= convert_currency(request.price_cents + request.donation_cents) %></p>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-1"></div>
+          <div class="card-offer-list col-7">
+            <% request.offers.each do |offer| %>
+
+              <div class="card-offer-details rc-16 container my-1">
+                <div class="row align-items-center">
+
+                  <div class="col-1">
+                    <p>
+                    <%= image_tag "#{offer.user.photo}", class: "avatar" %>
+                    <%= offer.user.full_name %>
+                    </p>
+                  </div>
+
+                  <div class="col-7">
+                    <p><%= offer.content %></p>
+                  </div>
+
+                  <div class="col-1 ">
+                    <%= link_to 'detail', request_offer_path(request_id: offer.request_id, id: offer.id), class: 'mini-button'   %>
+                  </div>
+
+                  <div class="col-1"></div>
+
+                    <div class="col-1 d-flex flex-wrap">
+                      <%= link_to 'confirm', edit_statusoffer_path(id: offer.id, status: 0), class: 'mini-button mb-2'  %>
+                      <%= link_to 'decline', edit_statusoffer_path(id: offer.id, status: 2), class: 'mini-button'  %>
+                    </div>
+
+                </div>
+
+              </div>
+            <% end %>
           </div>
         </div>
       </div>
     <% end %>
-  </div>
+  <!-- </div> -->
 </div>
