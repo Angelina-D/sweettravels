@@ -159,30 +159,6 @@
 
 }
 
-.sticky-search-candy {
-  position: sticky;
-  top: 0;
-  background: $beige;
-  z-index: 5;
-  height: 180px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  h1 {
-    font-family: 'Passion One', cursive;
-    font-size: 75px;
-    letter-spacing: 2px;
-    color: #C7F0DB;
-    font-weight: bold;
-    text-shadow: 3px 5px 0px #49BEB7;
-    text-transform: uppercase;
-  }
-
-  .search_bar {
-    padding-top: 12px;
-  }
-
   #left-candy {
     width: 200px;
     transform: rotate(32deg);
@@ -192,8 +168,6 @@
     width: 200px;
     transform: rotate(-32deg) scaleX(-1);
   }
-
-}
 
 .sticky-search-reguest{
   position: sticky;
