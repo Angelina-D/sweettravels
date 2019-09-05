@@ -14,15 +14,15 @@ puts 'Oh data destroyed'
 
 ############################ SWEET ##########################################
 
-sweet1 = Sweet.create(
-  name: 'Feijoa Candy',
+pineap = Sweet.create(
+  name: 'Pineapple lumps',
   description: 'Mayceys lollies continue to be a Kiwi favourite',
-  picture: 'https://www.shopnewzealand.co.nz/sites/default/files/styles/large/public/imported_images/feijoa_sweets.jpg?itok=45DsESd6',
+  picture: 'https://www.bigw.com.au/medias/sys_master/images/images/hf4/h6e/11848954707998.jpg',
   category:'Lollies',
   country: '🇳🇿 New Zealand',
   )
 
-sweet2 = Sweet.create(
+dragibus = Sweet.create(
   name: 'Dragibus',
   description: 'France best kept secret',
   picture: 'https://24h-chrono.fr/127-large_default/haribo-dragibus.jpg',
@@ -30,7 +30,7 @@ sweet2 = Sweet.create(
   country: '🇫🇷 France',
   )
 
-sweet3 = Sweet.create(
+pictolin = Sweet.create(
   name: 'Pictolin',
    description: "Perfect for Valentinesday (14th Feb) or Weddings",
    picture: 'https://taw9eelcdn.cachefly.net/media/catalog/product/cache/1/image/519x/caf7b51f4c4f72629c8e66ac0d790077/1/_/1_780_107.jpg',
@@ -38,7 +38,7 @@ sweet3 = Sweet.create(
    country: '🇪🇸 Spain',
    )
 
-sweet4 = Sweet.create(
+balas = Sweet.create(
   name: 'Balas Sabor Coco',
   description: 'For coco cravings and birthday parties',
   picture: 'https://www.vicios-brasileiros.de/images/product_images/original_images/Bala-Coco-Brasilien.jpg',
@@ -46,74 +46,83 @@ sweet4 = Sweet.create(
   country: '🇧🇷 Brazil',
   )
 
-sweet5 = Sweet.create(
+koreanShit = Sweet.create(
   name: '이것들을 사랑해',
   description: 'Look at that promising cow on the package - its awesome!',
   picture: 'http://blog.snackfever.com/wp-content/uploads/2017/01/malang-cow-strawberry-e1484313141780.png',
   category: 'Bonbon',
   country: '🇰🇷 Korea',
   )
-sweet6 = Sweet.create!(
+rossana = Sweet.create!(
   name: 'Rossana',
   description: "Nuts in there! Watch your allergy",
   picture: "https://images-na.ssl-images-amazon.com/images/I/81%2B-vLir0UL._SL1500_.jpg",
   category: 'Choco',
   country: ' 🇮🇹 Italy',
   )
-sweet7 = Sweet.create(
+junior_mint = Sweet.create(
   name: 'Junior Mints',
   description: 'The best of all candies ever',
   picture: 'https://images-na.ssl-images-amazon.com/images/I/818exYu5sbL._SL1500_.jpg',
   category:'Choco',
   country: '🇺🇸 USA',
   )
-sweet8 = Sweet.create(
+trolli = Sweet.create(
   name: 'Trolli',
   description: 'Very awesome good quality 4.5/5 stars',
   picture: 'https://images-na.ssl-images-amazon.com/images/I/91Kad-jepLL._SL1500_.jpg',
   category:'Pure Insanity',
   country: '🇩🇪 Germany',
   )
-sweet9 = Sweet.create(
+timtam = Sweet.create(
   name: 'Timtam',
-  description: 'In Australia there is not only deadly animal but chocolat biscuit to die for too!',
+  description: 'Oz has deadly animal and biscuit to die for too!',
   picture: 'https://images-na.ssl-images-amazon.com/images/I/514RuYgRv7L.jpg',
   category:'Choco',
   country: '🇦🇺 Australia',
   )
-sweet10 = Sweet.create(
+carambar = Sweet.create(
   name: 'Carambar',
   description: 'The classic teeth breaker coming from France',
   picture: 'https://static.weezbe.com/planetbonbons/Images/products/p_244G_180120181412.jpg',
   category:'Teeth breaker',
   country: '🇫🇷 France',
   )
-sweet10 = Sweet.create(
+cosette = Sweet.create(
   name: 'Cocosette',
   description: 'Hey coco! This is Venezula with a punch!',
   picture: 'https://images-na.ssl-images-amazon.com/images/I/51eAKP6xhHL._SX355_.jpg',
   category:'Teeth breaker',
   country: '🇻🇪 Venezuela',
   )
-sweet10 = Sweet.create(
+prince_picolo = Sweet.create(
   name: 'Prince Polo',
-  description: 'The classic teeth breaker coming from France',
+  description: 'The classic teeth breaker coming from Poland',
   picture: 'https://images-nitrosell-com.akamaized.net/product_images/23/5695/princepoloclassic.jpg',
   category:'Teeth breaker',
   country: '🇵🇱 Poland',
   )
+twinkies = Sweet.create(
+  name: 'Twinkies',
+  description: 'Very nasty american statment!',
+  picture: 'https://images-na.ssl-images-amazon.com/images/I/91VKsgpRZrL._SL1500_.jpg',
+  category:'MERICAAAAA!',
+  country: '🇺🇸 USA',
+  )
+
+
 
 puts "Sweets created!"
 
 ############################## USER ############################################
-user1 = User.create(
+angie = User.create(
   full_name: 'Angie' ,
   photo: 'https://avatars3.githubusercontent.com/u/52400250?s=460&v=4',
   email:'potatoe@hotmail.com',
   password: '123456',
   city: 'Berlin',
   )
-user2 = User.create(
+kaylee = User.create(
   full_name: 'Kaylee' ,
   photo: 'https://avatars3.githubusercontent.com/u/50417340?v=4',
   email:'bootstrapisevil@hotmail.com',
@@ -121,7 +130,7 @@ user2 = User.create(
   city: 'Berlin',
   )
 
-user3 = User.create(
+max = User.create(
   full_name: 'Max' ,
   photo: 'https://avatars2.githubusercontent.com/u/51816032?v=4',
   email:'cssisevil@hotmail.com',
@@ -129,7 +138,7 @@ user3 = User.create(
   city: 'Berlin',
   )
 
-user4 = User.create(
+jorge = User.create(
   full_name: 'Jorge' ,
   photo: 'https://avatars1.githubusercontent.com/u/28198714?v=4',
   email:'jsisthebest@hotmail.com',
@@ -137,7 +146,7 @@ user4 = User.create(
   city: 'Berlin',
   )
 
-user5 = User.create(
+yann = User.create(
   full_name: 'Yann' ,
   photo: 'https://avatars.githubusercontent.com/u/51452830?s=460&v=4',
   email:'jsisevil@hotmail.com',
@@ -145,7 +154,7 @@ user5 = User.create(
   city: 'Berlin',
   )
 
-user6 = User.create(
+malina = User.create(
   full_name: 'Malina' ,
   photo: 'https://avatars2.githubusercontent.com/u/41272214?v=4',
   email:'rubyisevil@hotmail.com',
@@ -153,7 +162,7 @@ user6 = User.create(
   city: 'Berlin',
   )
 
-user7 = User.create!(
+angelo = User.create!(
   full_name: 'Angelo' ,
   photo: 'https://avatars1.githubusercontent.com/u/51519319?v=4',
   email:'cssisawesome@hotmail.com',
@@ -161,24 +170,31 @@ user7 = User.create!(
   city: 'Berlin',
   )
 
-user8 = User.create(
+grant = User.create(
   full_name: 'Grant' ,
   photo: 'https://avatars2.githubusercontent.com/u/48766845?s=460&v=4',
   email:'timtam@hotmail.com',
   password: '123456',
   city: 'Melbourne',
   )
-user9 = User.create(
+amelle = User.create(
   full_name: 'Amelle' ,
   photo: 'https://avatars2.githubusercontent.com/u/49689058?s=460&v=4',
   email:'memelle@hotmail.com',
   password: '123456',
   city: 'Berlin',
   )
-user10 = User.create(
+victor = User.create(
   full_name: 'Victor' ,
   photo: 'https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/67557545_929840497354966_844013081422987264_o.jpg?_nc_cat=100&_nc_oc=AQm63oEcvg4oc2hmqGTzUAGWBl3X2JDhtG2kfLL6UpFnpGwS7FA_2s-Ny-kkXR5bFQ8&_nc_ht=scontent-amt2-1.xx&oh=8b0fc5be17c4adac120de056b2c48b46&oe=5E058913',
   email:'redcabage@hotmail.com',
+  password: '123456',
+  city: 'Berlin',
+  )
+toni = User.create(
+  full_name: 'Antoinette' ,
+  photo: 'https://avatars2.githubusercontent.com/u/31135213?s=460&v=4',
+  email:'antoinette@hotmail.com',
   password: '123456',
   city: 'Berlin',
   )
@@ -229,14 +245,33 @@ Charity.create(
 
 puts "Charity created!"
 ##################### REQUEST ########################
+Request.create!(
+    description: 'I want those bad boy from France, they are ROYAL!',
+    price_cents: rand(1000..2500),
+    donation_cents: rand(500..2000),
+    quantity: rand(1..5),
+    charity_id: Charity.all.sample.id,
+    user: toni,
+    sweet: dragibus,
+    )
+
+Request.create(
+    description: 'I need my timtam!',
+    price_cents: rand(1000..2500),
+    donation_cents: rand(500..2000),
+    quantity: rand(1..5),
+    charity_id: Charity.all.sample.id,
+    user: grant,
+    sweet: timtam,
+    )
   Request.create(
     description: 'I am Craving Feijoa!',
     price_cents: rand(1000..2500),
     donation_cents: rand(500..2000),
     quantity: rand(1..5),
     charity_id: Charity.all.sample.id,
-    user: user3,
-    sweet: sweet1,
+    user: max,
+    sweet: pineap,
     )
 
 Request.create(
@@ -245,8 +280,8 @@ Request.create(
     donation_cents: rand(500..2000),
     quantity: rand(1..5),
     charity_id: Charity.all.sample.id,
-    user: user2,
-    sweet: sweet5,
+    user: kaylee,
+    sweet: koreanShit,
     )
 
 Request.create(
@@ -255,8 +290,8 @@ Request.create(
     donation_cents: rand(500..2000),
     quantity: rand(1..5),
     charity_id: Charity.all.sample.id,
-    user: user4,
-    sweet: sweet3,
+    user: jorge,
+    sweet: pictolin,
     )
 
 Request.create(
@@ -265,8 +300,8 @@ Request.create(
     donation_cents: rand(500..2000),
     quantity: rand(1..5),
     charity_id: Charity.all.sample.id,
-    user: user5,
-    sweet: sweet2,
+    user: yann,
+    sweet: dragibus,
     )
 
 Request.create(
@@ -275,8 +310,8 @@ Request.create(
     donation_cents: rand(500..2000),
     quantity: rand(1..5),
     charity_id: Charity.all.sample.id,
-    user: user6,
-    sweet: sweet7,
+    user: amelle,
+    sweet: junior_mint,
     )
 
 Request.create(
@@ -285,18 +320,8 @@ Request.create(
     donation_cents: rand(500..2000),
     quantity: rand(1..5),
     charity_id: Charity.all.sample.id,
-    user: user8,
-    sweet: sweet9,
-    )
-
-Request.create(
-    description: 'My all time Favorite - send help pls',
-    price_cents: rand(1000..2500),
-    donation_cents: rand(500..2000),
-    quantity: rand(1..5),
-    charity_id: Charity.all.sample.id,
-    user: user7,
-    sweet: sweet6,
+    user: angelo,
+    sweet: rossana,
     )
 
 Request.create!(
@@ -305,8 +330,8 @@ Request.create!(
     donation_cents: rand(500..2000),
     quantity: rand(1..5),
     charity_id: Charity.all.sample.id,
-    user: user9,
-    sweet: sweet8,
+    user: amelle,
+    sweet: trolli,
     )
 Request.create!(
     description: 'My all time Favorite - send help pls',
@@ -314,9 +339,19 @@ Request.create!(
     donation_cents: rand(500..2000),
     quantity: rand(1..5),
     charity_id: Charity.all.sample.id,
-    user: user10,
-    sweet: sweet10,
+    user: victor,
+    sweet: balas,
     )
+Request.create!(
+    description: 'My all time Favorite - send help pls',
+    price_cents: rand(1000..2500),
+    donation_cents: rand(500..2000),
+    quantity: rand(1..5),
+    charity_id: Charity.all.sample.id,
+    user: angie,
+    sweet: carambar,
+    )
+
 puts "Requests created!"
 
 # ################################ OFFER ####################################
@@ -335,7 +370,7 @@ puts "Requests created!"
 30.times do
   userer = User.all.sample
   Offer.create(
-    content: "Hey #{userer.full_name}, I can bring those bad boy back, no prob! ",
+    content: "Hey, I can bring those bad boy back, no prob! ",
     end_date: "#{date = Time.at(rand * Time.now.to_i)}",
     start_date: "#{date-10.days}",
     user: userer,
