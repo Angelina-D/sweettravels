@@ -56,18 +56,13 @@
   &-request{
     display: flex;
     height: 180px;
-    width: 600px;
+    width: 425px;
     margin: 0 auto;
 
     &-info {
       flex-grow:1;
     }
 
-  }
-
-    &-img{
-    // height: 422px;
-    // width: 445px;
   }
 
 }
@@ -107,32 +102,11 @@
   }
  }
 
- .card-donation{
-  display: flex;
-  justify-content: space-between;
-}
-
-.card-price{
-  display: flex;
-  justify-content: space-between;
-}
-
-.card-total-column{
-  display: flex;
-  flex-direction: column;
-  margin-right: 20px;
-}
-
-.card-border-bottom{
-  border-bottom: 1px solid black;
-  padding-bottom: 2px;
-  p {
-    margin-bottom: 5px;
-  }
-}
 
 .card-avatar{
-  text-align: center;
+  p {
+    margin-top: 5px;
+  }
 }
 
 .card-landing {
@@ -188,8 +162,8 @@
   margin: 20px 36px 20px 0px;
   height: auto;
   padding: 14px;
-  border-radius: 6px;
-  box-shadow: 15px 15px $pink;
+  border-radius: 8px;
+  box-shadow: 15px 15px #165ECA;
 }
 
 .card-request-content {

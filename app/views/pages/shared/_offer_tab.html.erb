@@ -1,5 +1,5 @@
 <div class="cards-wr-margin">
-  <h2>OFFERS RECENTLY MADE</h2>
+  <h2 id="blue">OFFERS RECENTLY MADE</h2>
   <div class="flex-card-container">
     <% @offers_pend.each do |offer| %>
       <div class="card-offer-content">
@@ -16,7 +16,7 @@
     <% end %>
   </div>
 
-  <h2> ARCHIVED OFFERS</h2>
+  <h2 id= "blue"> ARCHIVED OFFERS</h2>
   <div class="flex-card-container">
     <% @offers_arch.each do |offer| %>
       <div class="card-offer-content">
@@ -32,7 +32,7 @@
     <% end %>
   </div>
 
-  <h2> CANCELED OFFERS</h2>
+  <h2 id="blue"> CANCELED OFFERS</h2>
   <div class="flex-card-container">
     <% @offers_canc.each do |offer| %>
       <div class="card-offer-content">

@@ -4,29 +4,17 @@
     {class:"card-picture rc-16"}) %>
 
     <div class="card-request-info">
-      <div class="card-donation">
+      <div>
         <h5>  <i class="fas fa-globe-americas"></i> <%= request.sweet.country %></h5>
         <div class="card-charity">
           <p> <i class="fas fa-heart"></i> <%= request.charity.name %></p>
-        </div>
       </div>
-      <div class="card-price">
+        </div>
         <div class="card-avatar">
           <%= cl_image_tag(request.user.photo,
-           {class: "avatar-large"}) %>
-           <p>  <%= request.user.full_name %></p>
+           {class: "avatar"}) %>
+           <p>  <%= request.user.full_name %> from <%= request.user.city %></p>
         </div>
-        <div class="card-info-user-request-index">
-           <p> <%= request.user.city %></p>
-        </div>
-         <div class="card-total-column">
-            <p>donation: <%= convert_currency(request.donation_cents) %> €</p>
-          <div class="card-border-bottom">
-            <p>price:  <%= convert_currency(request.price_cents) %> €</p>
-          </div>
-            <p class='mt-2'>total:  <%= convert_currency(request.price_cents + request.donation_cents) %> €</p>
-        </div>
-      </div>
     </div>
   <% end %>
 <% end %>

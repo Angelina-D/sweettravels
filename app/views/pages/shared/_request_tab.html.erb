@@ -49,7 +49,7 @@
 
                   <div class="mx-1">
                     <p>
-                    <%= image_tag "#{offer.user.photo}", class: "avatar" %>
+                    <%= image_tag "#{offer.user.photo}", class: "avatar", id: "avatar-chat" %>
                     <%= offer.user.full_name %>
                     </p>
                   </div>
@@ -60,16 +60,19 @@
 
                   <div class="mx-1 ">
                     <%= link_to 'Chat', request_offer_path(request_id: offer.request_id, id: offer.id), class: 'mini-detail-button'   %>
+
                   </div>
 
 
                   <% if offer.confirmed? %>
                     <div class="mx-1"></div>
-
                     <%= form_tag orders_path do %>
                       <%= hidden_field_tag 'request_id', request.id %>
                       <%= submit_tag 'BUY', class: 'buy-button blink_button' %>
                     <% end %>
+
+                    </div>
+
 
                   <% else %>
 
