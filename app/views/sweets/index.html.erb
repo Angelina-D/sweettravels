@@ -24,7 +24,8 @@
       <%= link_to cl_image_tag(sweet.picture, {class:"rc-16"}), new_sweet_request_path(sweet.id) %>
     </div>
       <div class="card-info">
-        <h6><i class="fas fa-globe-americas"></i> <%= sweet.country %></h6>
+        <h6><%= sweet.country %></h6>
+        <p><%= sweet.description %></p>
       </div>
   </div>
   <% end %>

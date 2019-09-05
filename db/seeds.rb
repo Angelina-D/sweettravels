@@ -19,7 +19,7 @@ sweet1 = Sweet.create(
   description: 'Mayceys lollies continue to be a Kiwi favourite',
   picture: 'https://www.shopnewzealand.co.nz/sites/default/files/styles/large/public/imported_images/feijoa_sweets.jpg?itok=45DsESd6',
   category:'Lollies',
-  country: 'New Zealand',
+  country: '🇳🇿 New Zealand',
   )
 
 sweet2 = Sweet.create(
@@ -27,15 +27,15 @@ sweet2 = Sweet.create(
   description: 'France best kept secret',
   picture: 'https://24h-chrono.fr/127-large_default/haribo-dragibus.jpg',
   category: 'Candy',
-  country: 'France',
+  country: '🇫🇷 France',
   )
 
 sweet3 = Sweet.create(
-  name: 'Halal Fizzy Filled Hearts',
+  name: 'Pictolin',
    description: "Perfect for Valentinesday (14th Feb) or Weddings",
-   picture: 'https://images-na.ssl-images-amazon.com/images/I/41dHxPoTxfL._SX355_.jpg',
+   picture: 'https://taw9eelcdn.cachefly.net/media/catalog/product/cache/1/image/519x/caf7b51f4c4f72629c8e66ac0d790077/1/_/1_780_107.jpg',
    category:'Gummibear',
-   country: 'Spain',
+   country: '🇪🇸 Spain',
    )
 
 sweet4 = Sweet.create(
@@ -43,7 +43,7 @@ sweet4 = Sweet.create(
   description: 'For coco cravings and birthday parties',
   picture: 'https://www.vicios-brasileiros.de/images/product_images/original_images/Bala-Coco-Brasilien.jpg',
   category: 'Bonbon',
-  country: 'Brasil',
+  country: '🇧🇷 Brazil',
   )
 
 sweet5 = Sweet.create(
@@ -51,43 +51,58 @@ sweet5 = Sweet.create(
   description: 'Look at that promising cow on the package - its awesome!',
   picture: 'http://blog.snackfever.com/wp-content/uploads/2017/01/malang-cow-strawberry-e1484313141780.png',
   category: 'Bonbon',
-  country: 'Korea',
+  country: '🇰🇷 Korea',
   )
 sweet6 = Sweet.create!(
   name: 'Rossana',
   description: "Nuts in there! Watch your allergy",
   picture: "https://images-na.ssl-images-amazon.com/images/I/81%2B-vLir0UL._SL1500_.jpg",
   category: 'Choco',
-  country: 'Italy',
+  country: ' 🇮🇹 Italy',
   )
 sweet7 = Sweet.create(
-  name: 'Chocolate covered Bretzels',
+  name: 'Junior Mints',
   description: 'The best of all candies ever',
-  picture: 'https://www.flipz.com/wp-content/uploads/2015/05/Dark-Chocolate-Flipz.jpg',
+  picture: 'https://images-na.ssl-images-amazon.com/images/I/818exYu5sbL._SL1500_.jpg',
   category:'Choco',
-  country: 'USA',
+  country: '🇺🇸 USA',
   )
 sweet8 = Sweet.create(
-  name: 'Prinzenrolle',
+  name: 'Trolli',
   description: 'Very awesome good quality 4.5/5 stars',
-  picture: 'https://www.staples.de/content/images/product/5865718_1_xnl.jpg',
-  category:'Choco',
-  country: 'Germany',
+  picture: 'https://images-na.ssl-images-amazon.com/images/I/91Kad-jepLL._SL1500_.jpg',
+  category:'Pure Insanity',
+  country: '🇩🇪 Germany',
   )
 sweet9 = Sweet.create(
   name: 'Timtam',
   description: 'In Australia there is not only deadly animal but chocolat biscuit to die for too!',
-  picture: 'http://www.arnotts.com/wp-content/uploads/2015/01/Tim-Tam-Chewy-Caramel.png',
+  picture: 'https://images-na.ssl-images-amazon.com/images/I/514RuYgRv7L.jpg',
   category:'Choco',
-  country: 'Australia',
+  country: '🇦🇺 Australia',
   )
 sweet10 = Sweet.create(
   name: 'Carambar',
   description: 'The classic teeth breaker coming from France',
-  picture: 'https://upload.wikimedia.org/wikipedia/commons/a/ad/Carambar_Caramel.jpg',
+  picture: 'https://static.weezbe.com/planetbonbons/Images/products/p_244G_180120181412.jpg',
   category:'Teeth breaker',
-  country: 'France',
+  country: '🇫🇷 France',
   )
+sweet10 = Sweet.create(
+  name: 'Cocosette',
+  description: 'Hey coco! This is Venezula with a punch!',
+  picture: 'https://images-na.ssl-images-amazon.com/images/I/51eAKP6xhHL._SX355_.jpg',
+  category:'Teeth breaker',
+  country: '🇻🇪 Venezuela',
+  )
+sweet10 = Sweet.create(
+  name: 'Prince Polo',
+  description: 'The classic teeth breaker coming from France',
+  picture: 'https://images-nitrosell-com.akamaized.net/product_images/23/5695/princepoloclassic.jpg',
+  category:'Teeth breaker',
+  country: '🇵🇱 Poland',
+  )
+
 puts "Sweets created!"
 
 ############################## USER ############################################
@@ -245,7 +260,7 @@ Request.create(
     )
 
 Request.create(
-    description: 'I am only here because of parrots & Dragibus',
+    description: 'I NEED MY DRAGIBUS AAARGRRRGRGRGGGG!!!!',
     price_cents: rand(1000..2500),
     donation_cents: rand(500..2000),
     quantity: rand(1..5),
@@ -318,11 +333,12 @@ puts "Requests created!"
 # end
 
 30.times do
+  userer = User.all.sample
   Offer.create(
-    content: "Hey everyone, I'm going to France for two weeks I like to talk about my life blablabal ablablba labalbalbal balablba ",
+    content: "Hey #{userer.full_name}, I can bring those bad boy back, no prob! ",
     end_date: "#{date = Time.at(rand * Time.now.to_i)}",
     start_date: "#{date-10.days}",
-    user: User.all.sample,
+    user: userer,
     pick_up_location: 'berlin' ,
     status: 1,
     request: Request.all.sample,
