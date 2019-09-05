@@ -27,6 +27,7 @@ class OffersController < ApplicationController
   end
 
   def update
+    raise
     @offer.update(offer_params)
     if @offer.save
       render :show

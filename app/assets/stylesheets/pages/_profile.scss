@@ -63,13 +63,12 @@
   img {
     width: 150px;
     height: 175px;
-  // margin: 10px;
   }
 }
 
 .candy-pic-request {
   img {
-    height: 50px;
+    height: 100px;
   }
 }
 
@@ -98,8 +97,8 @@
 }
 
 .calculator {
-    border-color: black;
-    border: #fff1f6 solid;
+  border: $dark-pink solid;
+  padding: 8px;
     p {
       font-size: 15px;
       margin: 4px;

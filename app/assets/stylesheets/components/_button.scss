@@ -133,3 +133,36 @@
     color: #4351C6;
   }
 }
+
+.buy-button{
+  background: $yellow;
+  text-align: center;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 4px solid $dark-pink;
+  border-radius: 6px;
+  color: $red;
+  a {
+    text-decoration: none;
+    color: #4351C6;
+  }
+}
+
+
+.blink_button {
+  animation: blinker 0.5s linear infinite;
+}
+
+@keyframes blinker {
+  100% {
+    opacity: 0;
+    background: $red;
+    text-align: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 4px solid $yellow;
+    color: blue;
+  }
+}

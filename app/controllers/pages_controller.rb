@@ -14,7 +14,6 @@ class PagesController < ApplicationController
    @sum_requests = sum_requests
    @sum_confirmed_offers = sum_confirmed_offers
    @sum_donation = sum_charity
-
   end
 
   def offers_confirmed(request)
