@@ -14,6 +14,17 @@ class PagesController < ApplicationController
    @sum_requests = sum_requests
    @sum_confirmed_offers = sum_confirmed_offers
    @sum_donation = sum_charity
+
+  end
+
+  def offers_confirmed(request)
+    confirmed_offer = 0
+      request.offer.each do |offer|
+        if offer.confirmed?
+          confirmed_offer = offer.id
+        end
+    end
+    confirmed_offer
   end
 
   private
@@ -50,4 +61,6 @@ class PagesController < ApplicationController
     offers_canc = current_user.offers.where(status: :canceled)
     offers_canc.order(:created_at)
   end
+
+
 end

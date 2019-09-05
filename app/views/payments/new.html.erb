@@ -1,0 +1,41 @@
+<div class="payment-container-top">
+  <h1>MAKE IT RAIN! </h1>
+</div>
+<div class="checkout rc-16">
+  <h2>  Payment for candy <%= @order.offer.request.sweet.name %></h2>
+  <p> <%= form_tag order_payments_path(@order) do %></p>
+  <div class="summary-payment mb-3 ml-5 d-flex justify-content-around">
+    <p>Offer From <%= @order.offer.user.full_name %></p><p> | </p><p><i class="fas fa-candy-cane"></i> <%= @order.offer.request.sweet.name %></p><p> |</p><p> <i class="fas fa-hand-holding-heart"></i> <%= @order.offer.request.charity.name %> </p>
+    </p><p>
+  </div>
+  <article>
+    <label class="amount">
+      <div class="bill d-flex flex-column">
+
+        <div class="d-flex justify-content-between">
+          <span>Donation </span>
+          <span> <%= convert_currency(@order.offer.request.donation_cents) %>€</span>
+        </div>
+        <div class="d-flex justify-content-between bill-underline">
+          <span>Candy price</span>
+          <span> <%= convert_currency(@order.offer.request.price_cents) %>€</span>
+        </div>
+        <div class="d-flex justify-content-between">
+          <span>Total</span>
+          <span><%= convert_currency(@order.amount)  %>€</span>
+        </div>
+      </div>
+    </label>
+  </article>
+
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button btn-payment"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-name="My Teddy"
+    data-email="<%= current_user.email %>"
+    data-description="Teddy <%= @order.candy_sku %>"
+    data-amount="100"<%#= @request.price_cents + @request.donation_cents %>
+    data-currency="euros
+  </script>
+<% end %>
+</div>

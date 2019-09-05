@@ -4,6 +4,7 @@ content = ['Whaou, just Whaou!', 'I feel like my life has a meaning now',
 'I can not remember what life was like before this', 'I will be obese but fuck it! YOLO']
 
 # Review.destroy_all
+Order.destroy_all
 Offer.destroy_all
 Request.destroy_all
 User.destroy_all
@@ -144,40 +145,40 @@ puts "Users created!"
 ####################### CHARITY ###############################
 
 Charity.create(
-  name: "Global Gift Guide",
+  name: "Action Against Hunger",
   cause: "Education",
   description: 'Children are the faces of the future, and their education is one of the most critical factors to help a community rise above poverty. Your gift of education will not only help a child but her entire village. ',
   picture: 'https://www.channelstv.com/wp-content/uploads/2019/07/ACF-3.jpg'
   )
 
 Charity.create(
-  name: "action against hunger",
+  name: "Doctor wihtout Borders",
   cause: "Hunger",
   description: 'Action Against Hunger (or Action Contre La Faim (ACF) in French) is a global humanitarian organization which originated in France and is committed to ending world hunger. The organization helps malnourished children and provides communities with access to safe water and sustainable solutions to hunger. ',
   picture: 'https://armacad.info/images/2016/07/doctors-without-borders-k8t3CTUSaD1UHYV2pTmtzyK1Q78nN9zW.png'
   )
 Charity.create(
-  name: "Global Gift Guide",
+  name: "Action Against Hunger",
   cause: "Education",
   description: 'Children are the faces of the future, and their education is one of the most critical factors to help a community rise above poverty. Your gift of education will not only help a child but her entire village. ',
   picture: 'https://www.channelstv.com/wp-content/uploads/2019/07/ACF-3.jpg'
   )
 
 Charity.create(
-  name: "action against hunger",
+  name: "Doctor wihtout Borders",
   cause: "Hunger",
   description: 'Action Against Hunger (or Action Contre La Faim (ACF) in French) is a global humanitarian organization which originated in France and is committed to ending world hunger. The organization helps malnourished children and provides communities with access to safe water and sustainable solutions to hunger. ',
   picture: 'https://armacad.info/images/2016/07/doctors-without-borders-k8t3CTUSaD1UHYV2pTmtzyK1Q78nN9zW.png'
   )
 Charity.create(
-  name: "Global Gift Guide",
+  name: "Action Against Hunger",
   cause: "Education",
   description: 'Children are the faces of the future, and their education is one of the most critical factors to help a community rise above poverty. Your gift of education will not only help a child but her entire village. ',
   picture: 'https://www.channelstv.com/wp-content/uploads/2019/07/ACF-3.jpg'
   )
 
 Charity.create(
-  name: "action against hunger",
+  name: "Doctor wihtout Borders",
   cause: "Hunger",
   description: 'Action Against Hunger (or Action Contre La Faim (ACF) in French) is a global humanitarian organization which originated in France and is committed to ending world hunger. The organization helps malnourished children and provides communities with access to safe water and sustainable solutions to hunger. ',
   picture: 'https://armacad.info/images/2016/07/doctors-without-borders-k8t3CTUSaD1UHYV2pTmtzyK1Q78nN9zW.png'
@@ -185,7 +186,7 @@ Charity.create(
 
 puts "Charity created!"
 ##################### REQUEST ########################
-Request.create(
+  Request.create(
     description: 'I am Craving Feijoa!',
     price_cents: rand(1000..2500),
     donation_cents: rand(500..2000),
@@ -267,26 +268,26 @@ Request.create!(
 puts "Requests created!"
 
 # ################################ OFFER ####################################
-20.times do
-  Offer.create(
-    content: "Hey everyone, I'm going to the US for two weeks",
-    end_date: "#{date = Time.at(rand * Time.now.to_i)}",
-    start_date: "#{date-10.days}",
-    user: User.all.sample,
-    pick_up_location: 'berlin',
-    status: rand(0..4),
-    request: Request.all.sample,
-    )
-end
+# 20.times do
+#   Offer.create(
+#     content: "Hey everyone, I'm going to the US for two weeks",
+#     end_date: "#{date = Time.at(rand * Time.now.to_i)}",
+#     start_date: "#{date-10.days}",
+#     user: User.all.sample,
+#     pick_up_location: 'berlin',
+#     status: rand(0..4),
+#     request: Request.all.sample,
+#     )
+# end
 
-20.times do
+30.times do
   Offer.create(
-    content: "Hey everyone, I'm going to France for two weeks I like to talk about my life blablabal ablablba labalbalbal balablba labab albalbalbal abalbalbalbalbalbal balbalbalbal balablab albalba lbal balablaba lbalbalbalabl abalba lbalal abalbabla",
+    content: "Hey everyone, I'm going to France for two weeks I like to talk about my life blablabal ablablba labalbalbal balablba ",
     end_date: "#{date = Time.at(rand * Time.now.to_i)}",
     start_date: "#{date-10.days}",
     user: User.all.sample,
     pick_up_location: 'berlin' ,
-    status: 0,
+    status: 1,
     request: Request.all.sample,
     )
 end

@@ -194,7 +194,7 @@
 
 .card-request-content {
   // display: flex;
-  background: white;
+  background: $light-pink;
   // width: 40%;
   margin: 20px 36px 20px 0px;
   height: auto;
@@ -209,6 +209,7 @@
 }
 .card-offer-details{
   border: 2px solid $green;
+  background-color: $light-green;
   padding: 5px;
 }
 @keyframes animatecard {
@@ -222,3 +223,4 @@
     transform: perspective(1600px) rotateX(0deg) rotateY(0deg) translateZ(65px);
 }
 }
+

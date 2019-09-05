@@ -24,4 +24,16 @@ class Request < ApplicationRecord
                   }
 
   DONATION = [5, 10, 15, 20]
+
+  # monetize :price_cents
+  # monetize :donation_cents
+
+  def confirmed_offers
+    offers.where(status: :confirmed)
+  end
+
+  def offers_to_display
+    return confirmed_offers if confirmed_offers.present?
+    return offers
+  end
 end

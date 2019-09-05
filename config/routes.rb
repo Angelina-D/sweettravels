@@ -17,7 +17,12 @@ Rails.application.routes.draw do
 
   resources :statusoffer, only: [:edit]
 
+  resources :orders, only: [:show, :create] do
+    resources :payments, only: [:new, :create]
+  end
+
   get 'profile', to: 'pages#profile', as: 'profile'
+
 
   mount ActionCable.server => "/cable"
 

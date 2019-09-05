@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_03_100658) do
+ActiveRecord::Schema.define(version: 2019_09_04_112201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,19 @@ ActiveRecord::Schema.define(version: 2019_09_03_100658) do
     t.bigint "request_id"
     t.index ["request_id"], name: "index_offers_on_request_id"
     t.index ["user_id"], name: "index_offers_on_user_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.string "candy_sku"
+    t.integer "amount"
+    t.jsonb "payment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "offer_id"
+    t.index ["offer_id"], name: "index_orders_on_offer_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -97,6 +110,8 @@ ActiveRecord::Schema.define(version: 2019_09_03_100658) do
   add_foreign_key "messages", "users"
   add_foreign_key "offers", "requests"
   add_foreign_key "offers", "users"
+  add_foreign_key "orders", "offers"
+  add_foreign_key "orders", "users"
   add_foreign_key "requests", "charities"
   add_foreign_key "requests", "sweets"
   add_foreign_key "requests", "users"
