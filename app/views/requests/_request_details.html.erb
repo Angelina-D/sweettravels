@@ -6,7 +6,7 @@
       <p> <i class="fas fa-map-marked-alt"></i> &nbsp; <%= @request.user.city %></p>
       <p> <i class="fas fa-plane-departure"></i>  &nbsp; <%= @request.sweet.country %></p>
       <p> <%= @request.quantity %> X &nbsp;<i class="fas fa-candy-cane"></i></p>
-      <p> <i class="far fa-envelope"></i> &nbsp;<%= @request.description %></p>
+      <p style="line-height: 1.5;"> <i class="far fa-envelope"></i> &nbsp;<%= @request.description %></p>
     </div>
   </div>
 
@@ -17,7 +17,6 @@
 </div>
 
 <div class="row align-items-end">
-
   <div class="col-6">
     <% if @request.user != current_user %>
       <div class="btn-action" id= "offer">
