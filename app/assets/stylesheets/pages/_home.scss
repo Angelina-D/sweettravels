@@ -39,10 +39,28 @@
   text-transform: uppercase;
 }
 
-.pointing-finger {
-    text-align: center;
-    margin-left: 12px;
+#pointing {
+  background-size: contain;
+  color: white;
+  padding: 11px;
+  font-weight: bolder;
+  text-shadow: 2px 1px black;
+  position: absolute;
+  right: 614px;
+  bottom: 65px;
+
+  &:hover{
     color: white;
-    transform: uppercase;
-    font-size: 12px;
+  }
+}
+
+#dollar {
+  height: 50p;
+  position: absolute;
+  bottom: -87px;
+  left: 72px;
+
+  img {
+    width: 38px;
+  }
 }
