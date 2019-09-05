@@ -48,6 +48,7 @@ input.form-control-chat {
   box-shadow: none;
   font-size: 14px;
   color: #868686;
+  transform: uppercase;
   &:focus {
     outline: none;
     border: 1px solid blue;
@@ -55,11 +56,28 @@ input.form-control-chat {
   }
 }
 .chat-header {
-  background-color: #4F2F4C;
-  color: white;
+  background-color: #FFD54D;
+  color: #FE7661;
   padding: 10px 20px;
   margin-top: 10px;
   h4 {
     margin: 0;
+    font-weight: bolder;
+    text-shadow: 2px 2px #FD1070;
+  }
+}
+
+.offer-button-chat {
+  background: #FD1070;
+  text-align: center;
+  padding: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 4px solid #FD1070;
+  border-radius: 6px;
+  color: #FEFBF5;
+  a {
+    text-decoration: none;
+    color: #4351C6;
   }
 }

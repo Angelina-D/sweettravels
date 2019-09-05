@@ -127,13 +127,27 @@
   display: flex;
   align-items: center;
   margin-bottom: 8px;
-  background: white;
+  background: #FFD54D;
   padding: 8px 16px;
 
   .container-content {
       flex-grow: 1;
       padding: 0 24px;
+  }
 
+  img {
+    width: 90px;
+    height: 90px;
+  }
+
+  h4 {
+    color: #FE7661;
+    font-weight: bolder;
+    text-shadow: 2px 2px #FD1070;
+  }
+
+  p {
+    font-style: italic;
   }
 }
 

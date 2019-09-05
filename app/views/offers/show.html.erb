@@ -15,12 +15,14 @@
           </div>
         </div>
         <p>Message:</p>
-        <%= @offer.content %>
+        <p><%= @offer.content %></p>
         <p>I will be back <%= @offer.end_date %></p>
         <p>City: <%= @offer.user.city %></p>
         <div class="mt-5">
-          <%= link_to 'Go to Profile', profile_path, class: 'btn-action mr-4' %>
-          <%= link_to 'Back to request', requests_path, class: 'btn-action' %>
+          <div class="b-container">
+            <%= link_to 'GO TO PROFILE', profile_path, class: 'offer-button-chat' %>
+            <%= link_to 'BACK TO REQUEST', requests_path, class: 'offer-button-chat' %>
+          </div>
         </div>
       </div>
     </div>
@@ -29,7 +31,7 @@
       <div class="container mt-5">
         <div class="row">
           <div class="col-sm-12 col-sm-offset-3">
-          <div class="chat-header rc-top-16">  <h4>Boutiful chat</h4>  </div>
+          <div class="chat-header rc-top-16">  <h4>LET'S CHAT</h4>  </div>
             <div class="messages">
               <% @offer.messages.each do |message| %>
                 <%= render "messages/message", message: message, user_is_message_author:
