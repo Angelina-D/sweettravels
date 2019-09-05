@@ -166,3 +166,19 @@
     color: blue;
   }
 }
+
+.profile-button {
+  background: #FD1070;
+  padding: 8px;
+  margin: 70px;
+  border-radius: 6px;
+  a {
+    color: #FEFBF5;
+  }
+
+  &:hover {
+    a {
+    color: #FCD54C !important;
+    }
+  }
+}
