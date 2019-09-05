@@ -61,7 +61,8 @@ class RequestsController < ApplicationController
       {
         lat: request.sweet.latitude,
         lng: request.sweet.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { request: request })
+        infoWindow: render_to_string(partial: "info_window", locals: { request: request }),
+        image_url: helpers.asset_url('http://www.dacoromania.org/upload/o/2/20213_candy-png.png')
       }
     end
   end
