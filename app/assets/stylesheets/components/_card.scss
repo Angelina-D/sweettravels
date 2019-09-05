@@ -6,7 +6,7 @@
   margin-bottom: 32px;
 
   background-color: $light-pink;
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 16px 16px $pink-orange;
 
   grid-column-start: 5;
@@ -18,7 +18,7 @@
   img {
     height: 208px;
     max-width: 356px;
-    border-radius: 16px;
+    border-radius: 6px;
   }
 }
 
@@ -33,7 +33,7 @@
 .card-request-user{
   background-color: $light-green;
   box-shadow: 15px 15px $green;
-  border-radius: 8px;
+  border-radius: 6px;
   margin-top: 43px;
 }
 .card-pink-p{
@@ -47,7 +47,7 @@
 .card-addition-request{
   box-shadow: 8px 8px #FFD54D;
   background-color: #FE7661;
-  border-radius: 16px;
+  border-radius: 6px;
   padding: 12px;
 }
 // #################################### REQUEST INDEX #############################333
@@ -66,8 +66,8 @@
   }
 
     &-img{
-    height: 422px;
-    width: 445px;
+    // height: 422px;
+    // width: 445px;
   }
 
 }
@@ -86,7 +86,7 @@
   color: black;
   border: none;
   background-color: $light-pink;
-  border-radius: 8px;
+  border-radius: 6px;
   p{
     font-size: 18px;
   }
@@ -146,15 +146,22 @@
   }
 }
 
+// ############################ SWEET INDEX #####################################
+
 .card-sweet {
   background-color: $light-pink;
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 15px 15px $pink-orange;
+    transition: all 0.3s ease 0s;
 
+
+  &:hover{
+    animation: 1s ease 0s 1 normal forwards running animatecard;
+  }
     img {
       background-size: cover;
-      height: 380px;
-      width: 380px;
+      height: 250px;
+      width: 250px;
       margin: 10px;
     }
 
@@ -170,7 +177,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   box-shadow: 40px 40px $pink-orange;
-  border-radius: 8px
+  border-radius: 6px
 
 }
 
@@ -192,7 +199,7 @@
   margin: 20px 36px 20px 0px;
   height: auto;
   padding: 14px;
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 15px 15px $pink-orange;
 }
 
@@ -204,5 +211,16 @@
   border: 2px solid $green;
   background-color: $light-green;
   padding: 5px;
+}
+@keyframes animatecard {
+  0% {
+    transform: perspective(1600px) rotateX(0deg) rotateY(0deg) translateZ(0px);
+}
+16% {
+    transform: perspective(1600px) rotateX(5deg) rotateY(15deg) translateZ(32px);
+}
+100% {
+    transform: perspective(1600px) rotateX(0deg) rotateY(0deg) translateZ(65px);
+}
 }
 
