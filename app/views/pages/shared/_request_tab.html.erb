@@ -1,62 +1,74 @@
 <div class="cards-wr-margin">
   <h2> ALL YOUR REQUESTS</h2>
-  <!-- <div class="flex-card-container"> -->
     <% @requests.each do |request| %>
       <div class="card-request-content container mb-5">
         <div class="row">
           <div class="card-request-info col-4">
             <p class="candy-pic-request"> <%= image_tag "#{request.sweet.picture}"%> </p>
 
-            <% if @offers.where(request_id: request.id).nil? %>
-              <p><%= No Offers %></p>
-              <% else %>
-              <p> <%= link_to @offers.where(request_id: request.id).count %></p>
-            <% end %>
 
             <div class="card-request-text">
               <h3> <%= request.sweet.name %> </h3>
-              <p> <%= request.quantity %>x</p>
+              <p> <%= request.quantity %> x <i class="fas fa-candy-cane"></i></p>
               <p> <i class="fas fa-globe-americas"></i> <%= request.sweet.country %> </p>
               <p> <i class="fas fa-heart"></i> <%= request.charity.name %> </p>
 
               <div class="calculator rc-16">
-                <p> Candy <%= convert_currency(request.price_cents) %> €</p>
-                <p> Charity <%= convert_currency(request.donation_cents) %> €</p>
-                <p class="smaller-line">_________</p>
-                <p>total <%= convert_currency(request.price_cents + request.donation_cents) %></p>
+                <div class="d-flex justify-content-between">
+                  <span> Candy </span>
+                  <span><%= convert_currency(request.price_cents) %> €</span>
+                </div>
+                <div class="card-border-bottom-show d-flex justify-content-between">
+                  <p> Charity </p><p><%= convert_currency(request.donation_cents) %> €</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p>total </p><p><%= convert_currency(request.price_cents + request.donation_cents) %></p>
+                </div>
               </div>
 
             </div>
           </div>
-          <div class="col-1"></div>
-          <div class="card-offer-list col-7">
-            Damn it! Here are the offers for your Candy request:
+          <!-- <div class="col-1"></div> -->
+          <div class="card-offer-list col-8">
+
+            <% if request.offers.count == 0 %>
+              <p>Oupsy! No offers yet!</p>
+              <% else %>
+              <p> Damn it! Here are the offers for your Candy request:</p>
+            <% end %>
+
             <% request.offers_to_display.each do |offer| %>
 
-              <div class="card-offer-details rc-16 container my-1">
-                <div class="row align-items-center">
+              <% if offer.status == 'decline' %>
+                <div class="card-offer-declined rc-16 my-3" id="id_<%= offer.id %>">
+              <% else %>
+                <div class="card-offer-details rc-16 my-3">
+              <% end %>
 
-                  <div class="col-2">
+                <div class="d-flex flex-nowrap justify-content-around align-items-center">
+
+                  <div class="mx-1">
                     <p>
                     <%= image_tag "#{offer.user.photo}", class: "avatar", id: "avatar-chat" %>
                     <%= offer.user.full_name %>
                     </p>
                   </div>
 
-                  <div class="col-8">
+                  <div class="mx-1 flex-fill">
                     <p><%= offer.content %></p>
                   </div>
 
-                  <div class="col-2 d-flex justify-content-start ">
-                    <%= link_to 'detail', request_offer_path(request_id: offer.request_id, id: offer.id), class: 'mini-detail-button'   %>
+                  <div class="mx-1 ">
+                    <%= link_to 'Chat', request_offer_path(request_id: offer.request_id, id: offer.id), class: 'mini-detail-button'   %>
+
                   </div>
 
 
                   <% if offer.confirmed? %>
-                    <div class="col-2">
+                    <div class="mx-1"></div>
                     <%= form_tag orders_path do %>
                       <%= hidden_field_tag 'request_id', request.id %>
-                      <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+                      <%= submit_tag 'BUY', class: 'buy-button blink_button' %>
                     <% end %>
 
                     </div>
@@ -64,9 +76,9 @@
 
                   <% else %>
 
-                    <div class="col-1 d-flex flex-wrap">
+                    <div class=" d-flex flex-column">
                       <%= link_to 'confirm', edit_statusoffer_path(id: offer.id, status: 0), class: 'mini-button ml-4 mb-2 confirm-button'  %>
-                      <%= link_to 'decline', edit_statusoffer_path(id: offer.id, status: 2), class: 'mini-button ml-4'  %>
+                      <%= link_to 'decline', edit_statusoffer_path(id: offer.id, status: 2), class: 'mini-button ml-4 mb-2'  %>
                     </div>
                   <% end %>
 
@@ -78,5 +90,4 @@
         </div>
       </div>
     <% end %>
-  <!-- </div> -->
 </div>

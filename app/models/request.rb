@@ -34,6 +34,6 @@ class Request < ApplicationRecord
 
   def offers_to_display
     return confirmed_offers if confirmed_offers.present?
-    return offers
+    return offers.sort
   end
 end
