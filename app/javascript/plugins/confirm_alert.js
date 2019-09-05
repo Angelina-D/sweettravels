@@ -8,7 +8,7 @@ const initConfirmAlerts = () => {
         event.preventDefault();
         swal({
           title: 'Confirm',
-          text: 'Are you sure you want to continue with this offer and proceed to payment?',
+          text: 'Are you sure you want to continue with this offer and decline all other offer?',
           buttons: ['No', 'Yes']
         }).then((isConfirmed) => {
           isConfirmed ? window.location.href = button.href : false;
