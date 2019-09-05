@@ -57,6 +57,7 @@
     App['offer_<%= @offer.id %>'] = App.cable.subscriptions.create(
       { channel: 'OfferChannel', offer_id: <%= @offer.id %> },
       { received: (data) => {
+        console.log(data)
         if (data.current_user_id !== <%= current_user.id %>){
           const messagesContainer = document.querySelector('.messages');
           messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
