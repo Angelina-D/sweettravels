@@ -2,6 +2,38 @@
   display: flex;
 }
 
+#myTab {
+  background: #ECF7ED;
+}
+
+#profile-tab {
+  background: #fff2f4;
+  color: #CC4481;
+  border-color: #CC4481;
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  border-radius: 6px 6px 0 0;
+  box-shadow: 3px -2px;
+}
+
+#home-tab {
+  background: #e1fff0;
+  color: #165ECA;
+  border-color: #165ECA;
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  border-radius: 6px 6px 0 0;
+  box-shadow: 3px -2px;
+}
+
+#requests {
+  background: #fff2f4;
+}
+
+#offers {
+  background: #e1fff0;
+}
+
 .profile-info {
   background-color: #C7F0DB;
   box-shadow: 15px 15px $green;
@@ -108,4 +140,9 @@
 
 .smaller-line {
   margin-top: 0px;
+}
+
+#avatar-chat {
+  margin-left: 5px;
+  margin-top: 2px;
 }
