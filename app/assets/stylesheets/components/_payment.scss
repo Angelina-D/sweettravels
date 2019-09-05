@@ -1,0 +1,64 @@
+ .payment-container-top{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+    h1{
+      font-family: 'Passion One', cursive;
+      font-size: 75px;
+      letter-spacing: 2px;
+      color: #C7F0DB;
+      font-weight: bold;
+      text-shadow: 3px 5px 0px #49BEB7;
+      text-transform: uppercase;
+    }
+  }
+
+.checkout{
+  margin:auto;
+  padding:20px;
+  background-color: $light-pink;
+  box-shadow: 20px 20px $pink-orange;
+  width:50%;
+  text-align: center;
+  h2{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Passion One', cursive;
+    text-transform: uppercase;
+    font-size: 48px;
+    color: #FCD54C;
+    text-shadow: 3px 5px #FF84B6;
+  }
+}
+
+.btn-payment {
+  background: $dark-pink !important;
+  text-align: center !important;
+  padding: 12px !important;
+  font-size: 22px !important;
+  font-weight: bold !important;
+  border: 4px solid $dark-pink !important;
+  border-radius: 16px !important;
+  color: white !important;
+  a {
+    text-decoration: none;
+    color: #4351C6;
+  }
+}
+
+.bill{
+  border: 1.5px solid black;
+  padding: 8px;
+  width: 320px
+}
+
+.bill-underline{
+  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+}
+
+.summary-payment{
+  text-align:left;
+}
