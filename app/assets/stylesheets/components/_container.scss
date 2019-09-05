@@ -12,13 +12,15 @@
 
 .container-sweet{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     justify-items: center;
     align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
 
   & > div {
-    width: 400px;
-    margin: 2rem 0;
+    width: 270px;
+    margin: 1.5rem 0;
   }
 }
 
@@ -101,7 +103,7 @@
   box-shadow: 40px 40px $pink-orange;
   background-color: $light-pink;
   padding: 20px;
-  border-radius: 8px
+  border-radius: 6px
 }
 .request-form-container{
   width: 880px;
@@ -110,13 +112,13 @@
   box-shadow: 40px 40px $pink-orange;
   background-color: $light-pink;
   padding: 20px;
-  border-radius: 8px
+  border-radius: 6px
 }
 
 #sweet-image-container{
     width: 100%;
     height: 100%;
-    border-radius: 16px;
+    border-radius: 6px;
     object-fit: cover;
     object-position: center;
 }
@@ -192,7 +194,7 @@
 
   h1 {
     font-family: 'Passion One', cursive;
-    font-size: 75px;
+    font-size: 65px;
     letter-spacing: 2px;
     color: #C7F0DB;
     font-weight: bold;
@@ -222,10 +224,7 @@
 }
 
 .rc-16{
-  border-radius: 16px;
-}
-.rc-24{
-  border-radius: 24px;
+  border-radius: 6px;
 }
 
 .rc-top-16{
@@ -235,4 +234,16 @@
 .rc-bottom-16{
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
+}
+
+@keyframes animatecard {
+  0% {
+    transform: perspective(1600px) rotateX(0deg) rotateY(0deg) translateZ(0px);
+}
+16% {
+    transform: perspective(1600px) rotateX(5deg) rotateY(15deg) translateZ(32px);
+}
+100% {
+    transform: perspective(1600px) rotateX(0deg) rotateY(0deg) translateZ(65px);
+}
 }
