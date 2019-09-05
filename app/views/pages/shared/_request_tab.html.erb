@@ -36,29 +36,31 @@
               <div class="card-offer-details rc-16 container my-1">
                 <div class="row align-items-center">
 
-                  <div class="col-1">
+                  <div class="col-2">
                     <p>
-                    <%= image_tag "#{offer.user.photo}", class: "avatar" %>
+                    <%= image_tag "#{offer.user.photo}", class: "avatar", id: "avatar-chat" %>
                     <%= offer.user.full_name %>
                     </p>
                   </div>
 
-                  <div class="col-7">
+                  <div class="col-8">
                     <p><%= offer.content %></p>
                   </div>
 
-                  <div class="col-1 ">
+                  <div class="col-2 d-flex justify-content-start ">
                     <%= link_to 'detail', request_offer_path(request_id: offer.request_id, id: offer.id), class: 'mini-detail-button'   %>
                   </div>
 
 
                   <% if offer.confirmed? %>
-                    <div class="col-1"></div>
-
+                    <div class="col-2">
                     <%= form_tag orders_path do %>
                       <%= hidden_field_tag 'request_id', request.id %>
                       <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
                     <% end %>
+
+                    </div>
+
 
                   <% else %>
 
