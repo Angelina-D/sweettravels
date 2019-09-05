@@ -23,6 +23,10 @@
       <div class="btn-action" id= "offer">
         <%= link_to 'MAKE AN OFFER', new_request_offer_path(@request) %>
       </div>
+    <% else %>
+      <div class="btn-action" id= "offer">
+        <%= link_to 'GO TO PROFILE', profile_path %>
+      </div>
     <% end %>
   </div>
 

@@ -160,7 +160,7 @@
 
 .card-offer-content {
   display: flex;
-  background: white;
+  background: #C7F0DB;
   // width: 40%;
   margin: 20px 36px 20px 0px;
   height: auto;
@@ -172,6 +172,7 @@
 .card-request-content {
   background: $light-pink;
   margin: 20px 36px 20px 0px;
+  font-style: italic;
   height: auto;
   width: 86%;
   padding: 14px;
