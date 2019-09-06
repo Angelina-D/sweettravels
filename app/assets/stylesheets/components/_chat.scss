@@ -63,7 +63,8 @@ input.form-control-chat {
   h4 {
     margin: 0;
     font-weight: bolder;
-    text-shadow: 2px 2px #FD1070;
+    text-shadow: 2px 1px #FD1070;
+    color: #FE7661;
   }
 }
 
@@ -79,5 +80,11 @@ input.form-control-chat {
   a {
     text-decoration: none;
     color: #4351C6;
+  }
+
+  &:hover{
+    a {
+      color: #FFD54D !important;
+    }
   }
 }
