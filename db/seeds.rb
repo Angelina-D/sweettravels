@@ -22,13 +22,6 @@ pineap = Sweet.create(
   country: '🇳🇿 New Zealand',
   )
 
-dragibus = Sweet.create(
-  name: 'Dragibus',
-  description: 'France best kept secret',
-  picture: 'https://24h-chrono.fr/127-large_default/haribo-dragibus.jpg',
-  category: 'Candy',
-  country: '🇫🇷 France',
-  )
 
 pictolin = Sweet.create(
   name: 'Pictolin',
@@ -109,6 +102,21 @@ twinkies = Sweet.create(
   category:'MERICAAAAA!',
   country: '🇺🇸 USA',
   )
+dragibus = Sweet.create(
+  name: 'Dragibus',
+  description: 'France best kept secret',
+  picture: 'https://24h-chrono.fr/127-large_default/haribo-dragibus.jpg',
+  category: 'Candy',
+  country: '🇫🇷 France',
+  )
+dragibus = Sweet.create(
+  name: 'Niniche',
+  description: 'A weird one straight from Brittany',
+  picture: 'https://www.biscuiteriedesvenetes.com/wp-content/uploads/2015/12/Niniches-de-Quiberon-tous-parfums-02-933x1024.jpg',
+  category: 'Candy',
+  country: '🇫🇷 France',
+  )
+
 
 
 
@@ -117,7 +125,7 @@ puts "Sweets created!"
 ############################## USER ############################################
 angie = User.create(
   full_name: 'Angie' ,
-  photo: 'https://avatars3.githubusercontent.com/u/52400250?s=460&v=4',
+  photo: 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/hrxsoyxf9dr8guwsfi6f.jpg',
   email:'potatoe@hotmail.com',
   password: '123456',
   city: 'Berlin',
@@ -125,7 +133,7 @@ angie = User.create(
 kaylee = User.create(
   full_name: 'Kaylee' ,
   photo: 'https://avatars3.githubusercontent.com/u/50417340?v=4',
-  email:'bootstrapisevil@hotmail.com',
+  email:'kaylee@hotmail.com',
   password: '123456',
   city: 'Berlin',
   )
@@ -133,7 +141,7 @@ kaylee = User.create(
 max = User.create(
   full_name: 'Max' ,
   photo: 'https://avatars2.githubusercontent.com/u/51816032?v=4',
-  email:'cssisevil@hotmail.com',
+  email:'max@hotmail.com',
   password: '123456',
   city: 'Berlin',
   )
@@ -141,7 +149,7 @@ max = User.create(
 jorge = User.create(
   full_name: 'Jorge' ,
   photo: 'https://avatars1.githubusercontent.com/u/28198714?v=4',
-  email:'jsisthebest@hotmail.com',
+  email:'jorge@hotmail.com',
   password: '123456',
   city: 'Berlin',
   )
@@ -149,7 +157,7 @@ jorge = User.create(
 yann = User.create(
   full_name: 'Yann' ,
   photo: 'https://avatars.githubusercontent.com/u/51452830?s=460&v=4',
-  email:'jsisevil@hotmail.com',
+  email:'yann@hotmail.com',
   password: '123456',
   city: 'Berlin',
   )
@@ -157,7 +165,7 @@ yann = User.create(
 malina = User.create(
   full_name: 'Malina' ,
   photo: 'https://avatars2.githubusercontent.com/u/41272214?v=4',
-  email:'rubyisevil@hotmail.com',
+  email:'malina@hotmail.com',
   password: '123456',
   city: 'Berlin',
   )
@@ -165,7 +173,7 @@ malina = User.create(
 angelo = User.create!(
   full_name: 'Angelo' ,
   photo: 'https://avatars1.githubusercontent.com/u/51519319?v=4',
-  email:'cssisawesome@hotmail.com',
+  email:'angelo@hotmail.com',
   password: '123456',
   city: 'Berlin',
   )
@@ -173,7 +181,7 @@ angelo = User.create!(
 grant = User.create(
   full_name: 'Grant' ,
   photo: 'https://avatars2.githubusercontent.com/u/48766845?s=460&v=4',
-  email:'timtam@hotmail.com',
+  email:'grant@hotmail.com',
   password: '123456',
   city: 'Melbourne',
   )
@@ -348,7 +356,7 @@ Request.create!(
     donation_cents: rand(500..2000),
     quantity: rand(1..5),
     charity_id: Charity.all.sample.id,
-    user: angie,
+    user: malina,
     sweet: carambar,
     )
 
