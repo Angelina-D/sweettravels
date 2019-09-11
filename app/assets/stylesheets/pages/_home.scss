@@ -16,7 +16,7 @@
 }
 
 #right-parrot {
-  margin-left: -93px;
+  margin-left: 361px;
   img {
     height: 60%;
     width: 60%;
@@ -24,15 +24,17 @@
 }
 
 #right-speech {
-  margin-left: -86px;
   width: 294px;
-  margin-bottom: -7px;
+  position: relative;
+  left: 322px;
+  bottom: 253px;
 }
 
 #left-speech {
   width: 294px;
   margin-left: 7px;
-  margin-bottom: -12px;
+  margin-bottom: 255px;
+  position: relative;
 }
 
 .pink {
